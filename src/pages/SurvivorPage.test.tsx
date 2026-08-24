@@ -1,4 +1,4 @@
-import { cleanup, render, screen, within } from '@testing-library/react'
+import { cleanup, render, screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { MemoryRouter } from 'react-router-dom'
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
@@ -7,10 +7,16 @@ import { ItemGroup } from '../components/ItemGroup'
 import { EXPECTED_SURVIVOR_SLUGS } from '../domain/validateGuideData'
 
 const scrollIntoView = vi.fn()
+const scrollTo = vi.fn()
 
 Object.defineProperty(HTMLElement.prototype, 'scrollIntoView', {
   configurable: true,
   value: scrollIntoView,
+})
+
+Object.defineProperty(window, 'scrollTo', {
+  configurable: true,
+  value: scrollTo,
 })
 
 function renderRoute(path: string) {
@@ -25,10 +31,14 @@ function expectedAsset(path: string) {
   return `${import.meta.env.BASE_URL}${path}`
 }
 
-afterEach(cleanup)
+afterEach(() => {
+  cleanup()
+  vi.restoreAllMocks()
+})
 
 beforeEach(() => {
   scrollIntoView.mockClear()
+  scrollTo.mockClear()
 })
 
 describe('complete survivor guide route', () => {
@@ -226,6 +236,29 @@ describe('complete survivor guide route', () => {
       '/survivors/drifter',
     )
     expect(screen.queryByRole('link', { name: /下一个角色/ })).not.toBeInTheDocument()
+  })
+
+  test('resets scroll and focuses the new survivor heading after route navigation', async () => {
+    const user = userEvent.setup()
+    const focus = vi.spyOn(HTMLElement.prototype, 'focus')
+    renderRoute('/survivors/acrid')
+
+    await user.click(screen.getByRole('button', { name: '前往虚空物品' }))
+    expect(document.activeElement).toBe(
+      screen.getByRole('heading', { level: 2, name: '虚空物品' }),
+    )
+    scrollTo.mockClear()
+    focus.mockClear()
+
+    await user.click(screen.getByRole('link', { name: '下一个角色：舰长 Captain' }))
+
+    const heading = await screen.findByRole('heading', { level: 1, name: '舰长 Captain' })
+    await waitFor(() => {
+      expect(scrollTo).toHaveBeenCalledWith({ top: 0, left: 0, behavior: 'instant' })
+      expect(heading).toHaveAttribute('tabindex', '-1')
+      expect(focus).toHaveBeenCalledWith({ preventScroll: true })
+      expect(document.activeElement).toBe(heading)
+    })
   })
 
   test('renders every canonical survivor route from the shared guide data', () => {

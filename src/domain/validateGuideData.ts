@@ -133,6 +133,20 @@ function validateItemPicks(
   }
 }
 
+function validateCommandRoutePicks(
+  guide: SurvivorGuide,
+  itemById: Map<string, ItemDefinition>,
+  errors: string[],
+): void {
+  for (const route of guide.commandRoute) {
+    for (const itemId of route.picks) {
+      if (hasText(itemId) && !itemById.has(itemId)) {
+        errors.push(`${guide.slug} 的${route.phase}统率路线引用了未知物品：${itemId}`)
+      }
+    }
+  }
+}
+
 export function validateGuideData(
   guides: SurvivorGuide[],
   items: ItemDefinition[],
@@ -169,6 +183,7 @@ export function validateGuideData(
       || !REQUIRED_ROUTE_PHASES.every((phase) => guide.commandRoute.filter((route) => route.phase === phase).length === 1)) {
       errors.push(`${guide.slug} 的统率路线必须包含三个阶段`)
     }
+    validateCommandRoutePicks(guide, itemById, errors)
 
     if (guide.coopAdjustments.length === 0 || guide.coopAdjustments.some((adjustment) => !hasText(adjustment))) {
       errors.push(`${guide.slug} 缺少联机调整`)

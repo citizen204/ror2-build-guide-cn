@@ -60,9 +60,9 @@ function createGuide(overrides: Partial<SurvivorGuide> = {}): SurvivorGuide {
     solo: createBuildSection(),
     coopAdjustments: ['让出关键治疗。'],
     commandRoute: [
-      { phase: '前期', picks: ['攻速'], explanation: '先保证输出手感。' },
-      { phase: '中期', picks: ['暴击'], explanation: '补足倍率。' },
-      { phase: '后期', picks: ['生存'], explanation: '应对高压。' },
+      { phase: '前期', picks: ['soldiers-syringe'], explanation: '先保证输出手感。' },
+      { phase: '中期', picks: ['harvesters-scythe'], explanation: '补足倍率。' },
+      { phase: '后期', picks: ['brilliant-behemoth'], explanation: '应对高压。' },
     ],
     voidItems: [pick('needletick')],
     lunarItems: [pick('shaped-glass')],
@@ -140,6 +140,29 @@ describe('validateGuideData', () => {
     guide.commandRoute[1] = { ...guide.commandRoute[1], phase: '前期' }
 
     expect(validateGuideData([guide], items)).toContain('commando 的统率路线必须包含三个阶段')
+  })
+
+  test('rejects every unknown Command route item reference', () => {
+    const guides = createCompleteRoster()
+    const [commando, huntress] = guides
+    commando.commandRoute[0] = {
+      ...commando.commandRoute[0],
+      picks: ['missing-command-white', 'soldiers-syringe'],
+    }
+    commando.commandRoute[2] = {
+      ...commando.commandRoute[2],
+      picks: ['missing-command-red'],
+    }
+    huntress.commandRoute[1] = {
+      ...huntress.commandRoute[1],
+      picks: ['harvesters-scythe', 'missing-command-green'],
+    }
+
+    expect(validateGuideData(guides, items)).toEqual([
+      'commando 的前期统率路线引用了未知物品：missing-command-white',
+      'commando 的后期统率路线引用了未知物品：missing-command-red',
+      'huntress 的中期统率路线引用了未知物品：missing-command-green',
+    ])
   })
 
   test('rejects blank required publishable content', () => {
