@@ -259,6 +259,15 @@ button:disabled {
   transform: translateY(-0.125rem);
 }
 
+.survivor-card__link:active {
+  border-color: var(--color-primary-hover);
+  background: oklch(0.24 0.025 110);
+  box-shadow:
+    inset 0 0 0 0.0625rem oklch(0.8 0.1 110 / 0.28),
+    0 0.25rem 0.75rem var(--color-shadow);
+  transform: translateY(0);
+}
+
 .survivor-card__portrait {
   display: grid;
   min-height: 10rem;
@@ -443,6 +452,7 @@ button:disabled {
 
   button:active,
   .survivor-card__link:hover,
+  .survivor-card__link:active,
   .survivor-card__link:hover .survivor-card__portrait img {
     transform: none;
   }

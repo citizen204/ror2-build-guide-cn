@@ -1,9 +1,10 @@
 import { cleanup, render, screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { MemoryRouter } from 'react-router-dom'
+import { MemoryRouter, Route, Routes, useParams } from 'react-router-dom'
 import { afterEach, expect, test } from 'vitest'
 import App from '../App'
 import { survivors } from '../content/survivors'
+import { HomePage } from './HomePage'
 
 afterEach(cleanup)
 
@@ -11,6 +12,23 @@ function renderHomePage() {
   return render(
     <MemoryRouter initialEntries={['/']}>
       <App />
+    </MemoryRouter>,
+  )
+}
+
+function SurvivorRouteProbe() {
+  const { slug } = useParams()
+
+  return <p>已打开角色：{slug}</p>
+}
+
+function renderHomePageWithRouteProbe() {
+  return render(
+    <MemoryRouter initialEntries={['/']}>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/survivors/:slug" element={<SurvivorRouteProbe />} />
+      </Routes>
     </MemoryRouter>,
   )
 }
@@ -72,6 +90,29 @@ test('filters the roster by SOTV and the special transformation', async () => {
 
   expect(screen.getByRole('status')).toHaveTextContent('找到 1 名角色')
   expect(screen.getByRole('link', { name: /Heretic/ })).toBeInTheDocument()
+})
+
+test('filters the roster by the base game, SOTS, and AC', async () => {
+  const user = userEvent.setup()
+  renderHomePage()
+
+  await user.click(screen.getByRole('button', { name: '本体' }))
+  expect(screen.getByRole('status')).toHaveTextContent('找到 11 名角色')
+  expect(screen.getByRole('link', { name: /Commando/ })).toBeInTheDocument()
+  expect(screen.getByRole('link', { name: /Acrid/ })).toBeInTheDocument()
+  expect(screen.queryByRole('link', { name: /Seeker/ })).not.toBeInTheDocument()
+
+  await user.click(screen.getByRole('button', { name: 'SOTS' }))
+  expect(screen.getByRole('status')).toHaveTextContent('找到 3 名角色')
+  expect(screen.getByRole('link', { name: /Seeker/ })).toBeInTheDocument()
+  expect(screen.getByRole('link', { name: /CHEF/ })).toBeInTheDocument()
+  expect(screen.getByRole('link', { name: /False Son/ })).toBeInTheDocument()
+
+  await user.click(screen.getByRole('button', { name: 'AC' }))
+  expect(screen.getByRole('status')).toHaveTextContent('找到 2 名角色')
+  expect(screen.getByRole('link', { name: /Operator/ })).toBeInTheDocument()
+  expect(screen.getByRole('link', { name: /Drifter/ })).toBeInTheDocument()
+  expect(screen.queryByRole('link', { name: /Seeker/ })).not.toBeInTheDocument()
 })
 
 test('explains how to recover from an empty combined search and filter', async () => {
@@ -150,4 +191,51 @@ test('exposes every DLC control and supports keyboard selection', async () => {
   expect(sotvButton).toHaveFocus()
   expect(sotvButton).toHaveAttribute('aria-pressed', 'true')
   expect(allButton).toHaveAttribute('aria-pressed', 'false')
+})
+
+test('traverses and activates search, filters, reset, and a card link by keyboard', async () => {
+  const user = userEvent.setup()
+  renderHomePageWithRouteProbe()
+  const searchbox = screen.getByRole('searchbox', { name: '搜索角色' })
+
+  await user.tab()
+  expect(searchbox).toHaveFocus()
+  await user.type(searchbox, 'Acrid')
+
+  for (const label of ['全部', '本体', 'SOTV', 'SOTS', 'AC', '特殊']) {
+    await user.tab()
+    const filterButton = screen.getByRole('button', { name: label })
+    expect(filterButton).toHaveFocus()
+
+    if (label === '本体') {
+      await user.keyboard('{Enter}')
+      expect(filterButton).toHaveAttribute('aria-pressed', 'true')
+      expect(screen.getByRole('status')).toHaveTextContent('找到 1 名角色')
+    }
+  }
+
+  await user.tab()
+  const resetButton = screen.getByRole('button', { name: '重置搜索和筛选' })
+  expect(resetButton).toHaveFocus()
+  await user.keyboard('{Enter}')
+
+  expect(searchbox).toHaveValue('')
+  expect(screen.getByRole('button', { name: '全部' })).toHaveAttribute(
+    'aria-pressed',
+    'true',
+  )
+
+  await user.tab()
+  expect(searchbox).toHaveFocus()
+  for (const label of ['全部', '本体', 'SOTV', 'SOTS', 'AC', '特殊']) {
+    await user.tab()
+    expect(screen.getByRole('button', { name: label })).toHaveFocus()
+  }
+
+  await user.tab()
+  const firstCardLink = screen.getByRole('link', { name: /突击队员.*Commando/ })
+  expect(firstCardLink).toHaveFocus()
+  await user.keyboard('{Enter}')
+
+  expect(screen.getByText('已打开角色：commando')).toBeInTheDocument()
 })
