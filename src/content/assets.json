@@ -1,0 +1,1328 @@
+[
+  {
+    "localPath": "assets/items/lens-makers-glasses.png",
+    "wikiFile": "Lens-Maker's Glasses.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Lens-Maker%27s_Glasses.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/soldiers-syringe.png",
+    "wikiFile": "Soldier's Syringe.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Soldier%27s_Syringe.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/mocha.png",
+    "wikiFile": "Mocha.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Mocha.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/pauls-goat-hoof.png",
+    "wikiFile": "Paul's Goat Hoof.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Paul%27s_Goat_Hoof.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/energy-drink.png",
+    "wikiFile": "Energy Drink.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Energy_Drink.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/tougher-times.png",
+    "wikiFile": "Tougher Times.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Tougher_Times.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/bustling-fungus.png",
+    "wikiFile": "Bustling Fungus.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Bustling_Fungus.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/crowbar.png",
+    "wikiFile": "Crowbar.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Crowbar.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/tri-tip-dagger.png",
+    "wikiFile": "Tri-Tip Dagger.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Tri-Tip_Dagger.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/cautious-slug.png",
+    "wikiFile": "Cautious Slug.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Cautious_Slug.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/gasoline.png",
+    "wikiFile": "Gasoline.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Gasoline.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/backup-magazine.png",
+    "wikiFile": "Backup Magazine.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Backup_Magazine.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/armor-piercing-rounds.png",
+    "wikiFile": "Armor-Piercing Rounds.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Armor-Piercing_Rounds.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/topaz-brooch.png",
+    "wikiFile": "Topaz Brooch.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Topaz_Brooch.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/focus-crystal.png",
+    "wikiFile": "Focus Crystal.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Focus_Crystal.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/oddly-shaped-opal.png",
+    "wikiFile": "Oddly-shaped Opal.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Oddly-shaped_Opal.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/delicate-watch.png",
+    "wikiFile": "Delicate Watch.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Delicate_Watch.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/rusted-key.png",
+    "wikiFile": "Rusted Key.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Rusted_Key.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/item-scrap-white.png",
+    "wikiFile": "Item Scrap, White.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Item_Scrap,_White.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/atg-missile-mk-1.png",
+    "wikiFile": "AtG Missile Mk. 1.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:AtG_Missile_Mk._1.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/ukulele.png",
+    "wikiFile": "Ukulele.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Ukulele.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/hopoo-feather.png",
+    "wikiFile": "Hopoo Feather.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Hopoo_Feather.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/kjaro-band.png",
+    "wikiFile": "Kjaro's Band.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Kjaro%27s_Band.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/runald-band.png",
+    "wikiFile": "Runald's Band.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Runald%27s_Band.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/will-o-the-wisp.png",
+    "wikiFile": "Will-o'-the-wisp.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Will-o%27-the-wisp.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/wax-quail.png",
+    "wikiFile": "Wax Quail.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Wax_Quail.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/shuriken.png",
+    "wikiFile": "Shuriken.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Shuriken.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/predatory-instincts.png",
+    "wikiFile": "Predatory Instincts.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Predatory_Instincts.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/harvesters-scythe.png",
+    "wikiFile": "Harvester's Scythe.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Harvester%27s_Scythe.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/fuel-cell.png",
+    "wikiFile": "Fuel Cell.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Fuel_Cell.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/rose-buckler.png",
+    "wikiFile": "Rose Buckler.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Rose_Buckler.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/infusion.png",
+    "wikiFile": "Infusion.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Infusion.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/razorwire.png",
+    "wikiFile": "Razorwire.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Razorwire.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/chronobauble.png",
+    "wikiFile": "Chronobauble.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Chronobauble.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/death-mark.png",
+    "wikiFile": "Death Mark.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Death_Mark.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/old-guillotine.png",
+    "wikiFile": "Old Guillotine.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Old_Guillotine.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/ignition-tank.png",
+    "wikiFile": "Ignition Tank.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Ignition_Tank.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/shipping-request-form.png",
+    "wikiFile": "Shipping Request Form.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Shipping_Request_Form.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/box-of-dynamite.png",
+    "wikiFile": "Box of Dynamite.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Box_of_Dynamite.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/collectors-compulsion.png",
+    "wikiFile": "Collector's Compulsion.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Collector%27s_Compulsion.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/item-scrap-green.png",
+    "wikiFile": "Item Scrap, Green.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Item_Scrap,_Green.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/brilliant-behemoth.png",
+    "wikiFile": "Brilliant Behemoth.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Brilliant_Behemoth.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/57-leaf-clover.png",
+    "wikiFile": "57 Leaf Clover.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:57_Leaf_Clover.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/alien-head.png",
+    "wikiFile": "Alien Head.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Alien_Head.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/hardlight-afterburner.png",
+    "wikiFile": "Hardlight Afterburner.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Hardlight_Afterburner.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/h3ad-5t-v2.png",
+    "wikiFile": "H3AD-5T v2.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:H3AD-5T_v2.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/soulbound-catalyst.png",
+    "wikiFile": "Soulbound Catalyst.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Soulbound_Catalyst.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/spare-drone-parts.png",
+    "wikiFile": "Spare Drone Parts.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Spare_Drone_Parts.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/dios-best-friend.png",
+    "wikiFile": "Dio's Best Friend.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Dio%27s_Best_Friend.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/rejuvenation-rack.png",
+    "wikiFile": "Rejuvenation Rack.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Rejuvenation_Rack.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/laser-scope.png",
+    "wikiFile": "Laser Scope.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Laser_Scope.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/sentient-meat-hook.png",
+    "wikiFile": "Sentient Meat Hook.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Sentient_Meat_Hook.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/ceremonial-dagger.png",
+    "wikiFile": "Ceremonial Dagger.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Ceremonial_Dagger.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/frost-relic.png",
+    "wikiFile": "Frost Relic.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Frost_Relic.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/aegis.png",
+    "wikiFile": "Aegis.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Aegis.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/symbiotic-scorpion.png",
+    "wikiFile": "Symbiotic Scorpion.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Symbiotic_Scorpion.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/pocket-icbm.png",
+    "wikiFile": "Pocket I.C.B.M..png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Pocket_I.C.B.M..png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/bens-raincoat.png",
+    "wikiFile": "Ben's Raincoat.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Ben%27s_Raincoat.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/orphaned-core.png",
+    "wikiFile": "Orphaned Core.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Orphaned_Core.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/substandard-duplicator.png",
+    "wikiFile": "Substandard Duplicator.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Substandard_Duplicator.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/defensive-microbots.png",
+    "wikiFile": "Defensive Microbots.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Defensive_Microbots.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/item-scrap-red.png",
+    "wikiFile": "Item Scrap, Red.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Item_Scrap,_Red.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/titanic-knurl.png",
+    "wikiFile": "Titanic Knurl.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Titanic_Knurl.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/queens-gland.png",
+    "wikiFile": "Queen's Gland.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Queen%27s_Gland.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/genesis-loop.png",
+    "wikiFile": "Genesis Loop.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Genesis_Loop.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/little-disciple.png",
+    "wikiFile": "Little Disciple.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Little_Disciple.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/molten-perforator.png",
+    "wikiFile": "Molten Perforator.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Molten_Perforator.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/charged-perforator.png",
+    "wikiFile": "Charged Perforator.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Charged_Perforator.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/mired-urn.png",
+    "wikiFile": "Mired Urn.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Mired_Urn.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/shatterspleen.png",
+    "wikiFile": "Shatterspleen.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Shatterspleen.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/empathy-cores.png",
+    "wikiFile": "Empathy Cores.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Empathy_Cores.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/defense-nucleus.png",
+    "wikiFile": "Defense Nucleus.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Defense_Nucleus.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/item-scrap-yellow.png",
+    "wikiFile": "Item Scrap, Yellow.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Item_Scrap,_Yellow.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/royal-capacitor.png",
+    "wikiFile": "Royal Capacitor.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Royal_Capacitor.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/disposable-missile-launcher.png",
+    "wikiFile": "Disposable Missile Launcher.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Disposable_Missile_Launcher.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/recycler.png",
+    "wikiFile": "Recycler.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Recycler.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/executive-card.png",
+    "wikiFile": "Executive Card.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Executive_Card.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/gorags-opus.png",
+    "wikiFile": "Gorag's Opus.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Gorag%27s_Opus.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/ocular-hud.png",
+    "wikiFile": "Ocular HUD.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Ocular_HUD.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/preon-accumulator.png",
+    "wikiFile": "Preon Accumulator.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Preon_Accumulator.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/the-back-up.png",
+    "wikiFile": "The Back-up.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:The_Back-up.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/super-massive-leech.png",
+    "wikiFile": "Super Massive Leech.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Super_Massive_Leech.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/forgive-me-please.png",
+    "wikiFile": "Forgive Me Please.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Forgive_Me_Please.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/deus-ex-machina.png",
+    "wikiFile": "Deus Ex Machina.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Deus_Ex_Machina.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/gesture-of-the-drowned.png",
+    "wikiFile": "Gesture of the Drowned.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Gesture_of_the_Drowned.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/spinel-tonic.png",
+    "wikiFile": "Spinel Tonic.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Spinel_Tonic.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/shaped-glass.png",
+    "wikiFile": "Shaped Glass.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Shaped_Glass.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/transcendence.png",
+    "wikiFile": "Transcendence.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Transcendence.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/purity.png",
+    "wikiFile": "Purity.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Purity.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/light-flux-pauldron.png",
+    "wikiFile": "Light Flux Pauldron.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Light_Flux_Pauldron.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/corpsebloom.png",
+    "wikiFile": "Corpsebloom.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Corpsebloom.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/brittle-crown.png",
+    "wikiFile": "Brittle Crown.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Brittle_Crown.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/focused-convergence.png",
+    "wikiFile": "Focused Convergence.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Focused_Convergence.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/neutronium-weight.png",
+    "wikiFile": "Neutronium Weight.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Neutronium_Weight.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/visions-of-heresy.png",
+    "wikiFile": "Visions of Heresy.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Visions_of_Heresy.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/hooks-of-heresy.png",
+    "wikiFile": "Hooks of Heresy.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Hooks_of_Heresy.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/strides-of-heresy.png",
+    "wikiFile": "Strides of Heresy.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Strides_of_Heresy.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/essence-of-heresy.png",
+    "wikiFile": "Essence of Heresy.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Essence_of_Heresy.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/needletick.png",
+    "wikiFile": "Needletick.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Needletick.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/lost-seers-lenses.png",
+    "wikiFile": "Lost Seer's Lenses.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Lost_Seer%27s_Lenses.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/weeping-fungus.png",
+    "wikiFile": "Weeping Fungus.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Weeping_Fungus.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/safer-spaces.png",
+    "wikiFile": "Safer Spaces.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Safer_Spaces.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/encrusted-key.png",
+    "wikiFile": "Encrusted Key.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Encrusted_Key.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/polylute.png",
+    "wikiFile": "Polylute.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Polylute.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/plasma-shrimp.png",
+    "wikiFile": "Plasma Shrimp.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Plasma_Shrimp.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/tentabauble.png",
+    "wikiFile": "Tentabauble.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Tentabauble.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/voidsent-flame.png",
+    "wikiFile": "Voidsent Flame.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Voidsent_Flame.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/lysate-cell.png",
+    "wikiFile": "Lysate Cell.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Lysate_Cell.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/benthic-bloom.png",
+    "wikiFile": "Benthic Bloom.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Benthic_Bloom.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/items/pluripotent-larva.png",
+    "wikiFile": "Pluripotent Larva.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Pluripotent_Larva.png",
+    "kind": "item"
+  },
+  {
+    "localPath": "assets/survivors/commando.png",
+    "wikiFile": "Commando.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Commando.png",
+    "kind": "survivor"
+  },
+  {
+    "localPath": "assets/survivors/huntress.png",
+    "wikiFile": "Huntress.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Huntress.png",
+    "kind": "survivor"
+  },
+  {
+    "localPath": "assets/survivors/bandit.png",
+    "wikiFile": "Bandit.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Bandit.png",
+    "kind": "survivor"
+  },
+  {
+    "localPath": "assets/survivors/mul-t.png",
+    "wikiFile": "MUL-T.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:MUL-T.png",
+    "kind": "survivor"
+  },
+  {
+    "localPath": "assets/survivors/engineer.png",
+    "wikiFile": "Engineer.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Engineer.png",
+    "kind": "survivor"
+  },
+  {
+    "localPath": "assets/survivors/artificer.png",
+    "wikiFile": "Artificer.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Artificer.png",
+    "kind": "survivor"
+  },
+  {
+    "localPath": "assets/survivors/mercenary.png",
+    "wikiFile": "Mercenary.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Mercenary.png",
+    "kind": "survivor"
+  },
+  {
+    "localPath": "assets/survivors/rex.png",
+    "wikiFile": "REX.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:REX.png",
+    "kind": "survivor"
+  },
+  {
+    "localPath": "assets/survivors/loader.png",
+    "wikiFile": "Loader.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Loader.png",
+    "kind": "survivor"
+  },
+  {
+    "localPath": "assets/survivors/acrid.png",
+    "wikiFile": "Acrid.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Acrid.png",
+    "kind": "survivor"
+  },
+  {
+    "localPath": "assets/survivors/captain.png",
+    "wikiFile": "Captain.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Captain.png",
+    "kind": "survivor"
+  },
+  {
+    "localPath": "assets/survivors/railgunner.png",
+    "wikiFile": "Railgunner.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Railgunner.png",
+    "kind": "survivor"
+  },
+  {
+    "localPath": "assets/survivors/void-fiend.png",
+    "wikiFile": "Void Fiend.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Void_Fiend.png",
+    "kind": "survivor"
+  },
+  {
+    "localPath": "assets/survivors/seeker.png",
+    "wikiFile": "Seeker.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Seeker.png",
+    "kind": "survivor"
+  },
+  {
+    "localPath": "assets/survivors/chef.png",
+    "wikiFile": "CHEF.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:CHEF.png",
+    "kind": "survivor"
+  },
+  {
+    "localPath": "assets/survivors/false-son.png",
+    "wikiFile": "False Son.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:False_Son.png",
+    "kind": "survivor"
+  },
+  {
+    "localPath": "assets/survivors/operator.png",
+    "wikiFile": "Operator.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Operator.png",
+    "kind": "survivor"
+  },
+  {
+    "localPath": "assets/survivors/drifter.png",
+    "wikiFile": "Drifter.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Drifter.png",
+    "kind": "survivor"
+  },
+  {
+    "localPath": "assets/survivors/heretic.png",
+    "wikiFile": "Heretic.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Heretic.png",
+    "kind": "survivor"
+  },
+  {
+    "localPath": "assets/skills/commando/double-tap.png",
+    "wikiFile": "Double Tap.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Double_Tap.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/commando/phase-blast.png",
+    "wikiFile": "Phase Blast.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Phase_Blast.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/commando/tactical-slide.png",
+    "wikiFile": "Tactical Slide.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Tactical_Slide.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/commando/suppressive-fire.png",
+    "wikiFile": "Suppressive Fire.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Suppressive_Fire.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/huntress/strafe.png",
+    "wikiFile": "Strafe.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Strafe.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/huntress/laser-glaive.png",
+    "wikiFile": "Laser Glaive.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Laser_Glaive.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/huntress/blink.png",
+    "wikiFile": "Blink.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Blink.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/huntress/ballista.png",
+    "wikiFile": "Ballista.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Ballista.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/bandit/backstab.png",
+    "wikiFile": "Backstab.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Backstab.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/bandit/burst.png",
+    "wikiFile": "Burst.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Burst.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/bandit/serrated-shiv.png",
+    "wikiFile": "Serrated Shiv.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Serrated_Shiv.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/bandit/smoke-bomb.png",
+    "wikiFile": "Smoke Bomb.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Smoke_Bomb.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/bandit/desperado.png",
+    "wikiFile": "Desperado.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Desperado.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/mul-t/rebar-puncher.png",
+    "wikiFile": "Rebar Puncher.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Rebar_Puncher.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/mul-t/blast-canister.png",
+    "wikiFile": "Blast Canister.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Blast_Canister.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/mul-t/transport-mode.png",
+    "wikiFile": "Transport Mode.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Transport_Mode.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/mul-t/retool.png",
+    "wikiFile": "Retool.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Retool.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/engineer/bouncing-grenades.png",
+    "wikiFile": "Bouncing Grenades.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Bouncing_Grenades.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/engineer/spider-mines.png",
+    "wikiFile": "Spider Mines.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Spider_Mines.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/engineer/bubble-shield.png",
+    "wikiFile": "Bubble Shield.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Bubble_Shield.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/engineer/tr12-gauss-auto-turret.png",
+    "wikiFile": "TR12 Gauss Auto-Turret.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:TR12_Gauss_Auto-Turret.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/artificer/env-suit.png",
+    "wikiFile": "ENV Suit.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:ENV_Suit.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/artificer/flame-bolt.png",
+    "wikiFile": "Flame Bolt.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Flame_Bolt.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/artificer/cast-nano-spear.png",
+    "wikiFile": "Cast Nano-Spear.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Cast_Nano-Spear.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/artificer/snapfreeze.png",
+    "wikiFile": "Snapfreeze.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Snapfreeze.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/artificer/ion-surge.png",
+    "wikiFile": "Ion Surge.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Ion_Surge.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/mercenary/cybernetic-enhancements.png",
+    "wikiFile": "Cybernetic Enhancements.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Cybernetic_Enhancements.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/mercenary/laser-sword.png",
+    "wikiFile": "Laser Sword.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Laser_Sword.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/mercenary/whirlwind.png",
+    "wikiFile": "Whirlwind.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Whirlwind.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/mercenary/blinding-assault.png",
+    "wikiFile": "Blinding Assault.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Blinding_Assault.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/mercenary/eviscerate.png",
+    "wikiFile": "Eviscerate.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Eviscerate.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/rex/natural-toxins.png",
+    "wikiFile": "Natural Toxins.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Natural_Toxins.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/rex/directive-inject.png",
+    "wikiFile": "DIRECTIVE Inject.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:DIRECTIVE_Inject.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/rex/directive-drill.png",
+    "wikiFile": "DIRECTIVE Drill.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:DIRECTIVE_Drill.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/rex/directive-disperse.png",
+    "wikiFile": "DIRECTIVE Disperse.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:DIRECTIVE_Disperse.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/rex/tangling-growth.png",
+    "wikiFile": "Tangling Growth.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Tangling_Growth.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/loader/scrap-barrier.png",
+    "wikiFile": "Scrap Barrier.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Scrap_Barrier.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/loader/knuckleboom.png",
+    "wikiFile": "Knuckleboom.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Knuckleboom.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/loader/spiked-fist.png",
+    "wikiFile": "Spiked Fist.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Spiked_Fist.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/loader/charged-gauntlet.png",
+    "wikiFile": "Charged Gauntlet.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Charged_Gauntlet.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/loader/thunderslam.png",
+    "wikiFile": "Thunderslam.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Thunderslam.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/acrid/poison.png",
+    "wikiFile": "Poison.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Poison.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/acrid/vicious-wounds.png",
+    "wikiFile": "Vicious Wounds.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Vicious_Wounds.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/acrid/neurotoxin.png",
+    "wikiFile": "Neurotoxin.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Neurotoxin.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/acrid/caustic-leap.png",
+    "wikiFile": "Caustic Leap.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Caustic_Leap.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/acrid/epidemic.png",
+    "wikiFile": "Epidemic.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Epidemic.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/captain/defensive-microbots.png",
+    "wikiFile": "Defensive Microbots (Skill).png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Defensive_Microbots_(Skill).png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/captain/vulcan-shotgun.png",
+    "wikiFile": "Vulcan Shotgun.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Vulcan_Shotgun.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/captain/power-tazer.png",
+    "wikiFile": "Power Tazer.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Power_Tazer.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/captain/orbital-probe.png",
+    "wikiFile": "Orbital Probe.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Orbital_Probe.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/captain/beacon-hacking.png",
+    "wikiFile": "Beacon Hacking.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Beacon_Hacking.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/railgunner/magnetic-accelerator.png",
+    "wikiFile": "Magnetic Accelerator.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Magnetic_Accelerator.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/railgunner/xqr-smart-round-system.png",
+    "wikiFile": "XQR Smart Round System.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:XQR_Smart_Round_System.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/railgunner/m99-sniper.png",
+    "wikiFile": "M99 Sniper.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:M99_Sniper.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/railgunner/concussion-device.png",
+    "wikiFile": "Concussion Device.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Concussion_Device.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/railgunner/cryocharge.png",
+    "wikiFile": "Cryocharge.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Cryocharge.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/void-fiend/void-corruption.png",
+    "wikiFile": "Void Corruption.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Void_Corruption.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/void-fiend/drown.png",
+    "wikiFile": "Drown.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Drown.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/void-fiend/flood.png",
+    "wikiFile": "Flood.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Flood.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/void-fiend/trespass.png",
+    "wikiFile": "Trespass.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Trespass.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/void-fiend/suppress.png",
+    "wikiFile": "Suppress.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Suppress.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/seeker/inner-strength.png",
+    "wikiFile": "Inner Strength.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Inner_Strength.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/seeker/spirit-punch.png",
+    "wikiFile": "Spirit Punch.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Spirit_Punch.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/seeker/soul-spiral.png",
+    "wikiFile": "Soul Spiral.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Soul_Spiral.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/seeker/reprieve.png",
+    "wikiFile": "Reprieve.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Reprieve.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/seeker/meditate.png",
+    "wikiFile": "Meditate.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Meditate.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/chef/chef-s-kiss.png",
+    "wikiFile": "CHEF's Kiss.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:CHEF%27s_Kiss.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/chef/dice.png",
+    "wikiFile": "Dice.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Dice.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/chef/sear.png",
+    "wikiFile": "Sear.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Sear.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/chef/roll.png",
+    "wikiFile": "Roll.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Roll.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/chef/glaze.png",
+    "wikiFile": "Glaze.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Glaze.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/false-son/lunar-tampering.png",
+    "wikiFile": "Lunar Tampering.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Lunar_Tampering.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/false-son/club-of-the-forsaken.png",
+    "wikiFile": "Club of the Forsaken.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Club_of_the_Forsaken.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/false-son/lunar-spikes.png",
+    "wikiFile": "Lunar Spikes.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Lunar_Spikes.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/false-son/meridian-s-will.png",
+    "wikiFile": "Meridian's Will.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Meridian%27s_Will.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/false-son/laser-burst.png",
+    "wikiFile": "Laser Burst.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Laser_Burst.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/operator/drone-tech.png",
+    "wikiFile": "Drone Tech.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Drone_Tech.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/operator/gunner-drone-mk-2.png",
+    "wikiFile": "Gunner Drone Mk 2.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Gunner_Drone_Mk_2.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/operator/healing-drone-mk-2.png",
+    "wikiFile": "Healing Drone Mk 2.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Healing_Drone_Mk_2.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/operator/h3-11-ocr-custom.png",
+    "wikiFile": "H3-11 OCR Custom.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:H3-11_OCR_Custom.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/operator/admin-override.png",
+    "wikiFile": "ADMIN-OVERRIDE.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:ADMIN-OVERRIDE.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/operator/ascent-protocol.png",
+    "wikiFile": "Ascent Protocol.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Ascent_Protocol.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/operator/ejection-core.png",
+    "wikiFile": "Ejection Core.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Ejection_Core.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/drifter/trash-to-treasure.png",
+    "wikiFile": "Trash to Treasure.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Trash_to_Treasure.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/drifter/blunt-force.png",
+    "wikiFile": "Blunt Force.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Blunt_Force.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/drifter/junk-cube.png",
+    "wikiFile": "Junk Cube.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Junk_Cube.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/drifter/tornado-slam.png",
+    "wikiFile": "Tornado Slam.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Tornado_Slam.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/drifter/tinker.png",
+    "wikiFile": "Tinker.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Tinker.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/heretic/hungering-gaze.png",
+    "wikiFile": "Hungering Gaze.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Hungering_Gaze.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/heretic/slicing-maelstrom.png",
+    "wikiFile": "Slicing Maelstrom.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Slicing_Maelstrom.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/heretic/shadowfade.png",
+    "wikiFile": "Shadowfade.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Shadowfade.png",
+    "kind": "skill"
+  },
+  {
+    "localPath": "assets/skills/heretic/ruin.png",
+    "wikiFile": "Ruin.png",
+    "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Ruin.png",
+    "kind": "skill"
+  }
+]
