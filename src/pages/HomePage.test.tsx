@@ -36,13 +36,14 @@ function renderHomePageWithRouteProbe() {
 test('introduces the guide and reports the full survivor roster', () => {
   renderHomePage()
 
+  const title = screen.getByRole('heading', { name: '雨中冒险 2 全角色构筑' })
+  const header = title.closest('header')
+  expect(title).toBeInTheDocument()
+  expect(header).not.toBeNull()
   expect(
-    screen.getByRole('heading', { name: '雨中冒险 2 全角色构筑' }),
+    within(header!).getByText(/按中文名或英文名搜索角色/),
   ).toBeInTheDocument()
-  expect(
-    screen.getByText(/按中文名或英文名搜索角色/),
-  ).toBeInTheDocument()
-  expect(screen.getByText('最后核对：2026-08-25')).toBeInTheDocument()
+  expect(within(header!).getByText('最后核对：2026-08-25')).toBeInTheDocument()
   expect(screen.getByRole('status')).toHaveTextContent('找到 19 名角色')
 })
 

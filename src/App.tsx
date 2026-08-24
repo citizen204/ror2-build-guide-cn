@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
+import { SiteFooter } from './components/SiteFooter'
 import { HomePage } from './pages/HomePage'
 import { NotFoundPage } from './pages/NotFoundPage'
 import { SurvivorPage } from './pages/SurvivorPage'
@@ -26,6 +27,7 @@ function App() {
         <Route path="/survivors/:slug" element={<SurvivorPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
+      <SiteFooter />
     </>
   )
 }

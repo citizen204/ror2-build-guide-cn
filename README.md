@@ -1,0 +1,52 @@
+# 雨中冒险 2 全角色中文构筑攻略
+
+这是一个只读的《雨中冒险 2》中文粉丝攻略站。它覆盖 18 名可选角色与异端（Heretic）特殊变身，集中说明推荐技能、物品作用与件数、单人和联机调整、统率神器路线、虚空与月球物品，以及常见战斗场景。
+
+当前内容核对日期为 2026-08-25，适用范围包括：
+
+- 本体（Base）
+- Survivors of the Void（SOTV）
+- Seekers of the Storm（SOTS）
+- Alloyed Collective（AC）
+
+Hallowed Concepts 尚未纳入已发布攻略范围。
+
+## 本地开发与检查
+
+需要符合 `package.json` 中 `engines` 要求的 Node.js 和 npm。
+
+```bash
+npm install
+npm run dev
+```
+
+提交前运行：
+
+```bash
+npm run assets:check
+npm run check
+```
+
+也可以分别运行 `npm run test` 和 `npm run build`。Vite 的生产基础路径已经设为 `/ror2-build-guide-cn/`。
+
+## 更新攻略内容
+
+1. 在 `src/content/survivors/` 中更新对应 DLC 的角色资料。角色顺序由 `src/content/survivors/index.ts` 统一维护。
+2. 新增或修改物品时同步更新 `src/content/items.ts`，所有攻略引用都使用物品 ID，并由领域校验拦截未知引用。
+3. 在 `src/content/sources.ts` 中登记直接资料链接和核对日期，并在角色资料中引用对应的来源 ID。
+4. 更新角色、技能或物品图标时，先修改 `src/content/assets.json` 中的本地路径与 wiki.gg 文件来源，再运行 `npm run assets:update`。不要直接替换 `public/assets/` 中的文件。
+5. 运行 `npm run assets:check` 和 `npm run check`，确认资源哈希、内容结构、测试和生产构建全部通过。
+
+## 资料、素材与声明
+
+攻略结论参考官方 Steam 商店、官方更新公告和 [Risk of Rain 2 Wiki](https://riskofrain2.wiki.gg/wiki/Risk_of_Rain_2_Wiki)。主要直接来源记录在 `src/content/sources.ts`。
+
+角色、技能和物品图标取自 Risk of Rain 2 Wiki 的对应文件页。`src/content/assets.json` 为每个本地 PNG 保存原文件名、直接来源页、文件大小和 SHA-256。游戏名称与图像的权利及许可归各权利方；本仓库不对这些素材作再授权，复用前请查阅对应文件来源页的权利与许可说明。
+
+本项目是公开的非官方粉丝攻略，与《雨中冒险 2》的开发商、发行商及平台方没有隶属、赞助或认可关系。仓库当前标记为 `UNLICENSED`，未另行授予站点代码或攻略文字的复用许可。
+
+## GitHub Pages
+
+计划发布地址：<https://citizen204.github.io/ror2-build-guide-cn/>
+
+项目使用 Vite 的仓库子路径和 `HashRouter`，适合发布到 GitHub Pages。部署时应在 GitHub Actions 中安装锁定依赖、运行 `npm run check`、上传 `dist/`，再使用官方 Pages action 发布。本仓库目前只包含构建配置和说明，不会从本地命令自动发布。

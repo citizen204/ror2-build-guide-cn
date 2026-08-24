@@ -62,7 +62,8 @@ describe('complete survivor guide route', () => {
     expect(screen.getByText('操作难度：3 / 5')).toBeInTheDocument()
     expect(screen.getByText(/Poison 本身不能击杀，因此收尾能力比堆近战更关键/)).toBeInTheDocument()
 
-    expect(screen.getAllByRole('heading', { level: 2 }).map((heading) => heading.textContent)).toEqual([
+    const guide = screen.getByRole('article', { name: '呛鼻毒师完整构筑攻略' })
+    expect(within(guide).getAllByRole('heading', { level: 2 }).map((heading) => heading.textContent)).toEqual([
       '推荐技能',
       '构筑逻辑',
       '单人构筑',
@@ -297,7 +298,9 @@ describe('complete survivor guide route', () => {
     for (const slug of EXPECTED_SURVIVOR_SLUGS) {
       const view = renderRoute(`/survivors/${slug}`)
       expect(screen.getByRole('main')).toBeInTheDocument()
-      expect(screen.getAllByRole('heading', { level: 2 })).toHaveLength(8)
+      expect(
+        within(screen.getByRole('article')).getAllByRole('heading', { level: 2 }),
+      ).toHaveLength(8)
       view.unmount()
     }
   })
