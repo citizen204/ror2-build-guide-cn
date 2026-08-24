@@ -1,6 +1,6 @@
 import { cleanup, render, screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { MemoryRouter } from 'react-router-dom'
+import { MemoryRouter, useLocation } from 'react-router-dom'
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
 import App from '../App'
 import { ItemGroup } from '../components/ItemGroup'
@@ -23,8 +23,15 @@ function renderRoute(path: string) {
   return render(
     <MemoryRouter initialEntries={[path]}>
       <App />
+      <LocationProbe />
     </MemoryRouter>,
   )
+}
+
+function LocationProbe() {
+  const { pathname } = useLocation()
+
+  return <output data-testid="location-path">{pathname}</output>
 }
 
 function expectedAsset(path: string) {
@@ -261,6 +268,31 @@ describe('complete survivor guide route', () => {
     })
   })
 
+  test('resets scroll and focuses the home title from the bottom survivor navigation', async () => {
+    const user = userEvent.setup()
+    const focus = vi.spyOn(HTMLElement.prototype, 'focus')
+    renderRoute('/survivors/acrid')
+
+    await user.click(screen.getByRole('button', { name: '前往打法速记' }))
+    expect(document.activeElement).toBe(
+      screen.getByRole('heading', { level: 2, name: '打法速记' }),
+    )
+    scrollTo.mockClear()
+    focus.mockClear()
+
+    await user.click(screen.getByRole('link', { name: '返回角色首页' }))
+
+    const heading = await screen.findByRole('heading', { level: 1, name: '雨中冒险 2 全角色构筑' })
+    expect(screen.getByTestId('location-path')).toHaveTextContent('/')
+    await waitFor(() => {
+      expect(scrollTo).toHaveBeenCalledWith({ top: 0, left: 0, behavior: 'instant' })
+      expect(heading).toHaveAttribute('data-page-title')
+      expect(heading).toHaveAttribute('tabindex', '-1')
+      expect(focus).toHaveBeenCalledWith({ preventScroll: true })
+      expect(document.activeElement).toBe(heading)
+    })
+  })
+
   test('renders every canonical survivor route from the shared guide data', () => {
     for (const slug of EXPECTED_SURVIVOR_SLUGS) {
       const view = renderRoute(`/survivors/${slug}`)
@@ -278,6 +310,20 @@ describe('guide route failure states', () => {
     expect(screen.getByRole('heading', { level: 1, name: '没有找到这份角色攻略' })).toBeInTheDocument()
     expect(screen.getByText(/链接可能已经失效/)).toBeInTheDocument()
     expect(screen.getByRole('link', { name: '返回角色首页' })).toHaveAttribute('href', '/')
+  })
+
+  test('resets scroll and focuses the NotFound title on wildcard navigation', async () => {
+    const focus = vi.spyOn(HTMLElement.prototype, 'focus')
+    renderRoute('/missing')
+
+    const heading = screen.getByRole('heading', { level: 1, name: '没有找到这份角色攻略' })
+    await waitFor(() => {
+      expect(scrollTo).toHaveBeenCalledWith({ top: 0, left: 0, behavior: 'instant' })
+      expect(heading).toHaveAttribute('data-page-title')
+      expect(heading).toHaveAttribute('tabindex', '-1')
+      expect(focus).toHaveBeenCalledWith({ preventScroll: true })
+      expect(document.activeElement).toBe(heading)
+    })
   })
 
   test('does not silently hide an unknown item reference', () => {

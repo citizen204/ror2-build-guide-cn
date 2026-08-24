@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { GuideSection } from '../components/GuideSection'
 import { ItemGroup } from '../components/ItemGroup'
@@ -98,7 +97,7 @@ function SurvivorIdentity({ guide }: { guide: SurvivorGuide }) {
         />
       </div>
       <div className="survivor-identity__content">
-        <h1 id="guide-top" tabIndex={-1}>
+        <h1 id="guide-top" data-page-title="" tabIndex={-1}>
           <span>{guide.nameZh}</span>{' '}
           <span lang="en">{guide.nameEn}</span>
         </h1>
@@ -170,13 +169,6 @@ export function SurvivorPage() {
   const { slug } = useParams()
   const guideIndex = survivors.findIndex((candidate) => candidate.slug === slug)
   const guide = survivors[guideIndex]
-
-  useEffect(() => {
-    if (!guide) return
-
-    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
-    document.getElementById('guide-top')?.focus({ preventScroll: true })
-  }, [slug])
 
   if (!guide) return <NotFoundPage />
 
