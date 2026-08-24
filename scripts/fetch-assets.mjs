@@ -9,6 +9,7 @@ const RETRY_DELAYS_MS = [500, 1_000, 2_000]
 const REQUEST_TIMEOUT_MS = 15_000
 const MAX_RETRY_AFTER_MS = 10_000
 const MAX_PNG_BYTES = 5 * 1024 * 1024 // Game icons are tiny; 5 MiB bounds corrupt or hostile responses.
+const MAX_API_JSON_BYTES = 1 * 1024 * 1024 // A 40-file MediaWiki batch is small; 1 MiB bounds malformed responses.
 const API_BATCH_SIZE = 40
 const PNG_SIGNATURE = Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a])
 const scriptDirectory = dirname(fileURLToPath(import.meta.url))
@@ -87,15 +88,7 @@ export async function fetchWithRetry(url, label, options = {}) {
   throw new Error(`${label} exhausted retries`)
 }
 
-export async function readPngResponse(response, label, options = {}) {
-  const maxBytes = options.maxBytes ?? MAX_PNG_BYTES
-  const minBytes = options.minBytes ?? 200
-  const contentType = response.headers?.get?.('content-type') ?? ''
-  if (!contentType.toLowerCase().startsWith('image/png')) {
-    await cancelResponseBody(response)
-    throw new Error(`${label} returned unexpected content type: ${contentType}`)
-  }
-
+async function readBoundedResponseBytes(response, label, maxBytes) {
   const declaredLengthHeader = response.headers?.get?.('content-length')
   const declaredLength = declaredLengthHeader === null || declaredLengthHeader === undefined
     ? undefined
@@ -108,7 +101,10 @@ export async function readPngResponse(response, label, options = {}) {
     await cancelResponseBody(response)
     throw new Error(`${label} declared Content-Length ${declaredLength} exceeds ${maxBytes} bytes`)
   }
-  if (!response.body?.getReader) throw new Error(`${label} returned no readable body`)
+  if (!response.body?.getReader) {
+    await cancelResponseBody(response)
+    throw new Error(`${label} returned no readable body`)
+  }
 
   const reader = response.body.getReader()
   const chunks = []
@@ -128,12 +124,36 @@ export async function readPngResponse(response, label, options = {}) {
     throw new Error(`${label} body length ${totalBytes} does not match Content-Length ${declaredLength}`)
   }
 
-  const bytes = Buffer.concat(chunks, totalBytes)
+  return Buffer.concat(chunks, totalBytes)
+}
+
+export async function readPngResponse(response, label, options = {}) {
+  const maxBytes = options.maxBytes ?? MAX_PNG_BYTES
+  const minBytes = options.minBytes ?? 200
+  const contentType = response.headers?.get?.('content-type') ?? ''
+  if (!contentType.toLowerCase().startsWith('image/png')) {
+    await cancelResponseBody(response)
+    throw new Error(`${label} returned unexpected content type: ${contentType}`)
+  }
+
+  const bytes = await readBoundedResponseBytes(response, label, maxBytes)
   if (bytes.length <= minBytes) throw new Error(`${label} is unexpectedly small (${bytes.length} bytes)`)
   if (!bytes.subarray(0, PNG_SIGNATURE.length).equals(PNG_SIGNATURE)) {
     throw new Error(`${label} did not return real PNG bytes`)
   }
   return bytes
+}
+
+export async function readJsonResponse(response, label, options = {}) {
+  const maxBytes = options.maxBytes ?? MAX_API_JSON_BYTES
+  const contentType = response.headers?.get?.('content-type') ?? ''
+  if (!contentType.toLowerCase().includes('json')) {
+    await cancelResponseBody(response)
+    throw new Error(`${label} returned unexpected content type: ${contentType}`)
+  }
+
+  const bytes = await readBoundedResponseBytes(response, label, maxBytes)
+  return JSON.parse(bytes.toString('utf8'))
 }
 
 export function resolveContainedAssetPath(root, localPath) {
@@ -274,11 +294,7 @@ async function resolveWikiBatch(assets) {
     origin: '*',
   })
   const result = await fetchWithRetry(`${WIKI_API}?${parameters}`, 'wiki.gg API', {
-    consume: async (response) => {
-      const contentType = response.headers.get('content-type') ?? ''
-      if (!contentType.includes('json')) throw new Error(`wiki.gg API returned unexpected content type: ${contentType}`)
-      return response.json()
-    },
+    consume: (response) => readJsonResponse(response, 'wiki.gg API'),
   })
   if (result.error) throw new Error(`wiki.gg API error: ${result.error.info ?? result.error.code}`)
 

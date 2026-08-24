@@ -245,6 +245,86 @@ describe('bounded PNG response consumption', () => {
   })
 })
 
+describe('bounded MediaWiki API JSON consumption', () => {
+  function jsonResponse(chunks: Buffer[], headers: Record<string, string> = {}) {
+    let index = 0
+    const cancel = vi.fn(async () => undefined)
+    return {
+      ok: true,
+      status: 200,
+      headers: { get: (name: string) => headers[name.toLowerCase()] ?? null },
+      body: {
+        cancel,
+        getReader: () => ({
+          read: vi.fn(async () => index < chunks.length
+            ? { done: false, value: chunks[index++] }
+            : { done: true, value: undefined }),
+          cancel,
+        }),
+      },
+    }
+  }
+
+  test('exports a bounded JSON reader', () => {
+    expect(typeof assetFetcher.readJsonResponse).toBe('function')
+  })
+
+  test('parses valid JSON within the API response ceiling', async () => {
+    if (typeof assetFetcher.readJsonResponse !== 'function') return
+    const bytes = Buffer.from('{"query":{"pages":{}}}')
+    const current = jsonResponse([bytes.subarray(0, 8), bytes.subarray(8)], {
+      'content-type': 'application/json; charset=utf-8',
+      'content-length': String(bytes.length),
+    })
+
+    await expect(assetFetcher.readJsonResponse(current, 'wiki.gg API', { maxBytes: 1_024 }))
+      .resolves.toEqual({ query: { pages: {} } })
+  })
+
+  test('rejects declared oversized API JSON without retrying', async () => {
+    if (typeof assetFetcher.readJsonResponse !== 'function') return
+    const current = jsonResponse([], {
+      'content-type': 'application/json',
+      'content-length': '11',
+    })
+    const fetchImplementation = vi.fn(async () => current)
+    const wait = vi.fn(async () => undefined)
+
+    await expect(fetchWithRetry('https://example.invalid/api.php', 'wiki.gg API', {
+      fetchImplementation,
+      wait,
+      consume: (response: ReturnType<typeof jsonResponse>) => assetFetcher.readJsonResponse(
+        response,
+        'wiki.gg API',
+        { maxBytes: 10 },
+      ),
+    })).rejects.toThrow('declared Content-Length 11 exceeds 10 bytes')
+    expect(fetchImplementation).toHaveBeenCalledOnce()
+    expect(wait).not.toHaveBeenCalled()
+  })
+
+  test('rejects streamed oversized API JSON without retrying', async () => {
+    if (typeof assetFetcher.readJsonResponse !== 'function') return
+    const current = jsonResponse([Buffer.alloc(6, 0x20), Buffer.alloc(5, 0x20)], {
+      'content-type': 'application/json',
+    })
+    const fetchImplementation = vi.fn(async () => current)
+    const wait = vi.fn(async () => undefined)
+
+    await expect(fetchWithRetry('https://example.invalid/api.php', 'wiki.gg API', {
+      fetchImplementation,
+      wait,
+      consume: (response: ReturnType<typeof jsonResponse>) => assetFetcher.readJsonResponse(
+        response,
+        'wiki.gg API',
+        { maxBytes: 10 },
+      ),
+    })).rejects.toThrow('streamed body exceeds 10 bytes')
+    expect(fetchImplementation).toHaveBeenCalledOnce()
+    expect(wait).not.toHaveBeenCalled()
+  })
+})
+
 describe('wiki redirect and filesystem containment boundaries', () => {
   test('exports redirect mapping and containment helpers', () => {
     expect(typeof assetFetcher.mapResolvedWikiAssets).toBe('function')
