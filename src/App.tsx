@@ -1,8 +1,13 @@
+import { Route, Routes } from 'react-router-dom'
+import { HomePage } from './pages/HomePage'
+import './styles/tokens.css'
+import './styles/global.css'
+
 function App() {
   return (
-    <main>
-      <h1>雨中冒险 2 全角色构筑</h1>
-    </main>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+    </Routes>
   )
 }
 

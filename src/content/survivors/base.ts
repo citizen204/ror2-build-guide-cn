@@ -717,7 +717,7 @@ export const baseSurvivors: SurvivorGuide[] = [
   },
   {
     slug: 'acrid',
-    nameZh: '阿克里德',
+    nameZh: '呛鼻毒师',
     nameEn: 'Acrid',
     dlc: 'base',
     portrait: 'assets/survivors/acrid.png',

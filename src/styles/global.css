@@ -1,0 +1,449 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  min-width: 0;
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+button,
+input {
+  color: inherit;
+  font: inherit;
+}
+
+button {
+  min-height: 2.75rem;
+  border: 1px solid var(--color-line-strong);
+  border-radius: var(--radius-sm);
+  background: var(--color-raised);
+  cursor: pointer;
+  transition:
+    background-color var(--transition-state),
+    border-color var(--transition-state),
+    color var(--transition-state),
+    transform var(--transition-state);
+}
+
+button:hover {
+  border-color: var(--color-muted);
+  background: oklch(0.25 0.018 110);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.page-shell {
+  width: min(calc(100% - 2rem), 88rem);
+  margin-inline: auto;
+  padding-block: 2.5rem 4rem;
+}
+
+.site-header {
+  padding-bottom: 2rem;
+}
+
+.site-header h1 {
+  max-width: 22ch;
+  margin: 0;
+  color: var(--color-ink);
+  font-size: 2rem;
+  font-weight: 760;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+.site-header__intro {
+  max-width: 70ch;
+  margin: 0.875rem 0 1rem;
+  color: var(--color-muted);
+  font-size: 1rem;
+  text-wrap: pretty;
+}
+
+.site-header__verification {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  padding-inline: 0.75rem;
+  border: 1px solid var(--color-line);
+  border-radius: 999rem;
+  background: var(--color-surface);
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.search-filters {
+  display: grid;
+  grid-template-columns: minmax(13rem, 0.85fr) minmax(0, 1.65fr) auto;
+  gap: 1rem;
+  align-items: end;
+  padding: 1rem;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: 0 0.75rem 2.5rem var(--color-shadow);
+}
+
+.search-filters__search {
+  display: grid;
+  min-width: 0;
+  gap: 0.5rem;
+  color: var(--color-ink);
+  font-size: 0.875rem;
+  font-weight: 650;
+}
+
+.search-filters__search input {
+  width: 100%;
+  min-width: 0;
+  min-height: 2.75rem;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid var(--color-line-strong);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+  transition:
+    border-color var(--transition-state),
+    box-shadow var(--transition-state);
+}
+
+.search-filters__search input::placeholder {
+  color: var(--color-muted);
+  opacity: 1;
+}
+
+.search-filters__search input:hover {
+  border-color: var(--color-muted);
+}
+
+.search-filters__search input:focus-visible {
+  border-color: var(--color-focus);
+  box-shadow: 0 0 0 0.2rem oklch(0.78 0.1 215 / 0.16);
+}
+
+.search-filters__group {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.search-filters__group legend {
+  margin-bottom: 0.5rem;
+  padding: 0;
+  color: var(--color-ink);
+  font-size: 0.875rem;
+  font-weight: 650;
+}
+
+.search-filters__options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.search-filters__options button {
+  min-width: 3.25rem;
+  padding: 0.625rem 0.875rem;
+  color: var(--color-muted);
+  font-size: 0.875rem;
+}
+
+.search-filters__options button[aria-pressed="true"] {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  font-weight: 750;
+}
+
+.search-filters__options button[aria-pressed="true"]:hover {
+  border-color: var(--color-primary-hover);
+  background: var(--color-primary-hover);
+}
+
+.search-filters__reset {
+  padding-inline: 1rem;
+  background: transparent;
+  color: var(--color-ink);
+  white-space: nowrap;
+}
+
+.roster {
+  margin-top: 2rem;
+}
+
+.roster__heading {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.roster__heading h2 {
+  margin: 0;
+  font-size: 1.375rem;
+  letter-spacing: -0.015em;
+}
+
+.roster__heading [role="status"] {
+  margin: 0;
+  color: var(--color-muted);
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.roster__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+}
+
+.survivor-card {
+  min-width: 0;
+}
+
+.survivor-card__link {
+  display: grid;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: inherit;
+  text-decoration: none;
+  box-shadow: 0 0.5rem 1.75rem var(--color-shadow);
+  transition:
+    background-color var(--transition-state),
+    border-color var(--transition-state),
+    transform var(--transition-state);
+}
+
+.survivor-card__link:hover {
+  border-color: var(--color-primary);
+  background: var(--color-raised);
+  transform: translateY(-0.125rem);
+}
+
+.survivor-card__portrait {
+  display: grid;
+  min-height: 10rem;
+  place-items: center;
+  overflow: hidden;
+  border-bottom: 1px solid var(--color-line);
+  background: var(--color-surface-low);
+}
+
+.survivor-card__portrait img {
+  width: 100%;
+  height: 10.5rem;
+  padding: 1rem;
+  object-fit: contain;
+  transition: transform var(--transition-state);
+}
+
+.survivor-card__link:hover .survivor-card__portrait img {
+  transform: scale(1.035);
+}
+
+.survivor-card__body {
+  display: grid;
+  gap: 0.875rem;
+  align-content: start;
+  padding: 1rem;
+}
+
+.survivor-card__heading {
+  display: flex;
+  gap: 0.75rem;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.survivor-card__heading h2 {
+  display: grid;
+  min-width: 0;
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.25;
+}
+
+.survivor-card__heading h2 span:last-child {
+  margin-top: 0.25rem;
+  color: var(--color-muted);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.survivor-card__dlc {
+  flex: 0 0 auto;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--color-line-strong);
+  border-radius: 999rem;
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1.25;
+}
+
+.survivor-card__role {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.875rem;
+  overflow-wrap: anywhere;
+  text-wrap: pretty;
+}
+
+.survivor-card__difficulty {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--color-muted);
+  font-size: 0.8125rem;
+}
+
+.survivor-card__marks {
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  white-space: nowrap;
+}
+
+.empty-results {
+  padding: 2rem;
+  border: 1px dashed var(--color-line-strong);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-low);
+  text-align: center;
+}
+
+.empty-results h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.empty-results p {
+  margin: 0.5rem 0 1.25rem;
+  color: var(--color-muted);
+}
+
+.empty-results button {
+  padding-inline: 1rem;
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  font-weight: 750;
+}
+
+.empty-results button:hover {
+  border-color: var(--color-primary-hover);
+  background: var(--color-primary-hover);
+}
+
+@media (min-width: 40rem) {
+  .roster__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 64rem) {
+  .roster__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 78rem) {
+  .roster__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 52rem) {
+  .search-filters {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: stretch;
+  }
+
+  .search-filters__reset {
+    justify-self: start;
+  }
+}
+
+@media (max-width: 30rem) {
+  .page-shell {
+    width: min(calc(100% - 1rem), 88rem);
+    padding-block: 1.5rem 3rem;
+  }
+
+  .site-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .search-filters {
+    padding: 0.75rem;
+  }
+
+  .search-filters__options button {
+    flex: 1 1 calc(33.333% - 0.5rem);
+    min-width: 4.5rem;
+  }
+
+  .empty-results {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  button:active,
+  .survivor-card__link:hover,
+  .survivor-card__link:hover .survivor-card__portrait img {
+    transform: none;
+  }
+}
