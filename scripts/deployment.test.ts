@@ -120,24 +120,40 @@ describe('GitHub Pages workflow', () => {
     }
 
     const workflow = await readFile(workflowFile, 'utf8')
+    const buildJob = workflow.slice(workflow.indexOf('  build:'), workflow.indexOf('  deploy:'))
+    const deployJob = workflow.slice(workflow.indexOf('  deploy:'))
+    const actionReferences = [...workflow.matchAll(/uses:\s+([^\s#]+)/g)]
+      .map((match) => match[1])
 
     expect(workflow).toMatch(/push:\s*\n\s+branches: \[main\]/)
     expect(workflow).toContain('workflow_dispatch:')
-    expect(workflow).toMatch(/permissions:\s*\n\s+contents: read\s*\n\s+pages: write\s*\n\s+id-token: write/)
+    expect(workflow.match(/permissions:/g)).toHaveLength(2)
+    expect(buildJob).toMatch(/permissions:\s*\n\s+contents: read/)
+    expect(buildJob).not.toMatch(/pages:|id-token:/)
+    expect(deployJob).toMatch(/permissions:\s*\n\s+pages: write\s*\n\s+id-token: write/)
+    expect(deployJob).not.toMatch(/contents:/)
     expect(workflow).toMatch(/concurrency:\s*\n\s+group: pages\s*\n\s+cancel-in-progress: true/)
-    expect(workflow).toContain('uses: actions/checkout@v7')
-    expect(workflow).toContain('uses: actions/setup-node@v7')
+    expect(actionReferences).toEqual([
+      'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1',
+      'actions/setup-node@820762786026740c76f36085b0efc47a31fe5020',
+      'actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d',
+      'actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9',
+      'actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128',
+    ])
+    expect(actionReferences.every((reference) => /@[0-9a-f]{40}$/.test(reference))).toBe(true)
+    expect(workflow).toContain('3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1')
+    expect(workflow).toContain('820762786026740c76f36085b0efc47a31fe5020 # v7.0.0')
     expect(workflow).toContain("node-version: '24.15.0'")
     expect(workflow).toContain('cache: npm')
-    expect(workflow).toContain('uses: actions/configure-pages@v6')
+    expect(workflow).toContain('45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0')
     expect(workflow).toContain('run: npm ci')
     expect(workflow).toContain('run: npm run check')
     expect(workflow).not.toContain('run: npm run build')
-    expect(workflow).toContain('uses: actions/upload-pages-artifact@v5')
+    expect(workflow).toContain('fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0')
     expect(workflow).toContain('path: ./dist')
-    expect(workflow).toMatch(/deploy:\s*\n\s+environment:/)
+    expect(deployJob).toContain('environment:')
     expect(workflow).toContain('needs: build')
-    expect(workflow).toContain('uses: actions/deploy-pages@v5')
+    expect(workflow).toContain('cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5.0.0')
   })
 
   test('keeps HashRouter deployment free of an unnecessary 404 fallback', async () => {
