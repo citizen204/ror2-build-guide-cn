@@ -172,6 +172,12 @@ test('builds base-safe asset URLs with or without a leading slash', async () => 
 
   expect(assetUrl('assets/survivors/acrid.png')).toBe(expected)
   expect(assetUrl('/assets/survivors/acrid.png')).toBe(expected)
+  expect(assetUrl('assets/survivors/acrid.png', '/')).toBe(
+    '/assets/survivors/acrid.png',
+  )
+  expect(assetUrl('/assets/survivors/acrid.png', '/ror2-build-guide-cn')).toBe(
+    '/ror2-build-guide-cn/assets/survivors/acrid.png',
+  )
 })
 
 test('shows recognizable card metadata and difficulty in text and marks', async () => {

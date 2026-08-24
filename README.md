@@ -27,7 +27,7 @@ npm run assets:check
 npm run check
 ```
 
-也可以分别运行 `npm run test` 和 `npm run build`。Vite 的生产基础路径已经设为 `/ror2-build-guide-cn/`。
+也可以分别运行 `npm run test` 和 `npm run build`。开发服务器使用根路径 `/`；生产构建使用 GitHub Pages 仓库子路径 `/ror2-build-guide-cn/`，并在构建结束时检查 `dist/index.html` 的本地资源 URL 和对应文件。
 
 ## 更新攻略内容
 
@@ -49,4 +49,8 @@ npm run check
 
 计划发布地址：<https://citizen204.github.io/ror2-build-guide-cn/>
 
-项目使用 Vite 的仓库子路径和 `HashRouter`，适合发布到 GitHub Pages。部署时应在 GitHub Actions 中安装锁定依赖、运行 `npm run check`、上传 `dist/`，再使用官方 Pages action 发布。本仓库目前只包含构建配置和说明，不会从本地命令自动发布。
+项目使用 Vite 的仓库子路径和 `HashRouter`，适合发布到 GitHub Pages。部署流程会在 GitHub Actions 中安装锁定依赖、运行 `npm run check`、上传 `dist/`，再使用官方 Pages action 发布。
+
+仓库内的 `.github/workflows/deploy-pages.yml` 会在 `main` 分支更新或手动触发时，使用官方 GitHub Pages actions 构建、校验并发布 `dist/`。首次发布前，仓库维护者仍需在 GitHub 的 Pages 设置中选择 **GitHub Actions** 作为来源；本地命令不会创建仓库、启用 Pages 或执行发布。
+
+站点路由由 `HashRouter` 管理，页面地址位于 `/#/…`，因此不需要为直接访问另设 `404.html` SPA 回退。

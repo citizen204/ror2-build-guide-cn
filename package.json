@@ -13,7 +13,7 @@
     "assets:freshness": "node scripts/fetch-assets.mjs --freshness",
     "assets:update": "node scripts/fetch-assets.mjs --update",
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && node scripts/verify-deployment.mjs",
     "test": "vitest run",
     "test:watch": "vitest",
     "check": "npm run test && npm run build"
