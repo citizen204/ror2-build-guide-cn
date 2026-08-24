@@ -35,6 +35,15 @@ describe('maintainer documentation', () => {
     expect(readme).toContain('规范顺序由签名测试固定')
   })
 
+  test('documents GitHub Pages as live over HTTPS', async () => {
+    const readme = await readFile(resolve(repositoryDirectory, 'README.md'), 'utf8')
+
+    expect(readme).toContain('在线地址：<https://citizen204.github.io/ror2-build-guide-cn/>')
+    expect(readme).toMatch(/已配置 GitHub Actions Pages.*已通过 HTTPS.*上线/)
+    expect(readme).not.toContain('计划发布地址')
+    expect(readme).not.toContain('首次发布前')
+  })
+
   test('uses the official Alloyed Collective Chinese name throughout project documentation', async () => {
     const documentationFiles = listTrackedDocumentationFiles()
     const expectedDocumentationFiles = execFileSync('git', ['ls-files', '-z'], {

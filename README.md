@@ -55,10 +55,8 @@ npm run check
 
 ## GitHub Pages
 
-计划发布地址：<https://citizen204.github.io/ror2-build-guide-cn/>
+在线地址：<https://citizen204.github.io/ror2-build-guide-cn/>
 
-项目使用 Vite 的仓库子路径和 `HashRouter`，适合发布到 GitHub Pages。部署流程会在 GitHub Actions 中安装锁定依赖、运行 `npm run check`、上传 `dist/`，再使用官方 Pages action 发布。
+本仓库已配置 GitHub Actions Pages，站点已通过 HTTPS 在上述地址上线。`main` 分支更新或手动触发工作流时，会安装锁定依赖、运行 `npm run check`、上传 `dist/`，再使用官方 Pages action 发布。
 
-仓库内的 `.github/workflows/deploy-pages.yml` 会在 `main` 分支更新或手动触发时，使用官方 GitHub Pages actions 构建、校验并发布 `dist/`。首次发布前，仓库维护者仍需在 GitHub 的 Pages 设置中选择 **GitHub Actions** 作为来源；本地命令不会创建仓库、启用 Pages 或执行发布。
-
-站点路由由 `HashRouter` 管理，页面地址位于 `/#/…`，因此不需要为直接访问另设 `404.html` SPA 回退。
+项目使用 Vite 仓库子路径，路由由 `HashRouter` 管理；页面地址位于 `/#/…`，因此不需要另设 `404.html` SPA 回退。
