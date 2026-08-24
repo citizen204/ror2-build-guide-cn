@@ -7,7 +7,7 @@
 - 《Risk of Rain 2》本体 Steam 页仍明确写有“十一名可游玩幸存者（eleven playable survivors）”，因此本体计 **11** 人。
 - `Survivors of the Void`（虚空幸存者，SotV）增加 **Railgunner** 与 **Void Fiend**，计 **2** 人。
 - `Seekers of the Storm`（风暴探寻者，SotS）当前可选 **Seeker、CHEF、False Son**，计 **3** 人。这里采用 2025 年 SotS 2.0 重做完成后的技能，而不是首发旧攻略。
-- `Alloyed Collective`（合金共同体，AC）已经在 **2025-11-18** 发售，官方发行说明明确增加 **Operator（默认解锁）** 与 **Drifter（挑战解锁）**，计 **2** 人。当前研究基线包含官方 **Alloyed Collective Patch 1.4.1（2025-12-09）**；公告称这是 AC 唯一计划中的专属更新，并修正/平衡了 Operator、Drifter、无人机与 AC 物品互动。
+- `Alloyed Collective`（合金意念，AC）已经在 **2025-11-18** 发售，官方发行说明明确增加 **Operator（默认解锁）** 与 **Drifter（挑战解锁）**，计 **2** 人。当前研究基线包含官方 **Alloyed Collective Patch 1.4.1（2025-12-09）**；公告称这是 AC 唯一计划中的专属更新，并修正/平衡了 Operator、Drifter、无人机与 AC 物品互动。
 - `Heretic`（异端）不是角色选择界面的普通可选幸存者。任意角色在一局中同时取得 `Visions of Heresy`、`Hooks of Heresy`、`Strides of Heresy`、`Essence of Heresy` 后才会转化。本项目仍为其提供一篇“特殊变身”攻略。
 - 合计：**18 名正常可选幸存者 + Heretic 特殊变身 = 19 篇攻略**。
 

@@ -89,6 +89,7 @@ export const specialSurvivors: SurvivorGuide[] = [
       pick('shaped-glass', 'conditional', '高熟练 1 件', '利用高基础属性倍增伤害但减半最大生命', '负回复会更快压低安全线，必须已有回盾或多层保险。'),
       pick('corpsebloom', 'avoid', '不建议生命路线', '放大总治疗但延迟 Shadowfade 的关键恢复', '高压阶段恢复被限速会无法及时抵消负回复，风险超过总量收益。'),
     ],
+    lunarEquipment: [],
     combatNotes: combat(
       'Maelstrom 控场，Hungering Gaze 多目标叠 Ruin，装备补层后集中引爆，再 Shadowfade 撤离治疗。',
       '先累积 Ruin 到硬直爆发窗再引爆，Maelstrom 终爆对准首领停顿，不每层都立即按。',

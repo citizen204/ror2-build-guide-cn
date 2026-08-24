@@ -90,6 +90,7 @@ export const acSurvivors: SurvivorGuide[] = [
       pick('transcendence', 'conditional', 'DOC 护盾路线 1 件', '把生命转护盾并让常规 Healing Drone 治疗失效', '远程飞行适合回盾，但会降低治疗无人机对自身的价值。'),
       pick('brittle-crown', 'avoid', '不建议无人机经济路线', '命中赚金币但受伤会丢失大量金币', '飞行指挥时被擦伤会直接拖慢购买和合并无人机的核心经济。'),
     ],
+    lunarEquipment: [],
     combatNotes: combat(
       '储满 ADMIN，Ejection Core 上 Nano-Bug，依队列连续命令，再用 H3-11 充能点杀和 Ascent 躲线。',
       '先调用控制和增益机种，再放伤害机种；高 tier 合并命令留给首领硬直窗。',
@@ -168,6 +169,7 @@ export const acSurvivors: SurvivorGuide[] = [
       pick('shaped-glass', 'conditional', '临时物爆发成熟后 1 件', '倍增传送器临时库存的爆发伤害', '同时减半近战和 Tornado 容错，只有位移与保险充分时承担。'),
       pick('brittle-crown', 'avoid', '不建议近战经济路线', '命中赚金币但受伤会损失大量金币', 'Tornado 贴身多段环境容易被擦伤，反而拖慢箱子和无人机经济。'),
     ],
+    lunarEquipment: [],
     combatNotes: combat(
       'Tornado 穿大怪产 Junk，落 Cube 后用 Blunt Force 推三次，再用 Tinker 临时物开爆发。',
       '大体型让 Tornado 多次命中；Cube 推在首领路线，不站在落点硬吃攻击。',

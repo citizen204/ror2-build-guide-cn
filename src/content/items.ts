@@ -120,7 +120,7 @@ export const items: ItemDefinition[] = [
 
   // Lunar (blue)
   item('gesture-of-the-drowned', '溺亡者的心意', 'Gesture of the Drowned', 'lunar'),
-  item('spinel-tonic', '尖晶强心剂', 'Spinel Tonic', 'lunar'),
+  item('spinel-tonic', '尖晶强心剂', 'Spinel Tonic', 'lunar-equipment'),
   item('shaped-glass', '塑形玻璃', 'Shaped Glass', 'lunar'),
   item('transcendence', '超绝', 'Transcendence', 'lunar'),
   item('purity', '纯净', 'Purity', 'lunar'),

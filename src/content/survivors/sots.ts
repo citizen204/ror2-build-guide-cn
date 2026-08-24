@@ -88,6 +88,7 @@ export const sotsSurvivors: SurvivorGuide[] = [
       pick('corpsebloom', 'conditional', '低爆发压力时 1 件', '提高总治疗但限制单位时间的恢复速度', '持续恢复可用，团队遭遇爆发伤害时可能因释放过慢而救不回来。'),
       pick('transcendence', 'avoid', '不建议支援身份拾取', '把生命转护盾并让常规治疗对自身失效', '会降低 Meditate 和 Cyclone 的自身价值，与治疗支援身份不协调。'),
     ],
+    lunarEquipment: [],
     combatNotes: combat(
       '安全积 Meditate 层，Soul Spiral 开屏障，三拳穿群，Reprieve 穿出并留下 Cyclone。',
       '高 Tranquility 后维持三拳和螺旋；危险招式用 Reprieve，不用 Meditate 硬读条。',
@@ -164,6 +165,7 @@ export const sotsSurvivors: SurvivorGuide[] = [
       pick('corpsebloom', 'conditional', '持续恢复场景 1 件', '放大餐点总治疗但延迟分批释放恢复', '团队爆发受伤时可能回得太慢，不能把它当无条件治疗提升。'),
       pick('visions-of-heresy', 'avoid', '除完整转化外不拿', '替换 Dice 并破坏飞刀回收与主技能标记节奏', '单件会削弱 CHEF’s Kiss 的技能组合，只有完整转 Heretic 才合理。'),
     ],
+    lunarEquipment: [],
     combatNotes: combat(
       'Dice 标记，Glaze 铺油和 Weak，Sear 引燃，Roll 穿出并收飞刀，再安全拾取或留餐。',
       'Glaze 打满后 Sear 四倍 Ignite，Dice 回程；Roll 留给大招而非纯伤害。',
@@ -240,6 +242,7 @@ export const sotsSurvivors: SurvivorGuide[] = [
       pick('shaped-glass', 'conditional', '高熟练 1 件', '倍增伤害但减半最大生命与生存底盘', '一击线提高，却会削弱高生命路线容错，必须已有保险。'),
       pick('transcendence', 'avoid', '强烈避免', '把除一点外的生命转成护盾并使治疗失效', '护盾不计入 Growth，因此会完全移除 Growth，并破坏已用 Spike 的回复。'),
     ],
+    lunarEquipment: [],
     combatNotes: combat(
       '留满 Spikes 入场，Meridian 聚怪和三倍被动，Club 重砸后花 Spikes，再用 Burst 回填。',
       '侧面蓄 Club，Burst 穿透；危险期保留 Spike 护甲而不是全部打空。',

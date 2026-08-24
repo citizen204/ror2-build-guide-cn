@@ -101,6 +101,7 @@ export const baseSurvivors: SurvivorGuide[] = [
       pick('transcendence', 'conditional', '不受击路线 1 件', '把生命转成脱战自动恢复的护盾体系', '适合 Eclipse 远程走位，但常规治疗会全部失效，必须接受回盾节奏。'),
       pick('purity', 'avoid', '不建议 proc 构筑拾取', '缩短技能冷却却显著降低幸运属性', 'Commando 依靠大量概率触发输出，负幸运会系统性削弱导弹与连锁。'),
     ],
+    lunarEquipment: [],
     combatNotes: combat(
       '沿传送器边缘滑行，Phase Blast 点杀精英，Suppressive Fire 打断，再用 Double Tap 拉起触发链。',
       '中距离持续射击，看到首领攻击预兆才横滑；Phase Blast 只在安全窗口贴近打满弹丸。',
@@ -176,6 +177,7 @@ export const baseSurvivors: SurvivorGuide[] = [
       pick('light-flux-pauldron', 'conditional', '技能流 1 件', '大幅缩短技能冷却但降低普通攻击速度', 'Ballista 与飞刃流可接受代价，依赖 Flurry 的构筑应避免。'),
       pick('brittle-crown', 'avoid', '不建议稳定路线拾取', '命中赚取金币但受伤会立刻损失金币', '低生命角色容易被擦伤，经济波动会拖慢关键移动和暴击成型。'),
     ],
+    lunarEquipment: [],
     combatNotes: combat(
       '全程冲刺绕圈，飞刃先投小怪群，Ballista 点精英；Blink 只穿过明确攻击线。',
       'Ballista 开窗后持续 Strafe，飞刃借杂兵增伤；看到攻击预兆才 Blink。',
@@ -252,6 +254,7 @@ export const baseSurvivors: SurvivorGuide[] = [
       pick('shaped-glass', 'conditional', '高熟练 1 件', '倍增伤害并把背刺推入更高处决阈值', '同时减半最大生命，隐身失误或近距换弹时会立刻致命。'),
       pick('visions-of-heresy', 'avoid', '除转化外不建议', '替换非常适合背刺和近距爆发的 Burst 主攻', '会破坏原有换弹与背刺节奏，只有准备完整转 Heretic 才拿。'),
     ],
+    lunarEquipment: [],
     combatNotes: combat(
       '先用 Desperado 收小怪，再 Smoke Bomb 穿到精英背后，Shiv、Burst 后由特殊收尾。',
       '保持侧后方 Hemorrhage，首领转身或出招时隐身换侧，装备与双环留给硬直窗。',
@@ -324,8 +327,10 @@ export const baseSurvivors: SurvivorGuide[] = [
     ],
     lunarItems: [
       pick('transcendence', 'recommended', '护盾路线 1 件', '把高基础生命转为大型脱战恢复护盾', '大生命底盘换得高护盾，但常规治疗失效，必须按脱战回盾节奏移动。'),
-      pick('spinel-tonic', 'conditional', '高覆盖闭环 1 件', '全面强化 Power Mode 的攻击与生存属性', '只有 Gesture 与 Fuel Cell 能保证覆盖时使用，断档会累积 Tonic Affliction。'),
       pick('shaped-glass', 'avoid', '稳定路线不建议', '倍增伤害但直接减半最大生命上限', '会浪费 MUL-T 的大生命优势，只有机动与复活极强时才承担风险。'),
+    ],
+    lunarEquipment: [
+      pick('spinel-tonic', 'conditional', '高覆盖闭环 1 件', '全面强化 Power Mode 的攻击与生存属性', '只有 Gesture 与 Fuel Cell 能保证覆盖时使用，断档会累积 Tonic Affliction。'),
     ],
     combatNotes: combat(
       'Rebar、Retool、Rebar 轮换点杀精英，Canister 打断群体，Transport Mode 穿出包围。',
@@ -402,6 +407,7 @@ export const baseSurvivors: SurvivorGuide[] = [
       pick('gesture-of-the-drowned', 'conditional', 'The Back-up 闭环 1 件', '自动释放无人机装备并缩短装备冷却', '可以持续扩军，但会失去为传送器或首领保留无人机波次的时机。'),
       pick('shaped-glass', 'avoid', '稳定炮台路线不建议', '倍增伤害但同时减半本体和炮台有效生命', '部署失误会快速丢失全部火力平台，风险超过稳定通关收益。'),
     ],
+    lunarEquipment: [],
     combatNotes: combat(
       '两炮台分开放置，护盾覆盖主要射线，预放地雷后本体沿盾边投弹；拾新物品后重放。',
       '建立交叉射界并由本体拉开仇恨，不要和炮台重叠让一次范围攻击全清。',
@@ -478,6 +484,7 @@ export const baseSurvivors: SurvivorGuide[] = [
       pick('shaped-glass', 'conditional', '高熟练 1 件', '倍增强击与处决伤害但减半最大生命', '一击线显著提高，悬浮时被远程擦伤也可能立刻致命。'),
       pick('gesture-of-the-drowned', 'avoid', 'Preon 配置不建议', '自动释放装备并失去手动保留爆发时机', '长冷却 Preon 可能被杂兵浪费，只有换短冷却装备后才考虑。'),
     ],
+    lunarEquipment: [],
     combatNotes: combat(
       '长矛冻结精英，冰墙控行进线，Flame Bolt 轮射；危险时 Ion Surge 重置位置。',
       '预蓄副技能和装备触发双环，落地绕掩体，技能恢复后再升空。',
@@ -554,6 +561,7 @@ export const baseSurvivors: SurvivorGuide[] = [
       pick('light-flux-pauldron', 'conditional', 'Slicing Winds 技能流 1 件', '进一步缩短技能冷却但降低普通攻击速度', '会减少 Eviscerate 命中和剑手感，默认推荐配置需谨慎。'),
       pick('strides-of-heresy', 'avoid', '除完整转化外不拿', '替换关键 Blinding Assault 位移与连段技能', '会直接破坏三段突袭和 Expose 时间轴，只有准备转 Heretic 才合理。'),
     ],
+    lunarEquipment: [],
     combatNotes: combat(
       '第三刀上 Expose，Whirlwind 消费，Blinding Assault 穿群，Eviscerate 躲明确伤害后重复。',
       '贴侧后方三刀循环，读到大招时 Eviscerate 或突袭穿过；技能全空立即离开。',
@@ -630,6 +638,7 @@ export const baseSurvivors: SurvivorGuide[] = [
       pick('corpsebloom', 'conditional', '普通 Monsoon 谨慎 1 件', '提高总治疗但限制单位时间的恢复速度', '爆发自伤后可能回得太慢，Eclipse 尤其永久伤环境应避免。'),
       pick('transcendence', 'avoid', '不建议稳定 REX 拾取', '把除一点外的生命转护盾并使治疗失效', '会恶化生命消耗与 Inject、Tangling 治疗核心的所有互动。'),
     ],
+    lunarEquipment: [],
     combatNotes: combat(
       'Tangling 聚群后叠 Drill，Inject 维持 Weaken 和回血，Disperse 把近身怪推回控制区。',
       '常驻 Weaken 并预判 Drill 落点；生命低于安全线时停止所有主动耗血技能。',
@@ -706,6 +715,7 @@ export const baseSurvivors: SurvivorGuide[] = [
       pick('shaped-glass', 'conditional', '高熟练 1 件', '倍增一拳伤害并极大提高处决阈值', '同时减半最大生命，只有路线熟练且已有复活时才承担风险。'),
       pick('strides-of-heresy', 'avoid', '除完整转化外不拿', '替换 Charged Gauntlet 并破坏速度伤害核心', '失去主要拳和位移循环，单件完全不符合 Loader 构筑。'),
     ],
+    lunarEquipment: [],
     combatNotes: combat(
       '钩住边缘重目标或地形，满速拳穿精英群，Thunderslam 落地后继续飞离。',
       '预先拉长摆荡，速度峰值一拳触发双环；首领出招期间绕场继续积速。',
@@ -782,6 +792,7 @@ export const baseSurvivors: SurvivorGuide[] = [
       pick('visions-of-heresy', 'conditional', '纯远程路线 1 件', '替换近战 Vicious Wounds，提供远程主攻收尾', '能改善不想贴脸的 Acrid，但会改变主攻节奏，也是 Heretic 转化部件。'),
       pick('shaped-glass', 'avoid', '不建议稳定路线', '倍增部分伤害但减半最大生命与容错', 'Poison 百分比部分不会简单等比例获益，付出的生存代价过高。'),
     ],
+    lunarEquipment: [],
     combatNotes: combat(
       'Epidemic 投中央，Neurotoxin 补散怪，绕圈等毒压血，再由汽油或装备收尾。',
       '只需维持 Poison，把时间用于躲招和清小怪，安全时用主攻补最后一击。',
@@ -858,6 +869,7 @@ export const baseSurvivors: SurvivorGuide[] = [
       pick('focused-convergence', 'conditional', '清场和移速成型后 1 件', '缩小传送器区域并加快充能速度', 'Captain 无原生位移，区域过小会提高风险，只有移动充足时考虑。'),
       pick('brittle-crown', 'avoid', '不建议稳定经济路线', '命中赚金币但受伤会丢失大量金币', '无 dash 角色更容易被擦伤，反而削弱 Hacking 建立的经济优势。'),
     ],
+    lunarEquipment: [],
     combatNotes: combat(
       'Hacking 先换资源，Tazer 定精英，Probe 预判落点，再蓄紧 Shotgun 近中距触发。',
       '三次 Probe 交错落点，近距霰弹打满；明显大招前提前远离，因为没有紧急 dash。',

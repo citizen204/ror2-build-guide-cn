@@ -7,6 +7,7 @@ export type ItemTier =
   | 'boss'
   | 'equipment'
   | 'lunar'
+  | 'lunar-equipment'
   | 'void'
 
 export type Recommendation = 'core' | 'recommended' | 'conditional' | 'avoid'
@@ -77,6 +78,7 @@ export interface SurvivorGuide {
   commandRoute: StageRoute[]
   voidItems: ItemPick[]
   lunarItems: ItemPick[]
+  lunarEquipment: ItemPick[]
   combatNotes: CombatNote[]
   sourceIds: string[]
   verifiedOn: string

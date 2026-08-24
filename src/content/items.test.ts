@@ -8,6 +8,7 @@ const REQUIRED_TIERS = [
   'boss',
   'equipment',
   'lunar',
+  'lunar-equipment',
   'void',
 ] as const
 
@@ -147,7 +148,7 @@ const EXPECTED_ID_TIERS = [
   'soldiers-syringe:common',
   'soulbound-catalyst:legendary',
   'spare-drone-parts:legendary',
-  'spinel-tonic:lunar',
+  'spinel-tonic:lunar-equipment',
   'strides-of-heresy:lunar',
   'substandard-duplicator:legendary',
   'super-massive-leech:equipment',

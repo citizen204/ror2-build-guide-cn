@@ -51,6 +51,7 @@ function itemPicksFor(guide: SurvivorGuide): ItemPick[] {
     ...guide.solo.equipment,
     ...guide.voidItems,
     ...guide.lunarItems,
+    ...guide.lunarEquipment,
   ]
 }
 
@@ -198,6 +199,7 @@ export function validateGuideData(
     }
     validateItemPicks(guide, guide.voidItems, itemById, errors, 'void', '虚空')
     validateItemPicks(guide, guide.lunarItems, itemById, errors, 'lunar', '月球')
+    validateItemPicks(guide, guide.lunarEquipment, itemById, errors, 'lunar-equipment', '月球主动装备')
   }
 
   return errors

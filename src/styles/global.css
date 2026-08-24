@@ -206,6 +206,42 @@ button:disabled {
   white-space: nowrap;
 }
 
+.guide-usage {
+  display: grid;
+  grid-template-columns: minmax(10rem, 0.35fr) minmax(0, 1.65fr);
+  gap: 1rem 2rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-low);
+}
+
+.guide-usage h2 {
+  margin: 0;
+  font-size: 1.0625rem;
+  text-wrap: balance;
+}
+
+.guide-usage__notes {
+  display: grid;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.guide-usage p {
+  max-width: 75ch;
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+  text-wrap: pretty;
+}
+
+.guide-usage strong {
+  color: var(--color-ink);
+}
+
 .roster {
   margin-top: 2rem;
 }
@@ -426,6 +462,10 @@ button:disabled {
 
   .search-filters__reset {
     justify-self: start;
+  }
+
+  .guide-usage {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
@@ -803,6 +843,19 @@ button:disabled {
   font-size: 1.0625rem;
 }
 
+.item-group__empty {
+  min-height: 2.75rem;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  border: 1px dashed var(--color-line-strong);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-low);
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+  text-wrap: pretty;
+}
+
 .item-row {
   display: grid;
   grid-template-columns: 4.5rem minmax(0, 1fr);
@@ -863,6 +916,12 @@ button:disabled {
 
 .item-tag--rarity-lunar {
   border-color: var(--color-rarity-lunar);
+  color: var(--color-rarity-lunar);
+}
+
+.item-tag--rarity-lunar-equipment {
+  border-color: var(--color-rarity-lunar);
+  background: oklch(0.75 0.12 230 / 0.1);
   color: var(--color-rarity-lunar);
 }
 

@@ -25,6 +25,13 @@ export function HomePage() {
         onDlcChange={setDlc}
         onReset={resetFilters}
       />
+      <section className="guide-usage" aria-labelledby="guide-usage-title">
+        <h2 id="guide-usage-title">如何使用构筑建议</h2>
+        <div className="guide-usage__notes">
+          <p><strong>统率神器：</strong>按角色页的前期、中期、后期顺序选装，先建立生存与循环，再补倍率和终局容错。</p>
+          <p><strong>普通流程：</strong>不用照抄清单；根据掉落阅读“作用”“联动”和“替代选择”，挑能解决当前短板的物品。</p>
+        </div>
+      </section>
       <section className="roster" aria-labelledby="roster-title">
         <div className="roster__heading">
           <h2 id="roster-title">角色列表</h2>

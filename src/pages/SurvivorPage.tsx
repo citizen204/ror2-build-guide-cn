@@ -240,9 +240,20 @@ export function SurvivorPage() {
           <GuideSection
             id="lunar-items"
             title="月球物品"
-            intro={<p>先确认副作用能够被当前路线承受，再决定是否拾取。</p>}
+            intro={<p>被动物品与主动装备占用不同位置；先确认副作用和装备栏取舍，再决定是否拾取。</p>}
           >
-            <ItemGroup title="月球选择" picks={guide.lunarItems} />
+            <div className="item-groups">
+              <ItemGroup
+                title="被动月球物品"
+                picks={guide.lunarItems}
+                emptyMessage="本攻略不推荐该角色拾取被动月球物品。"
+              />
+              <ItemGroup
+                title="月球主动装备"
+                picks={guide.lunarEquipment}
+                emptyMessage="本攻略不推荐该角色使用月球主动装备。"
+              />
+            </div>
           </GuideSection>
 
           <GuideSection id="combat-notes" title="打法速记">

@@ -37,6 +37,14 @@ npm run check
 4. 更新角色、技能或物品图标时，先修改 `src/content/assets.json` 中的本地路径与 wiki.gg 文件来源，再运行 `npm run assets:update`。不要直接替换 `public/assets/` 中的文件。
 5. 运行 `npm run assets:check` 和 `npm run check`，确认资源哈希、内容结构、测试和生产构建全部通过。
 
+## 攻略数据结构
+
+每个 `SurvivorGuide` 以 `slug` 为稳定路由键，并包含 `nameZh`、`nameEn`、`dlc`、`portrait`、`role`、`difficulty` 与 `summary`。正文由 `skills`、`buildLogic`、`coopAdjustments`、三个阶段的 `commandRoute`、`combatNotes`、`sourceIds` 和 `verifiedOn` 组成。
+
+物品按用途分组：`solo` 内含白、绿、红、首领与普通主动装备；`voidItems` 存放虚空物品；`lunarItems` 只存被动月球物品；`lunarEquipment` 只存月球主动装备。每条 `ItemPick` 使用 `itemId` 连接 `src/content/items.ts`，并写明 `recommendation`、`stacks`、`role`、`synergy`，需要时再提供 `alternative`。
+
+`validateGuideData` 会检查 19 篇攻略的规范顺序与完整性、必需技能槽位、三阶段统率路线、非空公开内容、来源和所有物品引用，并验证每个分组对应的 `tier`。新增字段或分组时，应先扩展类型、领域校验和签名测试，再更新全部角色数据。
+
 ## 资料、素材与声明
 
 攻略结论参考官方 Steam 商店、官方更新公告和 [Risk of Rain 2 Wiki](https://riskofrain2.wiki.gg/wiki/Risk_of_Rain_2_Wiki)。主要直接来源记录在 `src/content/sources.ts`。

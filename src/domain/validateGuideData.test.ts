@@ -16,6 +16,7 @@ const items: ItemDefinition[] = [
   { id: 'royal-capacitor', nameZh: '皇家电容器', nameEn: 'Royal Capacitor', tier: 'equipment', icon: '/items/royal-capacitor.svg' },
   { id: 'needletick', nameZh: '针刺', nameEn: 'Needletick', tier: 'void', icon: '/items/needletick.svg', corrupts: 'soldiers-syringe' },
   { id: 'shaped-glass', nameZh: '塑形玻璃', nameEn: 'Shaped Glass', tier: 'lunar', icon: '/items/shaped-glass.svg' },
+  { id: 'spinel-tonic', nameZh: '尖晶强心剂', nameEn: 'Spinel Tonic', tier: 'lunar-equipment', icon: '/items/spinel-tonic.svg' },
 ]
 
 const item = items[0]
@@ -66,6 +67,7 @@ function createGuide(overrides: Partial<SurvivorGuide> = {}): SurvivorGuide {
     ],
     voidItems: [pick('needletick')],
     lunarItems: [pick('shaped-glass')],
+    lunarEquipment: [],
     combatNotes: [{ title: '走位', body: '保持距离。' }],
     sourceIds: ['wiki'],
     verifiedOn: '2026-08-25',
@@ -212,7 +214,7 @@ describe('validateGuideData', () => {
     expect(validateGuideData([guide], items)).toContain('commando 的 common 物品 tier 不匹配：harvesters-scythe')
   })
 
-  test('rejects void and lunar tier mismatches while retaining unknown item errors', () => {
+  test('rejects void and passive lunar tier mismatches while retaining unknown item errors', () => {
     const [guide] = createCompleteRoster()
     guide.voidItems = [pick('harvesters-scythe'), pick('missing-void')]
     guide.lunarItems = [pick('soldiers-syringe'), pick('missing-lunar')]
@@ -222,6 +224,18 @@ describe('validateGuideData', () => {
       'commando 的月球物品 tier 不匹配：soldiers-syringe',
       'commando 引用了未知物品：missing-void',
       'commando 引用了未知物品：missing-lunar',
+    ]))
+  })
+
+  test('keeps passive lunar items and lunar active equipment in distinct tiers', () => {
+    const [guide] = createCompleteRoster()
+    guide.lunarItems = [pick('spinel-tonic')]
+    guide.lunarEquipment = [pick('shaped-glass'), pick('missing-lunar-equipment')]
+
+    expect(validateGuideData([guide], items)).toEqual(expect.arrayContaining([
+      'commando 的月球物品 tier 不匹配：spinel-tonic',
+      'commando 的月球主动装备物品 tier 不匹配：shaped-glass',
+      'commando 引用了未知物品：missing-lunar-equipment',
     ]))
   })
 })

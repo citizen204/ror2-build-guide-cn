@@ -4,6 +4,7 @@ import { MemoryRouter, useLocation } from 'react-router-dom'
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
 import App from '../App'
 import { ItemGroup } from '../components/ItemGroup'
+import { survivors } from '../content/survivors'
 import { EXPECTED_SURVIVOR_SLUGS } from '../domain/validateGuideData'
 
 const scrollIntoView = vi.fn()
@@ -135,6 +136,29 @@ describe('complete survivor guide route', () => {
       .closest('li')
     expect(within(avoidedLunarRow!).getByText('月球')).toBeInTheDocument()
     expect(within(avoidedLunarRow!).getByText('避免')).toBeInTheDocument()
+  })
+
+  test('separates passive Lunar items from active Lunar equipment with clear empty states', () => {
+    const acrid = renderRoute('/survivors/acrid')
+    const acridLunarSection = screen
+      .getByRole('heading', { level: 2, name: '月球物品' })
+      .closest('section')
+
+    expect(acridLunarSection).not.toBeNull()
+    expect(within(acridLunarSection!).getByRole('heading', { level: 3, name: '被动月球物品' })).toBeInTheDocument()
+    expect(within(acridLunarSection!).getByRole('heading', { level: 3, name: '月球主动装备' })).toBeInTheDocument()
+    expect(within(acridLunarSection!).getByText('本攻略不推荐该角色使用月球主动装备。')).toBeInTheDocument()
+    expect(within(acridLunarSection!).getByRole('img', { name: '塑形玻璃（Shaped Glass）物品图标' })).toBeInTheDocument()
+    acrid.unmount()
+
+    renderRoute('/survivors/mul-t')
+    const tonicRow = screen
+      .getByRole('img', { name: '尖晶强心剂（Spinel Tonic）物品图标' })
+      .closest('li')
+    expect(tonicRow).not.toBeNull()
+    expect(within(tonicRow!).getByText('月球主动装备')).toBeInTheDocument()
+    expect(within(tonicRow!).getByText('条件')).toBeInTheDocument()
+    expect(within(tonicRow!).getByText('高覆盖闭环 1 件')).toBeInTheDocument()
   })
 
   test('renders co-op guidance, ordered Command phases, and four combat scenarios', () => {
@@ -301,6 +325,16 @@ describe('complete survivor guide route', () => {
       expect(
         within(screen.getByRole('article')).getAllByRole('heading', { level: 2 }),
       ).toHaveLength(8)
+      const lunarSection = screen
+        .getByRole('heading', { level: 2, name: '月球物品' })
+        .closest('section')
+      const guide = survivors.find((candidate) => candidate.slug === slug)
+      expect(lunarSection).not.toBeNull()
+      expect(within(lunarSection!).getByRole('heading', { level: 3, name: '被动月球物品' })).toBeInTheDocument()
+      expect(within(lunarSection!).getByRole('heading', { level: 3, name: '月球主动装备' })).toBeInTheDocument()
+      if (guide?.lunarEquipment.length === 0) {
+        expect(within(lunarSection!).getByText('本攻略不推荐该角色使用月球主动装备。')).toBeInTheDocument()
+      }
       view.unmount()
     }
   })

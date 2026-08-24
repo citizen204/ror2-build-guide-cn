@@ -88,6 +88,7 @@ export const sotvSurvivors: SurvivorGuide[] = [
       pick('transcendence', 'conditional', '远程无伤路线 1 件', '把生命转成脱战自动恢复的护盾体系', '远程站位适合回盾，但全部常规治疗会失效，受击后要主动离战。'),
       pick('visions-of-heresy', 'avoid', '除完整转化外不拿', '替换 XQR 并引入与瞄准切换复杂的充能互动', '会破坏推荐武器组和贴身自导清杂，只有完整转 Heretic 才考虑。'),
     ],
+    lunarEquipment: [],
     combatNotes: combat(
       '找掩体和高点，M99 弱点后完美换弹，XQR 清近身，震荡位移，Cryo 冻精英再补枪。',
       '装备与特殊开场触发双环；每枪后先移动再换弹，不在瞄准镜里贪视野。',
@@ -164,6 +165,7 @@ export const sotvSurvivors: SurvivorGuide[] = [
       pick('gesture-of-the-drowned', 'conditional', 'HUD 闭环 1 件', '自动使用 Ocular HUD 并加快装备循环', '会自动开启暴击和 Corruption 窗，代价是不能为指定腐化期保留。'),
       pick('corpsebloom', 'avoid', '不建议资源管理路线', '放大总治疗但把恢复延迟分批释放', '会先立即扣 Corruption，再随延迟治疗继续扣，极难计划变身。'),
     ],
+    lunarEquipment: [],
     combatNotes: combat(
       '普通 Drown、Flood 远程铺伤，约九成资源时位移入场，变身刷新后束流爆发再 Trespass 撤出。',
       '用 Suppress 控制变身时点，腐化期贴到束流射程，结束前预先确定退路。',

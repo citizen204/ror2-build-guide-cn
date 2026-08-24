@@ -47,6 +47,16 @@ test('introduces the guide and reports the full survivor roster', () => {
   expect(screen.getByRole('status')).toHaveTextContent('找到 19 名角色')
 })
 
+test('explains how Command and normal-run players should read recommendations', () => {
+  renderHomePage()
+
+  const guidance = screen.getByRole('region', { name: '如何使用构筑建议' })
+  expect(within(guidance).getByRole('heading', { level: 2, name: '如何使用构筑建议' })).toBeInTheDocument()
+  const [commandGuidance, normalRunGuidance] = guidance.querySelectorAll('p')
+  expect(commandGuidance).toHaveTextContent(/统率神器.*前期、中期、后期/)
+  expect(normalRunGuidance).toHaveTextContent(/普通流程.*作用.*联动.*替代选择/)
+})
+
 test('searches by English name and updates the result count', async () => {
   const user = userEvent.setup()
   renderHomePage()
