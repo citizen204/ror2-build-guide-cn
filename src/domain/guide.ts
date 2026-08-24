@@ -30,7 +30,7 @@ export interface ItemDefinition {
   nameEn: string
   tier: ItemTier
   icon: string
-  corrupts?: string[]
+  corrupts?: string
 }
 
 export interface ItemPick {
@@ -71,7 +71,7 @@ export interface SurvivorGuide {
   difficulty: 1 | 2 | 3 | 4 | 5
   summary: string
   skills: SkillChoice[]
-  buildLogic: string
+  buildLogic: string[]
   solo: BuildSection
   coopAdjustments: string[]
   commandRoute: StageRoute[]
@@ -81,27 +81,3 @@ export interface SurvivorGuide {
   sourceIds: string[]
   verifiedOn: string
 }
-
-export const SURVIVOR_ROSTER = [
-  'commando',
-  'huntress',
-  'bandit',
-  'mul-t',
-  'engineer',
-  'artificer',
-  'mercenary',
-  'rex',
-  'loader',
-  'acrid',
-  'captain',
-  'railgunner',
-  'void-fiend',
-  'seeker',
-  'chef',
-  'false-son',
-  'operator',
-  'drifter',
-  'heretic',
-] as const
-
-export type SurvivorSlug = (typeof SURVIVOR_ROSTER)[number]

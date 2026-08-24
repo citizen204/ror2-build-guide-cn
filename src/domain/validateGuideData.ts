@@ -1,9 +1,30 @@
 import {
-  SURVIVOR_ROSTER,
   type ItemDefinition,
   type ItemPick,
   type SurvivorGuide,
 } from './guide'
+
+export const EXPECTED_SURVIVOR_SLUGS = [
+  'commando',
+  'huntress',
+  'bandit',
+  'mul-t',
+  'engineer',
+  'artificer',
+  'mercenary',
+  'rex',
+  'loader',
+  'acrid',
+  'captain',
+  'railgunner',
+  'void-fiend',
+  'seeker',
+  'chef',
+  'false-son',
+  'operator',
+  'drifter',
+  'heretic',
+] as const
 
 function itemPicksFor(guide: SurvivorGuide): ItemPick[] {
   return [
@@ -25,7 +46,7 @@ export function validateGuideData(
   const guideSlugs = new Set(guides.map((guide) => guide.slug))
   const itemIds = new Set(items.map((item) => item.id))
 
-  if (guides.length !== SURVIVOR_ROSTER.length) {
+  if (guides.length !== EXPECTED_SURVIVOR_SLUGS.length) {
     errors.push('缺少 19 名角色的完整攻略')
   }
 
@@ -33,7 +54,7 @@ export function validateGuideData(
     errors.push('角色 slug 重复')
   }
 
-  for (const slug of SURVIVOR_ROSTER) {
+  for (const slug of EXPECTED_SURVIVOR_SLUGS) {
     if (!guideSlugs.has(slug)) {
       errors.push(`缺少角色：${slug}`)
     }

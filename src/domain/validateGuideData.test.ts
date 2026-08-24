@@ -1,10 +1,12 @@
 import { describe, expect, test } from 'vitest'
 import {
-  SURVIVOR_ROSTER,
   type ItemDefinition,
   type SurvivorGuide,
 } from './guide'
-import { validateGuideData } from './validateGuideData'
+import {
+  EXPECTED_SURVIVOR_SLUGS,
+  validateGuideData,
+} from './validateGuideData'
 
 const item: ItemDefinition = {
   id: 'soldiers-syringe',
@@ -30,7 +32,7 @@ function createGuide(overrides: Partial<SurvivorGuide> = {}): SurvivorGuide {
       { slot: 'utility', nameZh: '战术滑行', nameEn: 'Tactical Dive', icon: '', unlock: 'default', reason: '快速位移' },
       { slot: 'special', nameZh: '压制火力', nameEn: 'Suppressive Fire', icon: '', unlock: 'default', reason: '控制敌人' },
     ],
-    buildLogic: '攻速与暴击兼顾。',
+    buildLogic: ['攻速与暴击兼顾。'],
     solo: {
       common: [{ itemId: item.id, recommendation: 'core', stacks: '优先叠加', role: '攻速', synergy: '提升触发频率' }],
       uncommon: [],
@@ -55,7 +57,7 @@ function createGuide(overrides: Partial<SurvivorGuide> = {}): SurvivorGuide {
 
 describe('guide domain', () => {
   test('exports the required survivor roster in its canonical order', () => {
-    expect(SURVIVOR_ROSTER).toEqual([
+    expect(EXPECTED_SURVIVOR_SLUGS).toEqual([
       'commando', 'huntress', 'bandit', 'mul-t', 'engineer', 'artificer',
       'mercenary', 'rex', 'loader', 'acrid', 'captain', 'railgunner',
       'void-fiend', 'seeker', 'chef', 'false-son', 'operator', 'drifter',
