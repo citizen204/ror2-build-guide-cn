@@ -128,10 +128,8 @@ describe('GitHub Pages workflow', () => {
     expect(workflow).toMatch(/push:\s*\n\s+branches: \[main\]/)
     expect(workflow).toContain('workflow_dispatch:')
     expect(workflow.match(/permissions:/g)).toHaveLength(2)
-    expect(buildJob).toMatch(/permissions:\s*\n\s+contents: read/)
-    expect(buildJob).not.toMatch(/pages:|id-token:/)
-    expect(deployJob).toMatch(/permissions:\s*\n\s+pages: write\s*\n\s+id-token: write/)
-    expect(deployJob).not.toMatch(/contents:/)
+    expect(buildJob).toMatch(/    permissions:\r?\n      contents: read\r?\n    runs-on:/)
+    expect(deployJob).toMatch(/    permissions:\r?\n      pages: write\r?\n      id-token: write\r?\n    environment:/)
     expect(workflow).toMatch(/concurrency:\s*\n\s+group: pages\s*\n\s+cancel-in-progress: true/)
     expect(actionReferences).toEqual([
       'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1',

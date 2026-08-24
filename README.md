@@ -43,7 +43,7 @@ npm run check
 
 物品按用途分组：`solo` 内含白、绿、红、首领与普通主动装备；`voidItems` 存放虚空物品；`lunarItems` 只存被动月球物品；`lunarEquipment` 只存月球主动装备。每条 `ItemPick` 使用 `itemId` 连接 `src/content/items.ts`，并写明 `recommendation`、`stacks`、`role`、`synergy`，需要时再提供 `alternative`。
 
-`validateGuideData` 会检查 19 篇攻略的规范顺序与完整性、必需技能槽位、三阶段统率路线、非空公开内容、来源和所有物品引用，并验证每个分组对应的 `tier`。新增字段或分组时，应先扩展类型、领域校验和签名测试，再更新全部角色数据。
+`validateGuideData` 会检查 19 篇攻略的完整性、必需技能槽位、三阶段统率路线、非空公开内容、来源和所有物品引用，并验证每个分组对应的 `tier`；规范顺序由签名测试固定。新增字段或分组时，应先扩展类型、领域校验和签名测试，再更新全部角色数据。
 
 ## 资料、素材与声明
 
