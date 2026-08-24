@@ -2,7 +2,7 @@
 
 ## 版本与来源
 
-核验于 2026-08-25。角色与炮台：https://riskofrain2.wiki.gg/wiki/Engineer ；物品继承/触发：https://riskofrain2.wiki.gg/wiki/Proc_Coefficient ；物品：https://riskofrain2.wiki.gg/wiki/Items 。推荐为编辑判断。
+核验于 2026-08-25。角色、炮台与 Thermal Harpoons：https://riskofrain2.wiki.gg/wiki/Engineer#Thermal_Harpoons ；物品继承/触发：https://riskofrain2.wiki.gg/wiki/Proc_Coefficient ；物品：https://riskofrain2.wiki.gg/wiki/Items 。推荐为编辑判断。
 
 ## 角色定位
 
@@ -14,10 +14,12 @@
 |---|---|---|
 | 主技能 | 弹跳手雷 `Bouncing Grenades`（默认、唯一） | 固定；蓄满对地面大目标 |
 | 副技能 | 压力地雷 `Pressure Mines`（默认）；蜘蛛地雷 `Spider Mines`（挑战解锁） | **Spider Mines** 自动寻敌、实战命中更稳定；守点预埋可 Pressure |
-| 位移/防御 | 气泡护盾 `Bubble Shield`（默认、唯一） | 固定，但只挡外来投射物，不可把它当无敌 |
+| 效用 | 气泡护盾 `Bubble Shield`（默认）；热力鱼叉 `Thermal Harpoons`（`Engineer: Zero Sum` 挑战解锁） | **Bubble Shield** 为稳定 solo 守点选择；**Thermal Harpoons** 最多储存 4 枚锁定导弹、每枚 500% 伤害，牺牲护盾换主动对空/爆发 |
 | 特殊 | `TR12 Gauss Auto-Turret`（默认）；`TR58 Carbonizer Turret`（挑战解锁） | **TR12** + Bustling Fungus 是最稳 solo；移动炮台适合高速推进且不围绕真菌构筑 |
 
 推荐：`Bouncing Grenades / Spider Mines / Bubble Shield / TR12 Gauss Auto-Turret`。
+
+条件替代：已有足够移动/掩体、飞行怪或 Boss 压力高时，改用 `Thermal Harpoons` 并在进入标记模式前存满 4 枚；守传送器、雨季/Eclipse 求稳时保留 `Bubble Shield`。
 
 ## 触发、伤害与生存模式
 

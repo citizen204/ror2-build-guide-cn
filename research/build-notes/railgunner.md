@@ -2,7 +2,7 @@
 
 ## 版本与来源
 
-核验于 2026-08-25。角色/技能：https://riskofrain2.wiki.gg/wiki/Railgunner ；1.4.1 修正文案确认 M99 完美换弹为 +500% 基础伤害：https://steamcommunity.com/ogg/632360/announcements/detail/497214077375874960 ；proc：https://riskofrain2.wiki.gg/wiki/Proc_Coefficient 。推荐为编辑判断。
+核验于 2026-08-25。角色/技能：https://riskofrain2.wiki.gg/wiki/Railgunner ；1.4.1 修正文案确认 M99 完美换弹为 +500% 基础伤害：https://steamcommunity.com/ogg/632360/announcements/detail/497214077375874960 ；Ben's Raincoat：https://riskofrain2.wiki.gg/wiki/Ben%27s_Raincoat ；proc：https://riskofrain2.wiki.gg/wiki/Proc_Coefficient 。推荐为编辑判断。
 
 ## 角色定位
 
@@ -29,7 +29,7 @@
 
 - **白：** `Crowbar` **5–10**；`Lens-Maker's Glasses` **10 等效**（转弱点倍率）；`Armor-Piercing Rounds` **3–5**；`Mocha` **2–4**（换弹窗口/移速）；`Oddly-shaped Opal` **1**。
 - **绿：** `Kjaro's Band`+`Runald's Band` 各 **1**；`Hopoo Feather` **1–2**；`Old Guillotine` **1–2**；`Shuriken` **1**（贴身/触发环）。
-- **红：** `Laser Scope` **1**（进一步放大暴击）；`Brilliant Behemoth` **1**；`Hardlight Afterburner` **1**（更多 Concussion）。
+- **红：** `Laser Scope` **1**（进一步放大暴击）；`Brilliant Behemoth` **1**；`Hardlight Afterburner` **1**（更多 Concussion）；`Ben's Raincoat` **1**（阻挡 1 个有时限 debuff，改为获得 10% 最大生命的临时屏障，5 秒后充能）。
 - **首领：** `Shatterspleen` **1**（弱点必暴击触发爆炸）；`Molten Perforator`/`Charged Perforator` **1+**。
 - **装备：** `Ocular HUD` 直接提供暴击率→弱点伤害；`Preon Accumulator` 与狙击开场同步，或 `Royal Capacitor` 补难瞄目标。
 
@@ -56,7 +56,6 @@ Railgunner 优先撬棍、双手环和 Boss 远程点杀；把高频 proc、攻�
 - **推荐（纯狙击）：** `Purity` 缩短技能 CD，负幸运对单发倍率流影响较小；仍会削手环/Perforator proc。
 - **条件：** `Shaped Glass` 一击阈值极高，但瞄准时被擦伤即可致命。
 - **条件：** `Transcendence` 适合远程无伤回盾；治疗失效。
-- **条件推荐：** `Ben's Raincoat` 清除一次危险 debuff 并给短暂无敌；**1** 是终局稳定红候选。
 - **避免：** `Visions of Heresy` 会改掉 XQR，且与瞄准切主技能存在复杂充能互动，除非完整转 Heretic。
 
 ## 战斗循环

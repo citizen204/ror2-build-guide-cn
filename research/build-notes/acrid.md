@@ -31,7 +31,7 @@
 - **白：** `Gasoline` **1–3**（Poison 收尾清群）；`Tri-Tip Dagger` **5–10**；`Energy Drink` **3–5**；`Backup Magazine` **2–3**（更多 Neurotoxin）；`Focus Crystal` **1–3**（近战条件）。
 - **绿：** `Ukulele` **1–3**、`AtG Missile Mk. 1` **1–3**（收尾触发）；`Death Mark` **1**（Poison+毒池减速等易凑 debuff）；`Hopoo Feather` **1**。
 - **红：** `Brilliant Behemoth` **1**（可靠收尾）；`Alien Head` **1**；`Ceremonial Dagger` **1**（首个击杀后清屏）。
-- **首领：** `Mired Urn` **1**（近战减速/吸血，联机慎用）；`Little Disciple` **1+**（持续冲刺收尾）。
+- **首领：** `Mired Urn` **1**（仅牵引近处敌人，tar/吸血帮近战维持；https://riskofrain2.wiki.gg/wiki/Mired_Urn ）；`Little Disciple` **1+**（持续冲刺收尾）。
 - **装备：** `Royal Capacitor` 点掉 1 HP 飞行精英/爆发；`Forgive Me Please` 搭配 on-kill 物品远程启动清场。
 
 ## 单人 Command 路线
@@ -42,7 +42,7 @@
 
 ## 联机调整
 
-Acrid 负责给所有高血目标挂 Poison，队友负责收尾；因此无需抢撬棍/双手环，可把高价值单击件让 Loader/Railgunner。死亡标记由队伍补 debuff；避免 Mired Urn 吸连队友。Epidemic 先铺全场，不和队友争低血尾刀资源。
+Acrid 负责给所有高血目标挂 Poison，队友负责收尾；因此无需抢撬棍/双手环，可把高价值单击件让 Loader/Railgunner。死亡标记由队伍补 debuff；`Mired Urn` 的当前目标只是敌人，可按近战前排谁更需要 tar/自疗分配。Epidemic 先铺全场，不和队友争低血尾刀资源。
 
 ## Void 转换
 

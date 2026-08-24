@@ -2,11 +2,11 @@
 
 ## 版本与来源
 
-核验于 2026-08-25，采用 SotS 2.0 重做后的技能。角色/技能/Growth：https://riskofrain2.wiki.gg/wiki/False_Son ；proc：https://riskofrain2.wiki.gg/wiki/Proc_Coefficient ；1.4.1 修复 Club 文案与 Lunar Ruin/AC Boss 互动：https://steamcommunity.com/ogg/632360/announcements/detail/497214077375874960 。推荐为编辑判断。
+核验于 2026-08-25，采用 SotS 2.0 重做后的技能。角色/技能/Growth：https://riskofrain2.wiki.gg/wiki/False_Son#Growth ；Transcendence：https://riskofrain2.wiki.gg/wiki/Transcendence ；proc：https://riskofrain2.wiki.gg/wiki/Proc_Coefficient ；1.4.1 修复 Club 文案与 Lunar Ruin/AC Boss 互动：https://steamcommunity.com/ogg/632360/announcements/detail/497214077375874960 。推荐为编辑判断。
 
 ## 角色定位
 
-高生命近战/中距混合角色，以最大生命来源产生 `Growth`，增强技能充能/持续时间。被动 `Lunar Tampering`：未用 Lunar Spike 每层提供攻速/护甲，已用层提供移速/生命回复；战斗中要在“留层抗打”和“花层追击”间切换。
+高生命近战/中距混合角色，以额外最大**生命（health，不是 shield）**产生 `Growth`，增强技能充能/持续时间。被动 `Lunar Tampering`：未用 Lunar Spike 每层提供攻速/护甲，已用层提供移速/生命回复；战斗中要在“留层抗打”和“花层追击”间切换。
 
 ## 当前技能与推荐配置
 
@@ -21,7 +21,7 @@
 
 ## 伤害、移动与生存
 
-- 额外最大生命（非升级自然成长）贡献 Growth；`Infusion`、`Titanic Knurl` 等既加肉度也强化技能。
+- 额外最大生命（非升级自然成长）贡献 Growth；`Infusion`、`Titanic Knurl` 等既加肉度也强化技能。护盾不计入 Growth；`Transcendence` 把除 1 点外的生命转为护盾，会完全移除 Growth。
 - 留满 Spikes 获攻速/护甲；进攻时先用 Meridian's Will 三倍被动，再花 Spikes 和 Burst，之后 Burst 回填。
 - Club 蓄力时近身风险高；用聚怪/眩晕窗砸，不要在远程齐射中站桩。
 
@@ -30,7 +30,7 @@
 - **白：** `Mocha` **3–5**；`Focus Crystal` **3–5**；`Armor-Piercing Rounds` **1–3**；`Oddly-shaped Opal` **1**；`Cautious Slug` **1–2**。
 - **绿：** `Infusion` **1–3**（Growth 核心）；`Shuriken` **1–3**（Club 空窗远程）；`Hopoo Feather` **1**；`Rose Buckler` **1–3**。
 - **红：** `Alien Head` **1**；`Brilliant Behemoth` **1**；`Rejuvenation Rack` **1**（高血回复），已有暴击再考虑 Clover。
-- **首领：** `Titanic Knurl` **1+**（最大生命/Growth）；`Mired Urn` **1**（近距吸取，联机慎用）；`Genesis Loop` **1** 低血保险。
+- **首领：** `Titanic Knurl` **1+**（最大生命/Growth）；`Mired Urn` **1**（仅牵引近处敌人，附加 tar、伤害与自疗；https://riskofrain2.wiki.gg/wiki/Mired_Urn ）；`Genesis Loop` **1** 低血保险。
 - **装备：** `Gorag's Opus` 加速 Club/移动；`Royal Capacitor` 补远程点杀。
 
 ## 单人 Command 路线
@@ -41,7 +41,7 @@
 
 ## 联机调整
 
-False Son 是最大生命/Growth 物品优先候选，但 `Infusion` 也被 REX/Seeker 需要，按前排职责分配。负责 Meridian 聚怪与 Club 砸群，避免把怪拉离队友范围。Mired Urn 联机默认不拿；Gorag's Opus 开全队窗口。把高频 proc 件让持续射手。
+False Son 是最大生命/Growth 物品优先候选，但 `Infusion` 也被 REX/Seeker 需要，按前排职责分配。负责 Meridian 聚怪与 Club 砸群，避免把怪拉离队友范围。`Mired Urn` 的当前目标只是敌人，可按近战前排需求分配。Gorag's Opus 开全队窗口。把高频 proc 件让持续射手。
 
 ## Void 转换
 
@@ -53,10 +53,10 @@ False Son 是最大生命/Growth 物品优先候选，但 `Infusion` 也被 REX/
 
 ## Lunar 被动与装备
 
-- **条件推荐：** `Transcendence` 高最大护盾配 Growth 路线，但常规回复与已用 Spike 回复失效；需明确转护盾构筑。
+- **强烈避免：** `Transcendence` 把生命转为护盾，而护盾不计入 Growth，因此会完全移除 Growth；还会让常规治疗与已用 Spike 的生命回复失去主要价值。
 - **条件：** `Light Flux Pauldron` 降技能 CD，却砍 Club/被动攻速；偏 Burst/位移技能流才拿。
 - **条件：** `Shaped Glass` 高生命看似能承受减半，但会削弱 Growth 生存底盘，熟练后才拿。
-- **避免：** `Neutronium Weight`（AC 月球物品，未纳入目录推荐）：战斗中大幅压伤害/攻速/移速/护甲，转移机制不够稳定，明确避开。
+- **避免：** `Neutronium Weight`（AC 月球物品）：战斗中大幅压伤害/攻速/移速/护甲，转移机制不够稳定，明确避开。
 
 ## 战斗循环
 

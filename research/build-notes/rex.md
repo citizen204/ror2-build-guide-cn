@@ -51,7 +51,7 @@
 
 ### 首领与装备
 
-- `Mired Urn`：近距吸血/减速并补 debuff；**1**，联机会吸队友，慎用。
+- `Mired Urn`：仅牵引近处敌人，吸血/tar 并补 debuff；**1**。当前机制：https://riskofrain2.wiki.gg/wiki/Mired_Urn 。
 - `Titanic Knurl`：生命与回复的稳定底盘；**1+**。
 - `Super Massive Leech`：爆发期间把伤害转治疗，危急恢复。
 - `Royal Capacitor`：远程点杀，伤害提升也让 proc 链间接更强。
@@ -64,7 +64,7 @@
 
 ## 联机调整
 
-REX 的 Weaken/缠绕是团队减伤和聚怪工具，应把 Tangling Growth 对准队友 AoE。`Mired Urn` 可能把友军链接并造成不良体验，联机默认让掉；Death Mark 可由全队共同补四类 debuff。治疗资源不要全拿，Inject/Tangling 已能自给，优先把急救给无自愈前排。
+REX 的 Weaken/缠绕是团队减伤和聚怪工具，应把 Tangling Growth 对准队友 AoE。`Mired Urn` 的当前目标只是敌人；REX 可用它补 tar/近距自疗，Death Mark 可由全队共同补其他 debuff。治疗资源不要全拿，Inject/Tangling 已能自给，优先把急救给无自愈前排。
 
 ## Void 转换
 

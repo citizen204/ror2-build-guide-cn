@@ -30,7 +30,7 @@
 - **白：** `Backup Magazine` **2–4**（Sear/Ice Box）；`Mocha` **3–5**；`Gasoline` **1–3**；`Crowbar` **1–3**；`Oddly-shaped Opal` **1**。
 - **绿：** `Ignition Tank` **1–3**（Sear 路线核心）；`AtG Missile Mk. 1`/`Ukulele` 各 **1–2**；`Hopoo Feather` **1**；`Death Mark` **1**（Oil 的 Weak/Slow、Burn 等可凑）。
 - **红：** `Brilliant Behemoth` **1**；`Alien Head` **1**；`Rejuvenation Rack` **1**（强化餐点/自疗，联机支援）。
-- **首领：** `Molten Perforator` **1+**；`Mired Urn` **1**（近距连段，联机慎用）。
+- **首领：** `Molten Perforator` **1+**；`Mired Urn` **1**（仅牵引近处敌人，tar/吸血支持近距连段；https://riskofrain2.wiki.gg/wiki/Mired_Urn ）。
 - **装备：** `Royal Capacitor` 补远程；`Gorag's Opus` 提连段/团队爆发。
 
 ## 单人 Command 路线

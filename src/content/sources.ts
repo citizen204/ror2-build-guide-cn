@@ -167,4 +167,34 @@ export const sources: SourceRecord[] = [
     url: 'https://riskofrain2.wiki.gg/wiki/Engineer#TR12_Gauss_Auto-Turret',
     verifiedOn,
   },
+  {
+    id: 'wiki-engineer-thermal-harpoons',
+    label: 'Risk of Rain 2 Wiki — Engineer Thermal Harpoons',
+    url: 'https://riskofrain2.wiki.gg/wiki/Engineer#Thermal_Harpoons',
+    verifiedOn,
+  },
+  {
+    id: 'wiki-false-son-growth',
+    label: 'Risk of Rain 2 Wiki — False Son Growth',
+    url: 'https://riskofrain2.wiki.gg/wiki/False_Son#Growth',
+    verifiedOn,
+  },
+  {
+    id: 'wiki-transcendence',
+    label: 'Risk of Rain 2 Wiki — Transcendence',
+    url: 'https://riskofrain2.wiki.gg/wiki/Transcendence',
+    verifiedOn,
+  },
+  {
+    id: 'wiki-mired-urn',
+    label: 'Risk of Rain 2 Wiki — Mired Urn current targeting',
+    url: 'https://riskofrain2.wiki.gg/wiki/Mired_Urn',
+    verifiedOn,
+  },
+  {
+    id: 'wiki-bens-raincoat',
+    label: "Risk of Rain 2 Wiki — Ben's Raincoat",
+    url: 'https://riskofrain2.wiki.gg/wiki/Ben%27s_Raincoat',
+    verifiedOn,
+  },
 ]

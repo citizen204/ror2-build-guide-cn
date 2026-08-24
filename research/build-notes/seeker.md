@@ -30,7 +30,7 @@
 - **白：** `Mocha` **3–5**；`Focus Crystal` **2–4**；`Backup Magazine` **2–3**（Soul Spiral）；`Topaz Brooch` **1–2**；`Oddly-shaped Opal` **1**。
 - **绿：** `Hopoo Feather` **1–2**；`Rose Buckler` **1–3**；`AtG Missile Mk. 1`/`Ukulele` 各 **1–2**；`Infusion` **1**（屏障/治疗按最大生命更稳）。
 - **红：** `Rejuvenation Rack` **1**（团队治疗）；`Aegis` **1**（过量治疗转屏障）；`Alien Head` **1**。
-- **首领：** `Titanic Knurl` **1+**；`Mired Urn` **1**（近距减速/吸血，联机慎用）。
+- **首领：** `Titanic Knurl` **1+**；`Mired Urn` **1**（仅牵引近处敌人，tar/吸血补前排维持；https://riskofrain2.wiki.gg/wiki/Mired_Urn ）。
 - **装备：** `Gorag's Opus` 团队爆发；`Royal Capacitor` 补远程点杀。
 
 ## 单人 Command 路线
@@ -41,7 +41,7 @@
 
 ## 联机调整
 
-Seeker 的 Meditate/旋风承担公共治疗与复活，应把 `Rejuvenation Rack`/Aegis 与 REX 等治疗角色协商。满 Tranquility 的复活是事实能力，但不能成为队友故意倒地的计划。Gorag's Opus 开在全队；Mired Urn 默认让掉，避免吸队友。资源上可少拿个人治疗，多拿技能 CD/生存。
+Seeker 的 Meditate/旋风承担公共治疗与复活，应把 `Rejuvenation Rack`/Aegis 与 REX 等治疗角色协商。满 Tranquility 的复活是事实能力，但不能成为队友故意倒地的计划。Gorag's Opus 开在全队；`Mired Urn` 只吸敌人，因 Seeker 已有团队自疗，可按近战前排谁更需要分配。资源上可少拿个人治疗，多拿技能 CD/生存。
 
 ## Void 转换
 

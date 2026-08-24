@@ -31,7 +31,7 @@
 - **白：** `Mocha` **3–5**；`Focus Crystal` **3–5**；`Lens-Maker's Glasses` **5–10**（Tornado 产 Junk）；`Topaz Brooch` **1–2**；保留 **1–3 白废料**换移动被动，别全投打印机。
 - **绿：** `Backup Magazine` **2–4**（Cube/Cleanup）；`AtG Missile Mk. 1`/`Ukulele` 各 **1–2**；`Collector's Compulsion` **1–3**（拾物/临时物/Junk 维持叠层）；可留 **1–2 绿废料**持续回复。
 - **红：** `Substandard Duplicator` **1**（拾永久物时复制临时版并延长临时物时限）；`Brilliant Behemoth` **1**；`57 Leaf Clover` **1**。
-- **首领：** `Titanic Knurl` **1**（近战底盘）；`Mired Urn` **1**（联机慎用）；`Shatterspleen` **1**。
+- **首领：** `Titanic Knurl` **1**（近战底盘）；`Mired Urn` **1**（仅牵引近处敌人，tar/吸血支持近战；https://riskofrain2.wiki.gg/wiki/Mired_Urn ）；`Shatterspleen` **1**。
 - **装备：** `Recycler` 与 Tinker 双重改善选择；成型后 `Royal Capacitor`/`Gorag's Opus`。
 
 ## 单人 Command 路线
