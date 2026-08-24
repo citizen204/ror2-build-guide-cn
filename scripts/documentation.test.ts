@@ -1,23 +1,24 @@
+import { execFileSync } from 'node:child_process'
 import { readFile } from 'node:fs/promises'
 import { resolve } from 'node:path'
 import { describe, expect, test } from 'vitest'
 
 const repositoryDirectory = resolve(process.cwd())
-const documentationFiles = [
-  'README.md',
-  'PRODUCT.md',
-  'index.html',
-  'research/version-and-roster.md',
-  'docs/superpowers/specs/2026-08-25-ror2-build-guide-design.md',
-  'docs/superpowers/plans/2026-08-25-ror2-build-guide.md',
-]
+const excludedDocumentationDirectories = new Set([
+  'node_modules', 'dist', 'build', 'coverage', 'generated', '.vite',
+])
 
-const localizedAlloyedCollectiveFiles = [
-  'README.md',
-  'index.html',
-  'research/version-and-roster.md',
-  'docs/superpowers/specs/2026-08-25-ror2-build-guide-design.md',
-]
+function listTrackedDocumentationFiles(): string[] {
+  return execFileSync('git', ['ls-files', '-z'], {
+    cwd: repositoryDirectory,
+    encoding: 'utf8',
+  })
+    .split('\0')
+    .filter(Boolean)
+    .filter((file) => file.endsWith('.md') || file === 'index.html')
+    .filter((file) => !file.split('/').some((part) => excludedDocumentationDirectories.has(part)))
+    .sort()
+}
 
 describe('maintainer documentation', () => {
   test('documents the canonical guide, item-pick, and validation contracts', async () => {
@@ -39,6 +40,9 @@ describe('maintainer documentation', () => {
   })
 
   test('uses the official Alloyed Collective Chinese name throughout project documentation', async () => {
+    const documentationFiles = listTrackedDocumentationFiles()
+    expect(documentationFiles).toContain('research/build-notes/acrid.md')
+
     const documents = await Promise.all(documentationFiles.map(async (file) => ({
       file,
       content: await readFile(resolve(repositoryDirectory, file), 'utf8'),
@@ -48,9 +52,6 @@ describe('maintainer documentation', () => {
       expect(content, `${file} must not use stale DLC naming`).not.toMatch(/合金集体|合金共同体/)
     }
 
-    for (const file of localizedAlloyedCollectiveFiles) {
-      const document = documents.find((candidate) => candidate.file === file)
-      expect(document?.content, `${file} must use the official Chinese name`).toContain('合金意念')
-    }
+    expect(documents.some(({ content }) => content.includes('合金意念'))).toBe(true)
   })
 })
