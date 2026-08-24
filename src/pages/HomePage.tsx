@@ -33,11 +33,11 @@ export function HomePage() {
           </p>
         </div>
         {filteredSurvivors.length > 0 ? (
-          <div className="roster__grid">
+          <ul className="roster__grid" aria-label="角色筛选结果">
             {filteredSurvivors.map((survivor) => (
               <SurvivorCard key={survivor.slug} survivor={survivor} />
             ))}
-          </div>
+          </ul>
         ) : (
           <div className="empty-results" aria-labelledby="empty-results-title">
             <h2 id="empty-results-title">没有找到符合条件的角色</h2>

@@ -98,18 +98,33 @@ test('filters the roster by the base game, SOTS, and AC', async () => {
 
   await user.click(screen.getByRole('button', { name: '本体' }))
   expect(screen.getByRole('status')).toHaveTextContent('找到 11 名角色')
+  expect(
+    within(screen.getByRole('list', { name: '角色筛选结果' })).getAllByRole(
+      'listitem',
+    ),
+  ).toHaveLength(11)
   expect(screen.getByRole('link', { name: /Commando/ })).toBeInTheDocument()
   expect(screen.getByRole('link', { name: /Acrid/ })).toBeInTheDocument()
   expect(screen.queryByRole('link', { name: /Seeker/ })).not.toBeInTheDocument()
 
   await user.click(screen.getByRole('button', { name: 'SOTS' }))
   expect(screen.getByRole('status')).toHaveTextContent('找到 3 名角色')
+  expect(
+    within(screen.getByRole('list', { name: '角色筛选结果' })).getAllByRole(
+      'listitem',
+    ),
+  ).toHaveLength(3)
   expect(screen.getByRole('link', { name: /Seeker/ })).toBeInTheDocument()
   expect(screen.getByRole('link', { name: /CHEF/ })).toBeInTheDocument()
   expect(screen.getByRole('link', { name: /False Son/ })).toBeInTheDocument()
 
   await user.click(screen.getByRole('button', { name: 'AC' }))
   expect(screen.getByRole('status')).toHaveTextContent('找到 2 名角色')
+  expect(
+    within(screen.getByRole('list', { name: '角色筛选结果' })).getAllByRole(
+      'listitem',
+    ),
+  ).toHaveLength(2)
   expect(screen.getByRole('link', { name: /Operator/ })).toBeInTheDocument()
   expect(screen.getByRole('link', { name: /Drifter/ })).toBeInTheDocument()
   expect(screen.queryByRole('link', { name: /Seeker/ })).not.toBeInTheDocument()

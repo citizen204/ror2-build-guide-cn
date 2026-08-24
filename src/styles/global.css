@@ -27,7 +27,7 @@ input {
 
 button {
   min-height: 2.75rem;
-  border: 1px solid var(--color-line-strong);
+  border: 1px solid var(--color-interactive-boundary);
   border-radius: var(--radius-sm);
   background: var(--color-raised);
   cursor: pointer;
@@ -131,7 +131,7 @@ button:disabled {
   min-width: 0;
   min-height: 2.75rem;
   padding: 0.625rem 0.75rem;
-  border: 1px solid var(--color-line-strong);
+  border: 1px solid var(--color-interactive-boundary);
   border-radius: var(--radius-sm);
   background: var(--color-bg);
   transition:
@@ -231,17 +231,24 @@ button:disabled {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .survivor-card {
   min-width: 0;
 }
 
+.survivor-card__record {
+  height: 100%;
+}
+
 .survivor-card__link {
   display: grid;
   height: 100%;
   overflow: hidden;
-  border: 1px solid var(--color-line);
+  border: 1px solid var(--color-interactive-boundary);
   border-radius: var(--radius-md);
   background: var(--color-surface);
   color: inherit;
