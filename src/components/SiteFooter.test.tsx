@@ -11,6 +11,8 @@ const sourceLinks = [
   { id: 'steam-alloyed-collective', name: /Alloyed Collective 官方页面/ },
   { id: 'wiki-survivors', name: /角色资料与图标来源/ },
   { id: 'wiki-items', name: /物品资料与图标来源/ },
+  { id: 'github-asset-manifest', name: /完整图标来源清单/ },
+  { id: 'wiki-copyrights', name: /Wiki 权利与许可说明/ },
 ] as const
 
 afterEach(cleanup)
@@ -30,8 +32,10 @@ describe('site footer', () => {
       '2026-08-25',
     )
     expect(footer).not.toHaveTextContent('最后核对最后核对')
-    expect(within(footer).getByText(/本体（Base）/)).toHaveTextContent(
-      '本体（Base）、Survivors of the Void（SOTV）、Seekers of the Storm（SOTS）、Alloyed Collective（AC）',
+    const scope = within(footer).getByText('适用内容').parentElement?.querySelector('dd')
+    expect(scope).not.toBeNull()
+    expect(scope).toHaveTextContent(
+      '本体（Base）、虚空幸存者（Survivors of the Void，SOTV）、风暴探寻者（Seekers of the Storm，SOTS）、合金意念（Alloyed Collective，AC）',
     )
     expect(within(footer).getByText(/公开的非官方粉丝攻略/)).toHaveTextContent(
       /没有隶属、赞助或认可关系/,
@@ -62,6 +66,15 @@ describe('site footer', () => {
       await user.tab()
       expect(link).toHaveFocus()
     }
+
+    expect(screen.getByRole('link', { name: /完整图标来源清单/ })).toHaveAttribute(
+      'href',
+      'https://github.com/citizen204/ror2-build-guide-cn/blob/main/src/content/assets.json',
+    )
+    expect(screen.getByRole('link', { name: /Wiki 权利与许可说明/ })).toHaveAttribute(
+      'href',
+      'https://riskofrain2.wiki.gg/wiki/Risk_of_Rain_2_Wiki:Copyrights',
+    )
   })
 })
 
@@ -74,4 +87,5 @@ test.each(['/', '/survivors/acrid', '/missing'])('renders one main landmark and 
 
   expect(screen.getAllByRole('main')).toHaveLength(1)
   expect(screen.getAllByRole('contentinfo')).toHaveLength(1)
+  expect(document.body).not.toHaveTextContent(/[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/)
 })

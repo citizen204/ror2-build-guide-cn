@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'vitest'
+import { siteMetadata } from './siteMetadata'
 import { sources } from './sources'
 
 describe('research source registry', () => {
@@ -21,5 +22,6 @@ describe('research source registry', () => {
 
   test('records verification dates as YYYY-MM-DD', () => {
     expect(sources.every((source) => /^\d{4}-\d{2}-\d{2}$/.test(source.verifiedOn))).toBe(true)
+    expect(sources.every((source) => source.verifiedOn === siteMetadata.verifiedOn)).toBe(true)
   })
 })

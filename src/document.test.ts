@@ -17,6 +17,7 @@ describe('document metadata', () => {
   test('provides descriptive search and browser metadata', () => {
     expect(document.title).toBe('雨中冒险 2 全角色构筑攻略｜中文技能与物品指南')
     expect(metaContent('meta[name="description"]')).toMatch(/全角色中文构筑攻略/)
+    expect(metaContent('meta[name="description"]')).toMatch(/合金意念（Alloyed Collective）/)
     expect(metaContent('meta[name="theme-color"]')).toBe('#050505')
     expect(document.querySelector<HTMLLinkElement>('link[rel="canonical"]')?.href).toBe(
       'https://citizen204.github.io/ror2-build-guide-cn/',
@@ -33,5 +34,6 @@ describe('document metadata', () => {
       'https://citizen204.github.io/ror2-build-guide-cn/',
     )
     expect(document.querySelector('meta[property="og:image"]')).not.toBeInTheDocument()
+    expect(html).not.toMatch(/[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/)
   })
 })

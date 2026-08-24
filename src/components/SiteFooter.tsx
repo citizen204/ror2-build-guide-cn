@@ -1,3 +1,5 @@
+import { Fragment } from 'react'
+import { siteMetadata } from '../content/siteMetadata'
 import { sources } from '../content/sources'
 
 const footerSourceConfig = [
@@ -5,6 +7,8 @@ const footerSourceConfig = [
   { id: 'steam-alloyed-collective', label: 'Alloyed Collective 官方页面' },
   { id: 'wiki-survivors', label: '角色资料与图标来源' },
   { id: 'wiki-items', label: '物品资料与图标来源' },
+  { id: 'github-asset-manifest', label: '完整图标来源清单' },
+  { id: 'wiki-copyrights', label: 'Wiki 权利与许可说明' },
 ] as const
 
 const footerSources = footerSourceConfig.map(({ id, label }) => {
@@ -13,8 +17,6 @@ const footerSources = footerSourceConfig.map(({ id, label }) => {
 
   return { ...source, displayLabel: label }
 })
-
-const verifiedOn = footerSources[0].verifiedOn
 
 export function SiteFooter() {
   return (
@@ -29,15 +31,19 @@ export function SiteFooter() {
             <div>
               <dt>最后核对</dt>
               <dd>
-                <time dateTime={verifiedOn}>{verifiedOn}</time>
+                <time dateTime={siteMetadata.verifiedOn}>{siteMetadata.verifiedOn}</time>
               </dd>
             </div>
             <div>
               <dt>适用内容</dt>
               <dd>
-                本体（Base）、<span lang="en">Survivors of the Void</span>（SOTV）、
-                <span lang="en">Seekers of the Storm</span>（SOTS）、
-                <span lang="en">Alloyed Collective</span>（AC）
+                {siteMetadata.dlcScope.map((dlc, index) => (
+                  <Fragment key={dlc.id}>
+                    {index > 0 ? '、' : null}
+                    {dlc.nameZh}（<span lang="en">{dlc.nameEn}</span>
+                    {'abbreviation' in dlc ? `，${dlc.abbreviation}` : null}）
+                  </Fragment>
+                ))}
               </dd>
             </div>
           </dl>
