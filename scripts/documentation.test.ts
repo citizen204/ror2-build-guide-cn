@@ -3,6 +3,21 @@ import { resolve } from 'node:path'
 import { describe, expect, test } from 'vitest'
 
 const repositoryDirectory = resolve(process.cwd())
+const documentationFiles = [
+  'README.md',
+  'PRODUCT.md',
+  'index.html',
+  'research/version-and-roster.md',
+  'docs/superpowers/specs/2026-08-25-ror2-build-guide-design.md',
+  'docs/superpowers/plans/2026-08-25-ror2-build-guide.md',
+]
+
+const localizedAlloyedCollectiveFiles = [
+  'README.md',
+  'index.html',
+  'research/version-and-roster.md',
+  'docs/superpowers/specs/2026-08-25-ror2-build-guide-design.md',
+]
 
 describe('maintainer documentation', () => {
   test('documents the canonical guide, item-pick, and validation contracts', async () => {
@@ -23,13 +38,19 @@ describe('maintainer documentation', () => {
     expect(readme).toContain('规范顺序由签名测试固定')
   })
 
-  test('uses the official Alloyed Collective Chinese name in roster research', async () => {
-    const research = await readFile(
-      resolve(repositoryDirectory, 'research/version-and-roster.md'),
-      'utf8',
-    )
+  test('uses the official Alloyed Collective Chinese name throughout project documentation', async () => {
+    const documents = await Promise.all(documentationFiles.map(async (file) => ({
+      file,
+      content: await readFile(resolve(repositoryDirectory, file), 'utf8'),
+    })))
 
-    expect(research).toContain('合金意念')
-    expect(research).not.toContain('合金共同体')
+    for (const { file, content } of documents) {
+      expect(content, `${file} must not use stale DLC naming`).not.toMatch(/合金集体|合金共同体/)
+    }
+
+    for (const file of localizedAlloyedCollectiveFiles) {
+      const document = documents.find((candidate) => candidate.file === file)
+      expect(document?.content, `${file} must use the official Chinese name`).toContain('合金意念')
+    }
   })
 })
