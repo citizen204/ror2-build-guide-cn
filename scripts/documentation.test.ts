@@ -4,9 +4,6 @@ import { resolve } from 'node:path'
 import { describe, expect, test } from 'vitest'
 
 const repositoryDirectory = resolve(process.cwd())
-const excludedDocumentationDirectories = new Set([
-  'node_modules', 'dist', 'build', 'coverage', 'generated', '.vite',
-])
 
 function listTrackedDocumentationFiles(): string[] {
   return execFileSync('git', ['ls-files', '-z'], {
@@ -16,7 +13,6 @@ function listTrackedDocumentationFiles(): string[] {
     .split('\0')
     .filter(Boolean)
     .filter((file) => file.endsWith('.md') || file === 'index.html')
-    .filter((file) => !file.split('/').some((part) => excludedDocumentationDirectories.has(part)))
     .sort()
 }
 
@@ -41,6 +37,16 @@ describe('maintainer documentation', () => {
 
   test('uses the official Alloyed Collective Chinese name throughout project documentation', async () => {
     const documentationFiles = listTrackedDocumentationFiles()
+    const expectedDocumentationFiles = execFileSync('git', ['ls-files', '-z'], {
+      cwd: repositoryDirectory,
+      encoding: 'utf8',
+    })
+      .split('\0')
+      .filter(Boolean)
+      .filter((file) => file.endsWith('.md') || file === 'index.html')
+      .sort()
+
+    expect(documentationFiles).toEqual(expectedDocumentationFiles)
     expect(documentationFiles).toContain('research/build-notes/acrid.md')
 
     const documents = await Promise.all(documentationFiles.map(async (file) => ({
