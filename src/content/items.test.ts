@@ -26,6 +26,34 @@ const EXPECTED_CORRUPTIONS: Record<string, string> = {
   'weeping-fungus': 'bustling-fungus',
 }
 
+const EXPECTED_SPECIAL_REFERENCES = {
+  'defensive-microbots': {
+    nameZh: '防御用微型机器人',
+    nameEn: 'Defensive Microbots',
+    tier: 'legendary',
+  },
+  'item-scrap-white': {
+    nameZh: '物品碎片，白色',
+    nameEn: 'Item Scrap, White',
+    tier: 'common',
+  },
+  'item-scrap-green': {
+    nameZh: '物品碎片，绿色',
+    nameEn: 'Item Scrap, Green',
+    tier: 'uncommon',
+  },
+  'item-scrap-red': {
+    nameZh: '物品碎片，红色',
+    nameEn: 'Item Scrap, Red',
+    tier: 'legendary',
+  },
+  'item-scrap-yellow': {
+    nameZh: '物品碎片，黄色',
+    nameEn: 'Item Scrap, Yellow',
+    tier: 'boss',
+  },
+} as const
+
 describe('canonical item catalogue', () => {
   test('uses unique stable kebab-case IDs', () => {
     const ids = items.map((item) => item.id)
@@ -41,6 +69,17 @@ describe('canonical item catalogue', () => {
 
   test('uses local PNG icon paths', () => {
     expect(items.every((item) => /^assets\/items\/.+\.png$/.test(item.icon))).toBe(true)
+  })
+
+  test('includes every concretely referenced world-unique item at its source tier', () => {
+    const expectedIds = Object.keys(EXPECTED_SPECIAL_REFERENCES)
+    const actual = Object.fromEntries(
+      items
+        .filter((item) => expectedIds.includes(item.id))
+        .map(({ id, nameZh, nameEn, tier }) => [id, { nameZh, nameEn, tier }]),
+    )
+
+    expect(actual).toEqual(EXPECTED_SPECIAL_REFERENCES)
   })
 
   test.each(REQUIRED_TIERS)('contains at least one %s entry', (tier) => {

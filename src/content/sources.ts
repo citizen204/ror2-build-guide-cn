@@ -88,6 +88,18 @@ export const sources: SourceRecord[] = [
     verifiedOn,
   },
   {
+    id: 'wiki-mithrix-item-steal',
+    label: 'Risk of Rain 2 Wiki — Mithrix phase-four item stealing',
+    url: 'https://riskofrain2.wiki.gg/wiki/Mithrix#Phase_4',
+    verifiedOn,
+  },
+  {
+    id: 'wiki-cannot-steal-items',
+    label: 'Risk of Rain 2 Wiki — CannotSteal items',
+    url: 'https://riskofrain2.wiki.gg/wiki/Category:CannotSteal_Items',
+    verifiedOn,
+  },
+  {
     id: 'wiki-drone-combiner',
     label: 'Risk of Rain 2 Wiki — Drone Combiner Station',
     url: 'https://riskofrain2.wiki.gg/wiki/Drone_Combiner_Station',

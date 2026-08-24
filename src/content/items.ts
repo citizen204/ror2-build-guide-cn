@@ -43,6 +43,7 @@ export const items: ItemDefinition[] = [
   item('oddly-shaped-opal', '奇形怪状的蛋白石', 'Oddly-shaped Opal', 'common'),
   item('delicate-watch', '易碎手表', 'Delicate Watch', 'common'),
   item('rusted-key', '生锈的钥匙', 'Rusted Key', 'common'),
+  item('item-scrap-white', '物品碎片，白色', 'Item Scrap, White', 'common'),
 
   // Uncommon (green)
   item('atg-missile-mk-1', '空对地导弹1号', 'AtG Missile Mk. 1', 'uncommon'),
@@ -66,6 +67,7 @@ export const items: ItemDefinition[] = [
   item('shipping-request-form', '运输申请单', 'Shipping Request Form', 'uncommon'),
   item('box-of-dynamite', '一箱炸药', 'Box of Dynamite', 'uncommon'),
   item('collectors-compulsion', '收藏者的冲动', "Collector's Compulsion", 'uncommon'),
+  item('item-scrap-green', '物品碎片，绿色', 'Item Scrap, Green', 'uncommon'),
 
   // Legendary (red)
   item('brilliant-behemoth', '完美巨兽', 'Brilliant Behemoth', 'legendary'),
@@ -87,6 +89,8 @@ export const items: ItemDefinition[] = [
   item('bens-raincoat', '本的雨衣', "Ben's Raincoat", 'legendary'),
   item('orphaned-core', '遗落核心', 'Orphaned Core', 'legendary'),
   item('substandard-duplicator', '标准复制器', 'Substandard Duplicator', 'legendary'),
+  item('defensive-microbots', '防御用微型机器人', 'Defensive Microbots', 'legendary'),
+  item('item-scrap-red', '物品碎片，红色', 'Item Scrap, Red', 'legendary'),
 
   // Boss (yellow)
   item('titanic-knurl', '巨型隆起', 'Titanic Knurl', 'boss'),
@@ -99,6 +103,7 @@ export const items: ItemDefinition[] = [
   item('shatterspleen', '易爆的脾脏', 'Shatterspleen', 'boss'),
   item('empathy-cores', '共情核心', 'Empathy Cores', 'boss'),
   item('defense-nucleus', '防御核心', 'Defense Nucleus', 'boss'),
+  item('item-scrap-yellow', '物品碎片，黄色', 'Item Scrap, Yellow', 'boss'),
 
   // Equipment (orange)
   item('royal-capacitor', '皇家电容器', 'Royal Capacitor', 'equipment'),

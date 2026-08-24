@@ -2,7 +2,7 @@
 
 ## 版本与来源
 
-核验于 2026-08-25。角色与四件 Heresy：https://riskofrain2.wiki.gg/wiki/Heretic ；解锁挑战：https://riskofrain2.wiki.gg/wiki/Blockade_Breaker ；proc：https://riskofrain2.wiki.gg/wiki/Proc_Coefficient 。以下明确不把 Heretic 表述为正常角色选择界面幸存者；推荐为编辑判断。
+核验于 2026-08-25。角色与四件 Heresy：https://riskofrain2.wiki.gg/wiki/Heretic ；解锁挑战：https://riskofrain2.wiki.gg/wiki/Blockade_Breaker ；proc：https://riskofrain2.wiki.gg/wiki/Proc_Coefficient ；四件 Heresy 的 `CannotSteal` 分类：https://riskofrain2.wiki.gg/wiki/Category:CannotSteal_Items ；Mithrix 第四阶段夺取规则：https://riskofrain2.wiki.gg/wiki/Mithrix#Phase_4 。以下明确不把 Heretic 表述为正常角色选择界面幸存者；推荐为编辑判断。
 
 ## 角色定位、解锁与变身事实
 
@@ -64,4 +64,4 @@ Heretic 无法在开局角色选择中直接选择。完成 `Blockade Breaker` �
 - **传送器：** Maelstrom 控场→Hungering Gaze 多目标挂 Ruin→装备/爆炸补层→Ruin 引爆→Shadowfade 穿出并回血。
 - **Boss：** 先堆 Ruin 至爆发窗再引爆，不要每层立即按；Maelstrom 终爆对准 Boss 停顿。
 - **飞行怪：** Hungering Gaze 追踪处理，电容器点精英；三段跳维持射线但留 Shadowfade 回地面。
-- **最终阶段：** Shadowfade 无形穿锤击/旋转墙，负回复使拖延危险；物品夺取阶段三段跳+掩体，等四个 Heresy 物品归还后再进入完整循环。
+- **最终阶段：** Shadowfade 无形穿锤击/旋转墙，负回复使拖延危险。四件 Heresy 都属于 `CannotSteal`，Mithrix 第四阶段**不会夺走它们**，因此变身与四个完整技能始终保留；他仍会夺走其他可偷物品，所以用三段跳+掩体保持距离，靠 Hungering Gaze→Maelstrom→Ruin 循环打回其余构筑。
