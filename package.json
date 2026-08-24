@@ -10,6 +10,8 @@
   "scripts": {
     "assets:check": "node scripts/fetch-assets.mjs --check",
     "assets:fetch": "node scripts/fetch-assets.mjs",
+    "assets:freshness": "node scripts/fetch-assets.mjs --freshness",
+    "assets:update": "node scripts/fetch-assets.mjs --update",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "test": "vitest run",
@@ -29,7 +31,7 @@
     "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^14.6.6",
-    "@types/node": "^26.2.0",
+    "@types/node": "^22.20.1",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.5",
     "@vitejs/plugin-react": "^6.1.0",

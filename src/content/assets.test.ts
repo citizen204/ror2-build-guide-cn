@@ -1,7 +1,8 @@
 /// <reference types="node" />
 
-import { existsSync, readFileSync, statSync } from 'node:fs'
-import { resolve } from 'node:path'
+import { createHash } from 'node:crypto'
+import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs'
+import { relative, resolve } from 'node:path'
 import { describe, expect, test } from 'vitest'
 import { items } from './items'
 import { survivors } from './survivors'
@@ -13,6 +14,8 @@ interface AssetRecord {
   wikiFile: string
   sourcePage: string
   kind: AssetKind
+  byteLength: number
+  sha256: string
 }
 
 const manifestPath = resolve('src/content/assets.json')
@@ -36,6 +39,9 @@ describe('local game asset manifest', () => {
       expect(asset.wikiFile.trim()).not.toBe('')
       expect(asset.sourcePage.trim()).not.toBe('')
       expect(['survivor', 'skill', 'item']).toContain(asset.kind)
+      expect(Number.isSafeInteger(asset.byteLength)).toBe(true)
+      expect(asset.byteLength).toBeGreaterThan(200)
+      expect(asset.sha256).toMatch(/^[a-f0-9]{64}$/)
 
       const sourceUrl = new URL(asset.sourcePage)
       expect(sourceUrl.protocol).toBe('https:')
@@ -65,14 +71,32 @@ describe('local game asset manifest', () => {
     }
   })
 
-  test('stores every referenced file as a nontrivial real PNG', () => {
+  test('stores every referenced file as the exact pinned real PNG', () => {
     const pngSignature = Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a])
 
     for (const asset of manifest) {
       const filePath = resolve('public', asset.localPath)
+      const bytes = readFileSync(filePath)
       expect(existsSync(filePath), filePath).toBe(true)
-      expect(statSync(filePath).size, filePath).toBeGreaterThan(200)
-      expect(readFileSync(filePath).subarray(0, 8), filePath).toEqual(pngSignature)
+      expect(statSync(filePath).size, filePath).toBe(asset.byteLength)
+      expect(bytes.subarray(0, 8), filePath).toEqual(pngSignature)
+      expect(createHash('sha256').update(bytes).digest('hex'), filePath).toBe(asset.sha256)
     }
+  })
+
+  test('contains no unpinned physical files on disk', () => {
+    const assetsRoot = resolve('public/assets')
+    const files: string[] = []
+    const visit = (directory: string) => {
+      for (const entry of readdirSync(directory, { withFileTypes: true })) {
+        const entryPath = resolve(directory, entry.name)
+        if (entry.isDirectory()) visit(entryPath)
+        else if (entry.isFile()) files.push(relative(resolve('public'), entryPath).replaceAll('\\', '/'))
+        else files.push(`unsupported:${relative(assetsRoot, entryPath).replaceAll('\\', '/')}`)
+      }
+    }
+    visit(assetsRoot)
+
+    expect(files.sort()).toEqual(manifest.map((asset) => asset.localPath).sort())
   })
 })

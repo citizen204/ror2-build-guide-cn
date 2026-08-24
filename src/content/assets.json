@@ -3,1326 +3,1768 @@
     "localPath": "assets/items/lens-makers-glasses.png",
     "wikiFile": "Lens-Maker's Glasses.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Lens-Maker%27s_Glasses.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 19094,
+    "sha256": "ec6d30f2678ff1ec59298bb545b181f85a588d8f4077bd04899c511185861d09"
   },
   {
     "localPath": "assets/items/soldiers-syringe.png",
     "wikiFile": "Soldier's Syringe.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Soldier%27s_Syringe.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 9363,
+    "sha256": "abf353d5c6858f1c9df078ca2394e1f4e0270e7ac92ab065dff1d91f37f83a88"
   },
   {
     "localPath": "assets/items/mocha.png",
     "wikiFile": "Mocha.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Mocha.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 9625,
+    "sha256": "66c988cdcf66b00dd7ecca037ac73d634d53329eb9ed14597527266266956ae8"
   },
   {
     "localPath": "assets/items/pauls-goat-hoof.png",
     "wikiFile": "Paul's Goat Hoof.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Paul%27s_Goat_Hoof.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 9106,
+    "sha256": "dac2d57367c6b0aae8626bb3ec433542c5b4e4e739d101a8c408bd7eb25a7ba3"
   },
   {
     "localPath": "assets/items/energy-drink.png",
     "wikiFile": "Energy Drink.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Energy_Drink.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 33591,
+    "sha256": "28a813daef38008f18c59fff1ced174acc8df3f9d90aa07497d9ef1ba2e1a169"
   },
   {
     "localPath": "assets/items/tougher-times.png",
     "wikiFile": "Tougher Times.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Tougher_Times.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 29837,
+    "sha256": "c9f0fd828c247adb3c8a411a6d717d6c2615ecae4f8f91898985c6b23fa64b28"
   },
   {
     "localPath": "assets/items/bustling-fungus.png",
     "wikiFile": "Bustling Fungus.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Bustling_Fungus.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 12628,
+    "sha256": "1e52f4542b08674b4b16b7e1e1e69060a5e6d4dc8f3e33dfc63f14daf9f1fe20"
   },
   {
     "localPath": "assets/items/crowbar.png",
     "wikiFile": "Crowbar.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Crowbar.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 17944,
+    "sha256": "e22257d4bab796fb005e560b3441c5ff0d6ce0f6ba2844f3b722a2c83f04e551"
   },
   {
     "localPath": "assets/items/tri-tip-dagger.png",
     "wikiFile": "Tri-Tip Dagger.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Tri-Tip_Dagger.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 19670,
+    "sha256": "3e01c1d04753d691d50511bf68a6c691ce199f8b0b6acb3cde980a8f8e461511"
   },
   {
     "localPath": "assets/items/cautious-slug.png",
     "wikiFile": "Cautious Slug.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Cautious_Slug.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 10388,
+    "sha256": "91714165c488750102da3c385d80f0981bb3bd6fb74d3efa09c8232b2fcbb145"
   },
   {
     "localPath": "assets/items/gasoline.png",
     "wikiFile": "Gasoline.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Gasoline.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 23439,
+    "sha256": "88944350dc87f4432d88ec6d1c4bbbb6aff58c49bbc739ef84c121174e0bd525"
   },
   {
     "localPath": "assets/items/backup-magazine.png",
     "wikiFile": "Backup Magazine.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Backup_Magazine.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 28713,
+    "sha256": "aec1f8895a9084b9f84007af9f1e75d5c2cc34f9a0688cc671340c130edfb9da"
   },
   {
     "localPath": "assets/items/armor-piercing-rounds.png",
     "wikiFile": "Armor-Piercing Rounds.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Armor-Piercing_Rounds.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 27315,
+    "sha256": "d799cd5f75a9737445df028a982f899701705fa972bb72e40c2cc29398337442"
   },
   {
     "localPath": "assets/items/topaz-brooch.png",
     "wikiFile": "Topaz Brooch.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Topaz_Brooch.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 11972,
+    "sha256": "f4a6c3486af538463c28fe82f5cad668d8fbaa9147e7e4fc6f0db6ba9fca9200"
   },
   {
     "localPath": "assets/items/focus-crystal.png",
     "wikiFile": "Focus Crystal.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Focus_Crystal.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 11532,
+    "sha256": "f83d8b26bd5215b9a7fbdd57b9f8eea2c0cbecaccd1d747831af3c68a91b753f"
   },
   {
     "localPath": "assets/items/oddly-shaped-opal.png",
     "wikiFile": "Oddly-shaped Opal.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Oddly-shaped_Opal.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 11147,
+    "sha256": "b731f3fd8b5d2006a91bb25ff6bcbbe02ad80e31a28cb7b2520d0d218d1f5f0e"
   },
   {
     "localPath": "assets/items/delicate-watch.png",
     "wikiFile": "Delicate Watch.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Delicate_Watch.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 13837,
+    "sha256": "c5e9b732079d7a22f0d3ea79040dfcaca060d2568cc0af4268e46731674e7f7a"
   },
   {
     "localPath": "assets/items/rusted-key.png",
     "wikiFile": "Rusted Key.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Rusted_Key.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 10335,
+    "sha256": "8300284221853464c3637475662e5e2806a0041dacb71e411ac10410cd65162e"
   },
   {
     "localPath": "assets/items/item-scrap-white.png",
     "wikiFile": "Item Scrap, White.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Item_Scrap,_White.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 6605,
+    "sha256": "45b5d9ac2f09be2392449e846397034cc6772e08b0fa689cdda4f2eb84f603b4"
   },
   {
     "localPath": "assets/items/atg-missile-mk-1.png",
     "wikiFile": "AtG Missile Mk. 1.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:AtG_Missile_Mk._1.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 26293,
+    "sha256": "69d8ee9ca70bc819d9f325952704f7c4f8ae2ebc16687ece42381ac7e0f98eef"
   },
   {
     "localPath": "assets/items/ukulele.png",
     "wikiFile": "Ukulele.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Ukulele.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 7751,
+    "sha256": "8b562295b042eadfee94f6c01440cec7ac3632c5a597f09f347348b2a8e573f7"
   },
   {
     "localPath": "assets/items/hopoo-feather.png",
     "wikiFile": "Hopoo Feather.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Hopoo_Feather.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 25122,
+    "sha256": "ee0665f103c06e1bcf33723a30c8b9359742618a6e3558ca95f560222c7af68d"
   },
   {
     "localPath": "assets/items/kjaro-band.png",
     "wikiFile": "Kjaro's Band.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Kjaro%27s_Band.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 42969,
+    "sha256": "31b23d9465779fd0bf6feb2a4db0d9e2d0bd412d19bf184af6c6c346409cce57"
   },
   {
     "localPath": "assets/items/runald-band.png",
     "wikiFile": "Runald's Band.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Runald%27s_Band.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 39608,
+    "sha256": "29288a147e39eb04cc4ba3183b75c3040809079aa3ef9e6933ea3d270786186d"
   },
   {
     "localPath": "assets/items/will-o-the-wisp.png",
     "wikiFile": "Will-o'-the-wisp.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Will-o%27-the-wisp.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 20460,
+    "sha256": "794fc65dbb0ef1f24792f01b87a839c9eff20205c7c391c07729d81fe977ad9e"
   },
   {
     "localPath": "assets/items/wax-quail.png",
     "wikiFile": "Wax Quail.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Wax_Quail.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 26391,
+    "sha256": "5122bbd51b690586e84c783624f43d70e4ce670fb6e3ae0ca6ad4beffc344db3"
   },
   {
     "localPath": "assets/items/shuriken.png",
     "wikiFile": "Shuriken.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Shuriken.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 10654,
+    "sha256": "705af19228038cc2d8a260c30592c0956a62a046ede95208efd1a2c51dbb68eb"
   },
   {
     "localPath": "assets/items/predatory-instincts.png",
     "wikiFile": "Predatory Instincts.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Predatory_Instincts.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 35230,
+    "sha256": "1d311ce77ccb82e7b65db6d5ad98ce3bd52601b2c4f9a6a1b26f2b6cf0216dd5"
   },
   {
     "localPath": "assets/items/harvesters-scythe.png",
     "wikiFile": "Harvester's Scythe.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Harvester%27s_Scythe.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 23422,
+    "sha256": "d0f55b55761b6aa55f15e41c32cf35a229cc8d08337072ab7018049486aad423"
   },
   {
     "localPath": "assets/items/fuel-cell.png",
     "wikiFile": "Fuel Cell.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Fuel_Cell.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 22343,
+    "sha256": "03d6b848b5d8fb58f97bb20e5c6c2d97977529cccf207e7a3c94e6acfea3a2f8"
   },
   {
     "localPath": "assets/items/rose-buckler.png",
     "wikiFile": "Rose Buckler.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Rose_Buckler.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 49385,
+    "sha256": "a12e116dcad2ce21bc92877c0abb7a6e653508189ea75f47003a1d92665723a2"
   },
   {
     "localPath": "assets/items/infusion.png",
     "wikiFile": "Infusion.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Infusion.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 26142,
+    "sha256": "98b7738a260cda51140d4d2d0416addddd96543c77f8131064c7c532feb1173e"
   },
   {
     "localPath": "assets/items/razorwire.png",
     "wikiFile": "Razorwire.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Razorwire.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 17056,
+    "sha256": "8cbf4b6ae14987125db35298541f4efd81ab72106687944e91aa41c8a30251ab"
   },
   {
     "localPath": "assets/items/chronobauble.png",
     "wikiFile": "Chronobauble.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Chronobauble.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 36126,
+    "sha256": "64f6fff3752d61a56b05e438e740f37aa6aca10f366b24b7f325a47ef6a9c929"
   },
   {
     "localPath": "assets/items/death-mark.png",
     "wikiFile": "Death Mark.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Death_Mark.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 9626,
+    "sha256": "153f8bfad42ac3bc8e9f8b6858d9ae597750ddbe0839784462401b5446e8f92f"
   },
   {
     "localPath": "assets/items/old-guillotine.png",
     "wikiFile": "Old Guillotine.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Old_Guillotine.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 7754,
+    "sha256": "1926f2419278d5a0fda184df08e346b22c47a3b6ed0be6a5144f35cfc8b7dd52"
   },
   {
     "localPath": "assets/items/ignition-tank.png",
     "wikiFile": "Ignition Tank.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Ignition_Tank.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 7206,
+    "sha256": "b80c4161178cda86ad25a0eb0c6d5c38964d982b19273aa68fff4bbc7c71757a"
   },
   {
     "localPath": "assets/items/shipping-request-form.png",
     "wikiFile": "Shipping Request Form.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Shipping_Request_Form.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 12820,
+    "sha256": "094255cec4e406a236d4af384de64b0ab3ea5e3a54bbaac5041e7bd5aa3d1d8d"
   },
   {
     "localPath": "assets/items/box-of-dynamite.png",
     "wikiFile": "Box of Dynamite.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Box_of_Dynamite.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 8266,
+    "sha256": "a3b9ab0f3a0866ceaeda4b8d78aca006c725ea6a975d18c64fb0e68ed47f1979"
   },
   {
     "localPath": "assets/items/collectors-compulsion.png",
     "wikiFile": "Collector's Compulsion.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Collector%27s_Compulsion.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 10697,
+    "sha256": "54fe8dbff470223f4b4f3214c6e92f10e616d45dd4c2a11289932ca4b5c226e3"
   },
   {
     "localPath": "assets/items/item-scrap-green.png",
     "wikiFile": "Item Scrap, Green.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Item_Scrap,_Green.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 6397,
+    "sha256": "571dfd1c7370a8afa9387148a05e0398ef07f69e2d1ae88d6fb29726c12aa4c1"
   },
   {
     "localPath": "assets/items/brilliant-behemoth.png",
     "wikiFile": "Brilliant Behemoth.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Brilliant_Behemoth.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 34211,
+    "sha256": "5e2cd55e95ecbc03974a641cfd1a9add1efb0551a1f2d06eb9b8862643ca1578"
   },
   {
     "localPath": "assets/items/57-leaf-clover.png",
     "wikiFile": "57 Leaf Clover.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:57_Leaf_Clover.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 32017,
+    "sha256": "a4c7d20745f434dba1715623925d37085525f2b844b48395cc0cfcf0d8fce3b2"
   },
   {
     "localPath": "assets/items/alien-head.png",
     "wikiFile": "Alien Head.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Alien_Head.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 25879,
+    "sha256": "a547e962296081f1421a9b852697f5987a33774153d469f3406eb7836aea2100"
   },
   {
     "localPath": "assets/items/hardlight-afterburner.png",
     "wikiFile": "Hardlight Afterburner.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Hardlight_Afterburner.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 41159,
+    "sha256": "f2bf2d98448ab44ec72a53179bb1586090c0b5dc0cf2f717e0a81da2159015c6"
   },
   {
     "localPath": "assets/items/h3ad-5t-v2.png",
     "wikiFile": "H3AD-5T v2.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:H3AD-5T_v2.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 28819,
+    "sha256": "a53aeedaae01b94fdf4b9bffeeafbf2fca7017cdc7c461f3d62417108c109713"
   },
   {
     "localPath": "assets/items/soulbound-catalyst.png",
     "wikiFile": "Soulbound Catalyst.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Soulbound_Catalyst.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 27470,
+    "sha256": "c25b71e68831a8258fce39bf1854e5a4b021c79586159fd9639b9e5194994eda"
   },
   {
     "localPath": "assets/items/spare-drone-parts.png",
     "wikiFile": "Spare Drone Parts.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Spare_Drone_Parts.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 11871,
+    "sha256": "7891fe08fc6be143d5ec3182c8fc5bdefa07326e5c88581215e6b1a520079216"
   },
   {
     "localPath": "assets/items/dios-best-friend.png",
     "wikiFile": "Dio's Best Friend.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Dio%27s_Best_Friend.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 26957,
+    "sha256": "16fb7f9d8d87012dbd8523a9aa97d3b1275ffc241824834ff458f3db5e293a47"
   },
   {
     "localPath": "assets/items/rejuvenation-rack.png",
     "wikiFile": "Rejuvenation Rack.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Rejuvenation_Rack.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 38950,
+    "sha256": "d7971a572106a683b0e30c84cff69cde6a243f593269d1b6b09840b23e672d4b"
   },
   {
     "localPath": "assets/items/laser-scope.png",
     "wikiFile": "Laser Scope.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Laser_Scope.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 12575,
+    "sha256": "3ac1eee7232eaf71fd208a28b5e5133b040350280c1dd4320c1b61fb46e39572"
   },
   {
     "localPath": "assets/items/sentient-meat-hook.png",
     "wikiFile": "Sentient Meat Hook.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Sentient_Meat_Hook.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 34398,
+    "sha256": "4f2c78159983785fe8cfe23a8f1e2c5eb795e74f5e5ed87f90405a7a96f5bfb8"
   },
   {
     "localPath": "assets/items/ceremonial-dagger.png",
     "wikiFile": "Ceremonial Dagger.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Ceremonial_Dagger.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 19910,
+    "sha256": "6f5f479e80beeb24f370773ec8b1eddc9dd13c403b5e18569388d3f11924a3f3"
   },
   {
     "localPath": "assets/items/frost-relic.png",
     "wikiFile": "Frost Relic.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Frost_Relic.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 50595,
+    "sha256": "5288575f1b5e693b8e8b20401c15a97b27512b284b8e8e98b0c33e97517910bd"
   },
   {
     "localPath": "assets/items/aegis.png",
     "wikiFile": "Aegis.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Aegis.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 11408,
+    "sha256": "c25944749a54e480aad709fff0816b7f96f4bb4d4b6127c523b1acae80c4e4e1"
   },
   {
     "localPath": "assets/items/symbiotic-scorpion.png",
     "wikiFile": "Symbiotic Scorpion.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Symbiotic_Scorpion.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 13136,
+    "sha256": "33a900e5232ebd616099f34871e7d375641cc8c0086dd081fa7627d61f4a4300"
   },
   {
     "localPath": "assets/items/pocket-icbm.png",
     "wikiFile": "Pocket I.C.B.M..png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Pocket_I.C.B.M..png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 9997,
+    "sha256": "5cdcc8cc44efef75dca8a0bda68bbb6bdf68b61faa41461766fa44e30b1673db"
   },
   {
     "localPath": "assets/items/bens-raincoat.png",
     "wikiFile": "Ben's Raincoat.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Ben%27s_Raincoat.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 11848,
+    "sha256": "48bcd32d88dbc635006fc7d470eb2dc517aec294f434961a1b11e4d16e871d0d"
   },
   {
     "localPath": "assets/items/orphaned-core.png",
     "wikiFile": "Orphaned Core.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Orphaned_Core.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 8989,
+    "sha256": "6ecdaf54734b91815078d1c0f1ffad111228bb7a2c5fde863931b672e396ee97"
   },
   {
     "localPath": "assets/items/substandard-duplicator.png",
     "wikiFile": "Substandard Duplicator.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Substandard_Duplicator.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 10162,
+    "sha256": "15543dd4a0de0a27516ff5c9dba3c33f0876e9803b77998c0688b2ce774f712c"
   },
   {
     "localPath": "assets/items/defensive-microbots.png",
     "wikiFile": "Defensive Microbots.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Defensive_Microbots.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 11092,
+    "sha256": "ba7e106b13d72e67d18115f0bde9332446d42121b55b3ff422c8ef3348c5e97f"
   },
   {
     "localPath": "assets/items/item-scrap-red.png",
     "wikiFile": "Item Scrap, Red.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Item_Scrap,_Red.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 6348,
+    "sha256": "1ca6dee57d561140d844efe4b6575a6be9565eec2f9d8f350b9e46c469673a05"
   },
   {
     "localPath": "assets/items/titanic-knurl.png",
     "wikiFile": "Titanic Knurl.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Titanic_Knurl.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 44679,
+    "sha256": "a0ea3e70f0485cf54e6f0eb02478bc3e3fe600c3040aa62e607616128fa1392a"
   },
   {
     "localPath": "assets/items/queens-gland.png",
     "wikiFile": "Queen's Gland.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Queen%27s_Gland.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 38292,
+    "sha256": "990ad311bf676ca8d47f9f250d960377279160ab3b5f27364de8695af66f6527"
   },
   {
     "localPath": "assets/items/genesis-loop.png",
     "wikiFile": "Genesis Loop.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Genesis_Loop.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 13066,
+    "sha256": "f74acd9e72df240e4828fd80cba0eaaec9b6f3ec0d16c2115f302b6d1429469b"
   },
   {
     "localPath": "assets/items/little-disciple.png",
     "wikiFile": "Little Disciple.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Little_Disciple.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 11000,
+    "sha256": "76bd6320ce9025d9e022f8cba6fa3af86f0ad4cf65e419f43a69bb2d0eae9f34"
   },
   {
     "localPath": "assets/items/molten-perforator.png",
     "wikiFile": "Molten Perforator.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Molten_Perforator.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 10846,
+    "sha256": "1c997dde3cc20a12f16becf565e3a7698a51c51fd430d116601c7839fbd2bbb3"
   },
   {
     "localPath": "assets/items/charged-perforator.png",
     "wikiFile": "Charged Perforator.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Charged_Perforator.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 9620,
+    "sha256": "aef64771a9b1290f503eb0e38c4f312c74d7e55da089cce6ae06245fce8e8a67"
   },
   {
     "localPath": "assets/items/mired-urn.png",
     "wikiFile": "Mired Urn.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Mired_Urn.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 11519,
+    "sha256": "056727344bf9acf54bbddd0f0109143a5cc9b6fedc5a6dbb2d295e0cfa8505bd"
   },
   {
     "localPath": "assets/items/shatterspleen.png",
     "wikiFile": "Shatterspleen.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Shatterspleen.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 11231,
+    "sha256": "74f9c68d9904a5958b59923979653e10bdd452e89eab158edcd29553d65e98ba"
   },
   {
     "localPath": "assets/items/empathy-cores.png",
     "wikiFile": "Empathy Cores.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Empathy_Cores.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 14488,
+    "sha256": "2ca147d06ac98ea2be0015a4253af539e079e5cd420a37a3d4858da20f7e8f50"
   },
   {
     "localPath": "assets/items/defense-nucleus.png",
     "wikiFile": "Defense Nucleus.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Defense_Nucleus.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 11479,
+    "sha256": "772b0ed9deab7f17ee32e84278b56f0dc00aea45e9279f74e0ee8a43079631ea"
   },
   {
     "localPath": "assets/items/item-scrap-yellow.png",
     "wikiFile": "Item Scrap, Yellow.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Item_Scrap,_Yellow.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 6506,
+    "sha256": "799ae09bf260360f450a5186f1786f31cf28da9278efe1d7dc64f34c88a411d6"
   },
   {
     "localPath": "assets/items/royal-capacitor.png",
     "wikiFile": "Royal Capacitor.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Royal_Capacitor.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 32598,
+    "sha256": "743852bee045309a07917b217a82de173c1d22d3696ab7e5dac0efab4d2d0fc4"
   },
   {
     "localPath": "assets/items/disposable-missile-launcher.png",
     "wikiFile": "Disposable Missile Launcher.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Disposable_Missile_Launcher.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 23692,
+    "sha256": "4ef519242ee2b65877744e6b4c5636df139c5cfb26f260c5851d4406482afea9"
   },
   {
     "localPath": "assets/items/recycler.png",
     "wikiFile": "Recycler.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Recycler.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 12216,
+    "sha256": "fd5cd0421ae1b33d940c9d729f245b349f5579bcfbd2fa052143a527674feffe"
   },
   {
     "localPath": "assets/items/executive-card.png",
     "wikiFile": "Executive Card.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Executive_Card.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 11654,
+    "sha256": "c3ab0c07fe0fb6b29d63f6273bd93e52493598715d0c61c68ff20e409e75ea26"
   },
   {
     "localPath": "assets/items/gorags-opus.png",
     "wikiFile": "Gorag's Opus.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Gorag%27s_Opus.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 10000,
+    "sha256": "df3d28fc1df0d3a6d84ef03c26a333fd7f59d006734faa7084ab3fe67dca078a"
   },
   {
     "localPath": "assets/items/ocular-hud.png",
     "wikiFile": "Ocular HUD.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Ocular_HUD.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 51284,
+    "sha256": "5caa9fc07666599ec362b46e9b24f81abdf2226c6f454da1097b056b36f6224b"
   },
   {
     "localPath": "assets/items/preon-accumulator.png",
     "wikiFile": "Preon Accumulator.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Preon_Accumulator.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 31700,
+    "sha256": "20bb0d82880e39136e96a4441e21bbfb8a177c1878c41d92a928764eaba1905e"
   },
   {
     "localPath": "assets/items/the-back-up.png",
     "wikiFile": "The Back-up.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:The_Back-up.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 27312,
+    "sha256": "ead9d304860ef26565afc3b4c6cb0d8254fc5e89b1964cfa12da774873c7c39a"
   },
   {
     "localPath": "assets/items/super-massive-leech.png",
     "wikiFile": "Super Massive Leech.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Super_Massive_Leech.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 11478,
+    "sha256": "e1f33ba2566a017d7d85a9bb39c88894bc7624af057deb31644db4c21ab18ca2"
   },
   {
     "localPath": "assets/items/forgive-me-please.png",
     "wikiFile": "Forgive Me Please.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Forgive_Me_Please.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 11458,
+    "sha256": "a30b2a2c26d9d578917db001a04e57f59b2c76e29d7a29dac12212edae8511e6"
   },
   {
     "localPath": "assets/items/deus-ex-machina.png",
     "wikiFile": "Deus Ex Machina.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Deus_Ex_Machina.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 15174,
+    "sha256": "d7acb7ee2b15b9e24c93a7390110b22a5f9c363825f1e061e0e16d85bf9529f4"
   },
   {
     "localPath": "assets/items/gesture-of-the-drowned.png",
     "wikiFile": "Gesture of the Drowned.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Gesture_of_the_Drowned.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 44948,
+    "sha256": "19ce33f4bfc3881c0d6d99bfcedc54ade22d562af9c9f62c2ba1b9234600f2be"
   },
   {
     "localPath": "assets/items/spinel-tonic.png",
     "wikiFile": "Spinel Tonic.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Spinel_Tonic.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 9136,
+    "sha256": "0104db58fd99a3d085e19e95a456e3044fc793e014e806122d6298dc41e9c075"
   },
   {
     "localPath": "assets/items/shaped-glass.png",
     "wikiFile": "Shaped Glass.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Shaped_Glass.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 22610,
+    "sha256": "433a9937889a415331b9aea28cbe10a6ceb5ae5890cab7cb382885f37b8104d0"
   },
   {
     "localPath": "assets/items/transcendence.png",
     "wikiFile": "Transcendence.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Transcendence.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 41850,
+    "sha256": "3aae39d2318bde7ad73b9fbb02ec6ff747c14773a419762dd6b0a32cfc593e0d"
   },
   {
     "localPath": "assets/items/purity.png",
     "wikiFile": "Purity.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Purity.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 13235,
+    "sha256": "4d56050b3625d471d4daace889eb9050d1746a934cf27c0d575e9f3d34fbe1a3"
   },
   {
     "localPath": "assets/items/light-flux-pauldron.png",
     "wikiFile": "Light Flux Pauldron.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Light_Flux_Pauldron.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 11731,
+    "sha256": "d0c6a1a01a48889c5da9f3dd7a39f84dbbbf535d02aa99691e2252c54e4621d8"
   },
   {
     "localPath": "assets/items/corpsebloom.png",
     "wikiFile": "Corpsebloom.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Corpsebloom.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 45384,
+    "sha256": "a25a885b41ca55a91421d61b1767800ce29618f7ca9f4b53d7ee54bf96e0ed98"
   },
   {
     "localPath": "assets/items/brittle-crown.png",
     "wikiFile": "Brittle Crown.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Brittle_Crown.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 28600,
+    "sha256": "dfa4a5c47ea6bc216dc24ba6ee57d99cdfed9914fddbda3ab4e546ca15bbe3f7"
   },
   {
     "localPath": "assets/items/focused-convergence.png",
     "wikiFile": "Focused Convergence.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Focused_Convergence.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 13528,
+    "sha256": "62e8f7e67e1111b078ed0f8f3f4dc896c3f3c266c9d5903d86f6bbf76cd21c3b"
   },
   {
     "localPath": "assets/items/neutronium-weight.png",
     "wikiFile": "Neutronium Weight.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Neutronium_Weight.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 11373,
+    "sha256": "559b7622bb385f2b4403198291c0dfc7b0df27c8be6fbbbb4016396c83cdbe88"
   },
   {
     "localPath": "assets/items/visions-of-heresy.png",
     "wikiFile": "Visions of Heresy.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Visions_of_Heresy.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 11649,
+    "sha256": "2e1a30127882fec4d4b119333a59e01b814acaff3cfd2e676ef35a6bc1a5305b"
   },
   {
     "localPath": "assets/items/hooks-of-heresy.png",
     "wikiFile": "Hooks of Heresy.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Hooks_of_Heresy.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 10532,
+    "sha256": "892e405c8e575524da073e80b99202b25d8ef075fad42574760bc8c6e5e7d6d1"
   },
   {
     "localPath": "assets/items/strides-of-heresy.png",
     "wikiFile": "Strides of Heresy.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Strides_of_Heresy.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 11808,
+    "sha256": "5326d39459c828b4e70a6ab3b9c68b72fc4130d21fe27a98c979c41e05b80fa8"
   },
   {
     "localPath": "assets/items/essence-of-heresy.png",
     "wikiFile": "Essence of Heresy.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Essence_of_Heresy.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 13511,
+    "sha256": "7f66196df34759175baca9ee5650458a7cac3be6a94c897313420083e52f7393"
   },
   {
     "localPath": "assets/items/needletick.png",
     "wikiFile": "Needletick.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Needletick.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 12783,
+    "sha256": "5678adb20e1222e4e95ad556d643551ee137c168a23513fef300d9af976c3e02"
   },
   {
     "localPath": "assets/items/lost-seers-lenses.png",
     "wikiFile": "Lost Seer's Lenses.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Lost_Seer%27s_Lenses.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 14375,
+    "sha256": "5b4562a3d434eb1e81e4ba7c72cb53f65824190b01ca50d572d49cb5b9c49599"
   },
   {
     "localPath": "assets/items/weeping-fungus.png",
     "wikiFile": "Weeping Fungus.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Weeping_Fungus.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 12992,
+    "sha256": "f5b02c5dad8f7c183a3799aa5f555b577c546d137f45e2fb5f21a2b980fd4e06"
   },
   {
     "localPath": "assets/items/safer-spaces.png",
     "wikiFile": "Safer Spaces.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Safer_Spaces.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 15436,
+    "sha256": "6c0af06d78228b158bf83d138fdd4bd833dacff0f17daabfb12f314bb0881ca1"
   },
   {
     "localPath": "assets/items/encrusted-key.png",
     "wikiFile": "Encrusted Key.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Encrusted_Key.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 13083,
+    "sha256": "4ba7f617550e01532476fa07741741bcb173561f21e18c4fa876ec65544d2104"
   },
   {
     "localPath": "assets/items/polylute.png",
     "wikiFile": "Polylute.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Polylute.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 14068,
+    "sha256": "4627e3f13df300f40bd745b5cd6a11093762cd51db43030a258cb8d08a2f6418"
   },
   {
     "localPath": "assets/items/plasma-shrimp.png",
     "wikiFile": "Plasma Shrimp.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Plasma_Shrimp.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 14516,
+    "sha256": "665408505420e5911de6f9697007467dcc673398aa7932bcd694e08c5edfcfb6"
   },
   {
     "localPath": "assets/items/tentabauble.png",
     "wikiFile": "Tentabauble.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Tentabauble.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 15949,
+    "sha256": "2aa569f4f0ae84552bccf890eebf27200879828ddc854b18c091351cfcfef7cb"
   },
   {
     "localPath": "assets/items/voidsent-flame.png",
     "wikiFile": "Voidsent Flame.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Voidsent_Flame.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 10810,
+    "sha256": "f37d8da236c8bbc4cbe373a1ae429e2c345ab6dc3c1b879555fc0dec3e3eb69c"
   },
   {
     "localPath": "assets/items/lysate-cell.png",
     "wikiFile": "Lysate Cell.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Lysate_Cell.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 14206,
+    "sha256": "139f710a61240560cd76e2c97d626e7ff85d14d7fd34b5fe97afd3ea9ee9f331"
   },
   {
     "localPath": "assets/items/benthic-bloom.png",
     "wikiFile": "Benthic Bloom.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Benthic_Bloom.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 15992,
+    "sha256": "e4a357fbced567a4eb77a201fa00f2efee3f1116961472ea6a4290bcca911d29"
   },
   {
     "localPath": "assets/items/pluripotent-larva.png",
     "wikiFile": "Pluripotent Larva.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Pluripotent_Larva.png",
-    "kind": "item"
+    "kind": "item",
+    "byteLength": 14302,
+    "sha256": "0d2e87f53c19bbe61eab05a47c1cb40813affe4ceb07ff9d1d6dcfb34dba1850"
   },
   {
     "localPath": "assets/survivors/commando.png",
     "wikiFile": "Commando.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Commando.png",
-    "kind": "survivor"
+    "kind": "survivor",
+    "byteLength": 35332,
+    "sha256": "609bb7a5063abdcc539c73c4d5cca1217faa684e07c3a5b657819c42bc079005"
   },
   {
     "localPath": "assets/survivors/huntress.png",
     "wikiFile": "Huntress.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Huntress.png",
-    "kind": "survivor"
+    "kind": "survivor",
+    "byteLength": 44013,
+    "sha256": "96ede25cfd52a93d1e3d194d5e072f34c73cf883872ff6b29385b1addd5e05eb"
   },
   {
     "localPath": "assets/survivors/bandit.png",
     "wikiFile": "Bandit.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Bandit.png",
-    "kind": "survivor"
+    "kind": "survivor",
+    "byteLength": 14216,
+    "sha256": "a1430759452b41191b7c146bd7de29d3de40b397c334938cffaa30a0146726f0"
   },
   {
     "localPath": "assets/survivors/mul-t.png",
     "wikiFile": "MUL-T.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:MUL-T.png",
-    "kind": "survivor"
+    "kind": "survivor",
+    "byteLength": 38045,
+    "sha256": "6587b043be67d1a3b62474fc1a9ba4b3a00533127cfe1dcd6afc670fd2410791"
   },
   {
     "localPath": "assets/survivors/engineer.png",
     "wikiFile": "Engineer.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Engineer.png",
-    "kind": "survivor"
+    "kind": "survivor",
+    "byteLength": 32063,
+    "sha256": "902c732aa3bff88cf9cd36826582c9e165af4e2f271ebd19285c4fd9b667672e"
   },
   {
     "localPath": "assets/survivors/artificer.png",
     "wikiFile": "Artificer.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Artificer.png",
-    "kind": "survivor"
+    "kind": "survivor",
+    "byteLength": 28180,
+    "sha256": "ad8c30daacde5b89de42ee2da55bfbf3b5ac90d2d5e7b210fc74b8b03a0bf101"
   },
   {
     "localPath": "assets/survivors/mercenary.png",
     "wikiFile": "Mercenary.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Mercenary.png",
-    "kind": "survivor"
+    "kind": "survivor",
+    "byteLength": 35429,
+    "sha256": "d69acfb7852fb8680a1308cc30a27c454af7fd42b4540d378acd9a7d311d09e1"
   },
   {
     "localPath": "assets/survivors/rex.png",
     "wikiFile": "REX.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:REX.png",
-    "kind": "survivor"
+    "kind": "survivor",
+    "byteLength": 14583,
+    "sha256": "ab8b2931edc110f2e5cb915fb33f27d6b8bd54d0f7ad3c39cb29164719314b2e"
   },
   {
     "localPath": "assets/survivors/loader.png",
     "wikiFile": "Loader.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Loader.png",
-    "kind": "survivor"
+    "kind": "survivor",
+    "byteLength": 13962,
+    "sha256": "566602c415f2218069fc7daeede1f9cba1f2d4414eef5289dbfa4d6e7ff5b133"
   },
   {
     "localPath": "assets/survivors/acrid.png",
     "wikiFile": "Acrid.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Acrid.png",
-    "kind": "survivor"
+    "kind": "survivor",
+    "byteLength": 14277,
+    "sha256": "c5f2745275b6732406ac81df0f72ee9325011ef9f67dd41b601be90107c4f974"
   },
   {
     "localPath": "assets/survivors/captain.png",
     "wikiFile": "Captain.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Captain.png",
-    "kind": "survivor"
+    "kind": "survivor",
+    "byteLength": 11105,
+    "sha256": "4cb9f6235a53d79d138f179e5f24cb4f669b3c898adfdf40c51916c93bcc1528"
   },
   {
     "localPath": "assets/survivors/railgunner.png",
     "wikiFile": "Railgunner.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Railgunner.png",
-    "kind": "survivor"
+    "kind": "survivor",
+    "byteLength": 16008,
+    "sha256": "b745c3fa42eef595d2c452f0206ef6c67340477691f32eb62c4f806788ac6f1a"
   },
   {
     "localPath": "assets/survivors/void-fiend.png",
     "wikiFile": "Void Fiend.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Void_Fiend.png",
-    "kind": "survivor"
+    "kind": "survivor",
+    "byteLength": 17915,
+    "sha256": "2bb51cec3fe8b52ad29c7d34c636297e3130d7928673c022f0330544b3965a0c"
   },
   {
     "localPath": "assets/survivors/seeker.png",
     "wikiFile": "Seeker.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Seeker.png",
-    "kind": "survivor"
+    "kind": "survivor",
+    "byteLength": 13837,
+    "sha256": "726de300a4e3999e514168246c3ec8a26c9a9ec4518c9c6148e71f21c9f307a2"
   },
   {
     "localPath": "assets/survivors/chef.png",
     "wikiFile": "CHEF.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:CHEF.png",
-    "kind": "survivor"
+    "kind": "survivor",
+    "byteLength": 15073,
+    "sha256": "19a431f93ce2bc9bc3adbe8e09b617a9367d46ca4e5c3cf23ec9007ce2365717"
   },
   {
     "localPath": "assets/survivors/false-son.png",
     "wikiFile": "False Son.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:False_Son.png",
-    "kind": "survivor"
+    "kind": "survivor",
+    "byteLength": 18384,
+    "sha256": "abf9e3d1b0d27a56f92de1c59ce122e0b5e0cb0b5b291149494b7a533de4b8e7"
   },
   {
     "localPath": "assets/survivors/operator.png",
     "wikiFile": "Operator.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Operator.png",
-    "kind": "survivor"
+    "kind": "survivor",
+    "byteLength": 81366,
+    "sha256": "162cd8d9576aab05f5ec527dcc3efabf8fa0df297f18c07c5a22c9bc2521332a"
   },
   {
     "localPath": "assets/survivors/drifter.png",
     "wikiFile": "Drifter.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Drifter.png",
-    "kind": "survivor"
+    "kind": "survivor",
+    "byteLength": 14564,
+    "sha256": "1b26b8e1f03359abf5f9739ef3360e047bd299ab252e4cce6ae3863444d2d717"
   },
   {
     "localPath": "assets/survivors/heretic.png",
     "wikiFile": "Heretic.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Heretic.png",
-    "kind": "survivor"
+    "kind": "survivor",
+    "byteLength": 16678,
+    "sha256": "918cc7a76e9970766320339c43993dc66f1de2a079252cbccd6802e10e700238"
   },
   {
     "localPath": "assets/skills/commando/double-tap.png",
     "wikiFile": "Double Tap.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Double_Tap.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 10606,
+    "sha256": "758dc02f83c5642e2a80926bfdce9caa20deacaccdcd92df4f1c447bbc3933bb"
   },
   {
     "localPath": "assets/skills/commando/phase-blast.png",
     "wikiFile": "Phase Blast.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Phase_Blast.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 12135,
+    "sha256": "0be52cbcaedea2a098c3ffa979b2837e206aa60a1cdd8eb181e2c5c3cfb57916"
   },
   {
     "localPath": "assets/skills/commando/tactical-slide.png",
     "wikiFile": "Tactical Slide.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Tactical_Slide.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 6754,
+    "sha256": "7cd96856c095650e019d51073a35dbb1b3d94629ad638851bb28a4032a397253"
   },
   {
     "localPath": "assets/skills/commando/suppressive-fire.png",
     "wikiFile": "Suppressive Fire.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Suppressive_Fire.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 7875,
+    "sha256": "e73b2d601231184f6e9ed7ff2afa70dc8a79ad5130b543cb0b3d740513400a89"
   },
   {
     "localPath": "assets/skills/huntress/strafe.png",
     "wikiFile": "Strafe.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Strafe.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 8836,
+    "sha256": "f54dfd191625909b2ce7869b044c001926600a704b2081dcc7a648eea5b2bf18"
   },
   {
     "localPath": "assets/skills/huntress/laser-glaive.png",
     "wikiFile": "Laser Glaive.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Laser_Glaive.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 8829,
+    "sha256": "cab84bf8d5c343467bbfc71f8755dd127704d6dbadd24efab940e3bcad77aed5"
   },
   {
     "localPath": "assets/skills/huntress/blink.png",
     "wikiFile": "Blink.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Blink.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 9832,
+    "sha256": "289a72a7348f4da5ad29d0f239d81f707ae7f74a2a5d74540b8aea01ce48631d"
   },
   {
     "localPath": "assets/skills/huntress/ballista.png",
     "wikiFile": "Ballista.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Ballista.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 11315,
+    "sha256": "8621f0e8460cd91db15dac2f94883bb2ed13bc92a49fd2c422518093465d1edb"
   },
   {
     "localPath": "assets/skills/bandit/backstab.png",
     "wikiFile": "Backstab.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Backstab.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 8457,
+    "sha256": "6c6530f858924ffcd7dbcdab0e3db10c63c0a3496d9b39978078e14341947e32"
   },
   {
     "localPath": "assets/skills/bandit/burst.png",
     "wikiFile": "Burst.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Burst.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 12445,
+    "sha256": "a6f1e504f86c1c806a1fa7a5a717eba8c5f8903dbf39b96cce3716eae982033d"
   },
   {
     "localPath": "assets/skills/bandit/serrated-shiv.png",
     "wikiFile": "Serrated Shiv.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Serrated_Shiv.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 11556,
+    "sha256": "7ce78c25b462b74c385655b923ac404817786bd95059ec1d0c9e27816928674c"
   },
   {
     "localPath": "assets/skills/bandit/smoke-bomb.png",
     "wikiFile": "Smoke Bomb.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Smoke_Bomb.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 10458,
+    "sha256": "b038c63a0a1408a7328b608f057ccce08448768722f6417561145afe18fdc2e2"
   },
   {
     "localPath": "assets/skills/bandit/desperado.png",
     "wikiFile": "Desperado.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Desperado.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 10868,
+    "sha256": "98adfea8dd0a4d2e6c9f2988fcd7a1003676415c5e2f26e5ba5ed93092b9859f"
   },
   {
     "localPath": "assets/skills/mul-t/rebar-puncher.png",
     "wikiFile": "Rebar Puncher.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Rebar_Puncher.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 25202,
+    "sha256": "edcf61f18ac14df64c52a6a6c3b1b96aceef3d31af0aa48330429d77e2de55ce"
   },
   {
     "localPath": "assets/skills/mul-t/blast-canister.png",
     "wikiFile": "Blast Canister.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Blast_Canister.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 34146,
+    "sha256": "b0490e61f26a0487b7befb159b05b39618190ddf7136fb6d0014816a4c339026"
   },
   {
     "localPath": "assets/skills/mul-t/transport-mode.png",
     "wikiFile": "Transport Mode.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Transport_Mode.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 35687,
+    "sha256": "3f8394b571b802818f7ab7273847bfa5946518dff891d3986664144fd8eff876"
   },
   {
     "localPath": "assets/skills/mul-t/retool.png",
     "wikiFile": "Retool.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Retool.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 18656,
+    "sha256": "59d5f5cfcb9eaba921cb187c78fd41600972eec0176cb696ea2fc0ac5925407e"
   },
   {
     "localPath": "assets/skills/engineer/bouncing-grenades.png",
     "wikiFile": "Bouncing Grenades.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Bouncing_Grenades.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 8405,
+    "sha256": "bb418e28bd9d1c0c556d930f4ecfc56f7a5213370faec056bffc1b48393eab2b"
   },
   {
     "localPath": "assets/skills/engineer/spider-mines.png",
     "wikiFile": "Spider Mines.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Spider_Mines.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 8875,
+    "sha256": "669c7626464dda0539f093b291b6009b06f1c8bc1f03f9ac88edb92c3a0dba65"
   },
   {
     "localPath": "assets/skills/engineer/bubble-shield.png",
     "wikiFile": "Bubble Shield.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Bubble_Shield.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 10919,
+    "sha256": "bc954e194038f1974fcc5ffc697dd1c90f17905221597714eeef71341c0ee991"
   },
   {
     "localPath": "assets/skills/engineer/tr12-gauss-auto-turret.png",
     "wikiFile": "TR12 Gauss Auto-Turret.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:TR12_Gauss_Auto-Turret.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 9028,
+    "sha256": "1a3344e0177a00010a7cfb94dedf7de5b13939746cbd5141d7773d443ead64dc"
   },
   {
     "localPath": "assets/skills/artificer/env-suit.png",
     "wikiFile": "ENV Suit.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:ENV_Suit.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 12025,
+    "sha256": "d6eb15f62974dc0596897e7642b946faeebdfafd92077cb94a730278dd217e7e"
   },
   {
     "localPath": "assets/skills/artificer/flame-bolt.png",
     "wikiFile": "Flame Bolt.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Flame_Bolt.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 9881,
+    "sha256": "2cf9a8c150a42440af65af8e89a6d20d6b9677b8803c0af82258961dc3eb9ddb"
   },
   {
     "localPath": "assets/skills/artificer/cast-nano-spear.png",
     "wikiFile": "Cast Nano-Spear.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Cast_Nano-Spear.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 10328,
+    "sha256": "9ca5530922e194af59a7fdfa1b24bf97582fbc528d9fe26faaf36ec626638889"
   },
   {
     "localPath": "assets/skills/artificer/snapfreeze.png",
     "wikiFile": "Snapfreeze.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Snapfreeze.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 9236,
+    "sha256": "ef7bc3dc8791b2299ad26dd15020e7525960d115b52d49dd6780f141404759cb"
   },
   {
     "localPath": "assets/skills/artificer/ion-surge.png",
     "wikiFile": "Ion Surge.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Ion_Surge.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 12936,
+    "sha256": "90592b42454ccef2d36619fe30784d6edb54121e4a3cbbad8fda365c12b71fa3"
   },
   {
     "localPath": "assets/skills/mercenary/cybernetic-enhancements.png",
     "wikiFile": "Cybernetic Enhancements.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Cybernetic_Enhancements.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 18837,
+    "sha256": "b863995ee759a71edee6fb8087bd0a834d2637ca35daae172f2b2b9f7b52c153"
   },
   {
     "localPath": "assets/skills/mercenary/laser-sword.png",
     "wikiFile": "Laser Sword.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Laser_Sword.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 35285,
+    "sha256": "4ab55e85663c58af5d9cf451ff56d68cbb53ebaec90f1a04ab3002e1f3c16be0"
   },
   {
     "localPath": "assets/skills/mercenary/whirlwind.png",
     "wikiFile": "Whirlwind.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Whirlwind.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 41942,
+    "sha256": "e7c4d9a676d59af4dad09886073d6282841f9231e100d4c4c3f4a72e0c4f624f"
   },
   {
     "localPath": "assets/skills/mercenary/blinding-assault.png",
     "wikiFile": "Blinding Assault.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Blinding_Assault.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 71466,
+    "sha256": "81101073c00376d39e1a69cb5e7a0b4ad885251ffb2cdbc9f643c63260a1ebf2"
   },
   {
     "localPath": "assets/skills/mercenary/eviscerate.png",
     "wikiFile": "Eviscerate.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Eviscerate.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 115606,
+    "sha256": "939d4f7acabe909f811d96ba36bc31ab01e58e51eb252cf3e823f16accc0c8bc"
   },
   {
     "localPath": "assets/skills/rex/natural-toxins.png",
     "wikiFile": "Natural Toxins.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Natural_Toxins.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 7840,
+    "sha256": "5746f70b3d2fcc137ba7f27903358e5340392b3fab03972694864451345ab4da"
   },
   {
     "localPath": "assets/skills/rex/directive-inject.png",
     "wikiFile": "DIRECTIVE Inject.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:DIRECTIVE_Inject.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 9441,
+    "sha256": "2dac1fa40cd36d38b5bcd3025752eec2b57fe34953e4deedc7ea0766a4157790"
   },
   {
     "localPath": "assets/skills/rex/directive-drill.png",
     "wikiFile": "DIRECTIVE Drill.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:DIRECTIVE_Drill.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 10139,
+    "sha256": "59d9e0175d1af17883308d5103c50c06062efc3a5a5645d76506dc3c872d2b76"
   },
   {
     "localPath": "assets/skills/rex/directive-disperse.png",
     "wikiFile": "DIRECTIVE Disperse.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:DIRECTIVE_Disperse.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 10747,
+    "sha256": "aa1e87ad9b2a418674abb67435969e0d0c8ab0d13b10886b7e349d68dc3bfb99"
   },
   {
     "localPath": "assets/skills/rex/tangling-growth.png",
     "wikiFile": "Tangling Growth.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Tangling_Growth.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 12930,
+    "sha256": "7af5d2b7a196f996f816489e47d4124783034a361b248a34b74e66a6e21509ef"
   },
   {
     "localPath": "assets/skills/loader/scrap-barrier.png",
     "wikiFile": "Scrap Barrier.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Scrap_Barrier.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 8304,
+    "sha256": "e65587745f57581097f3a51ac2a18a38363415bf8bd979c9a947935f36d4fa12"
   },
   {
     "localPath": "assets/skills/loader/knuckleboom.png",
     "wikiFile": "Knuckleboom.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Knuckleboom.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 9892,
+    "sha256": "42e08acf782e0e94cfc344a5fcf85d12a01c7b6a0ee39ecae7b7c6c489cd8b53"
   },
   {
     "localPath": "assets/skills/loader/spiked-fist.png",
     "wikiFile": "Spiked Fist.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Spiked_Fist.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 10789,
+    "sha256": "bb4f53c2949ffa037dae3745b3c3eda880d27a3359f08b0b6942c112a9cad9da"
   },
   {
     "localPath": "assets/skills/loader/charged-gauntlet.png",
     "wikiFile": "Charged Gauntlet.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Charged_Gauntlet.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 11715,
+    "sha256": "10e3519691d72f52be4d26ab6a3c242fd472409593016c44a0b873b6713d4619"
   },
   {
     "localPath": "assets/skills/loader/thunderslam.png",
     "wikiFile": "Thunderslam.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Thunderslam.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 101458,
+    "sha256": "d4824a0f69ac48e92439f57405de694b5c118f75cf52f2489364757db951e716"
   },
   {
     "localPath": "assets/skills/acrid/poison.png",
     "wikiFile": "Poison.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Poison.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 8854,
+    "sha256": "154776d812e2fe37a9e913701a89f3ff38e528bd01a81010edbad75bb6f63429"
   },
   {
     "localPath": "assets/skills/acrid/vicious-wounds.png",
     "wikiFile": "Vicious Wounds.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Vicious_Wounds.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 9041,
+    "sha256": "82722a518667d5d4c07ab49cbaad0308f682ea9d43ec620e25143f5691dcb2be"
   },
   {
     "localPath": "assets/skills/acrid/neurotoxin.png",
     "wikiFile": "Neurotoxin.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Neurotoxin.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 9789,
+    "sha256": "f26dd0b9058d3df1a30a6c23e7d32937c129d319ae271f2305867f1a23b50f64"
   },
   {
     "localPath": "assets/skills/acrid/caustic-leap.png",
     "wikiFile": "Caustic Leap.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Caustic_Leap.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 10249,
+    "sha256": "e08aef460be2002f14f676af46eca6dbe3bd33bbe23a8f764009bd8c4ae4b97c"
   },
   {
     "localPath": "assets/skills/acrid/epidemic.png",
     "wikiFile": "Epidemic.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Epidemic.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 11346,
+    "sha256": "64699841abd4d949ea153e34d0bedbe55c768f4021503ba486e42e53e50d6054"
   },
   {
     "localPath": "assets/skills/captain/defensive-microbots.png",
     "wikiFile": "Defensive Microbots (Skill).png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Defensive_Microbots_(Skill).png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 9606,
+    "sha256": "a5fd3f7269e305a442cc3f9b63bb53104b7f844e9c1fb9e351d3542881ed2e52"
   },
   {
     "localPath": "assets/skills/captain/vulcan-shotgun.png",
     "wikiFile": "Vulcan Shotgun.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Vulcan_Shotgun.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 11006,
+    "sha256": "f616120aa5b128fbdf93c02778125579c0e4e8dfaa713c35aed30fe940a9f3f5"
   },
   {
     "localPath": "assets/skills/captain/power-tazer.png",
     "wikiFile": "Power Tazer.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Power_Tazer.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 11456,
+    "sha256": "63786b0333fc4f89ee8acf346770da09a1c385972b627974138cffd58fe9a2c8"
   },
   {
     "localPath": "assets/skills/captain/orbital-probe.png",
     "wikiFile": "Orbital Probe.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Orbital_Probe.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 9902,
+    "sha256": "e73a44041f5dc97ae5293f2075be3255b6f2ecbd5295ffb8c8e366531f5ffdda"
   },
   {
     "localPath": "assets/skills/captain/beacon-hacking.png",
     "wikiFile": "Beacon Hacking.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Beacon_Hacking.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 11548,
+    "sha256": "a5d5b4d60590bbdb79e972a01ee614f9c727ae547c7158a2fbbbb036945de168"
   },
   {
     "localPath": "assets/skills/railgunner/magnetic-accelerator.png",
     "wikiFile": "Magnetic Accelerator.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Magnetic_Accelerator.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 9435,
+    "sha256": "3827367449ec0337ecc5527ba2ddd21099093b77e27e3dbc881d9a70db4157bb"
   },
   {
     "localPath": "assets/skills/railgunner/xqr-smart-round-system.png",
     "wikiFile": "XQR Smart Round System.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:XQR_Smart_Round_System.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 9023,
+    "sha256": "a06e98e09f829072fc601343e81741f5286c33ee3cac91b8ee0ce7305f2e538a"
   },
   {
     "localPath": "assets/skills/railgunner/m99-sniper.png",
     "wikiFile": "M99 Sniper.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:M99_Sniper.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 12748,
+    "sha256": "52e74ffb4402c0386728ed95580253d2d6af5f50547c1977ec93a896b4974898"
   },
   {
     "localPath": "assets/skills/railgunner/concussion-device.png",
     "wikiFile": "Concussion Device.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Concussion_Device.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 13901,
+    "sha256": "5c94f66cc792ba92a33d41b6de58556586d65cd0f189c096cc601fd2bb055aa3"
   },
   {
     "localPath": "assets/skills/railgunner/cryocharge.png",
     "wikiFile": "Cryocharge.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Cryocharge.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 15345,
+    "sha256": "20a364987c8647d7ec05fe94ef0c4e76345a5d032bfe72d288d895c9a0120b53"
   },
   {
     "localPath": "assets/skills/void-fiend/void-corruption.png",
     "wikiFile": "Void Corruption.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Void_Corruption.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 11803,
+    "sha256": "cf7b26bd5f8e8f5633d8e2ca24b588cf716a2a84419a1797abdaacd2b231949a"
   },
   {
     "localPath": "assets/skills/void-fiend/drown.png",
     "wikiFile": "Drown.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Drown.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 8161,
+    "sha256": "a2c5e13865546fd3050f48b32a0e1224d68e4989a2b0e4226a53c63aacfc0cb3"
   },
   {
     "localPath": "assets/skills/void-fiend/flood.png",
     "wikiFile": "Flood.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Flood.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 12267,
+    "sha256": "d063c7bd055172526e3b8eb18dbbb3a23b475254c0e785ac154c152ff52b9f32"
   },
   {
     "localPath": "assets/skills/void-fiend/trespass.png",
     "wikiFile": "Trespass.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Trespass.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 9020,
+    "sha256": "2df2bca91b17e1df6771a878cbb26fffae7541721533abddd76c80dda8c324bb"
   },
   {
     "localPath": "assets/skills/void-fiend/suppress.png",
     "wikiFile": "Suppress.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Suppress.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 9834,
+    "sha256": "ca0264ad4bdf583a13c6038e784c064dc90852bdf2dc82e6d8c5b21446b4163f"
   },
   {
     "localPath": "assets/skills/seeker/inner-strength.png",
     "wikiFile": "Inner Strength.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Inner_Strength.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 26351,
+    "sha256": "6b2a43aba26ade22d0d24c68de59f7d8a00a481c6a9ac931f9d06fe4bc3f8bbb"
   },
   {
     "localPath": "assets/skills/seeker/spirit-punch.png",
     "wikiFile": "Spirit Punch.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Spirit_Punch.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 24355,
+    "sha256": "f2e4a038848a3f14f6a9d5b35f6697db7ab317fdec4ab25cb6ee17bb1d399737"
   },
   {
     "localPath": "assets/skills/seeker/soul-spiral.png",
     "wikiFile": "Soul Spiral.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Soul_Spiral.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 24757,
+    "sha256": "a4d6f1a2d1168a0f9c73903c2960e16746f16e9ee12b6b0dff4404a9e5441eb0"
   },
   {
     "localPath": "assets/skills/seeker/reprieve.png",
     "wikiFile": "Reprieve.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Reprieve.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 12348,
+    "sha256": "68e06f0f1e6d959f6694f182cf2fe51a231421c87547d1d6ae6a4a71a1ddfa48"
   },
   {
     "localPath": "assets/skills/seeker/meditate.png",
     "wikiFile": "Meditate.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Meditate.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 13684,
+    "sha256": "f2db1d3985d86087e19db3f15030a9076c1b3f373c9315725d9f921749dce8aa"
   },
   {
     "localPath": "assets/skills/chef/chef-s-kiss.png",
     "wikiFile": "CHEF's Kiss.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:CHEF%27s_Kiss.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 19529,
+    "sha256": "fc45cc97d48abc44d4495ef14f2a98f65aab10d39d93f7292b1039a69a10a93a"
   },
   {
     "localPath": "assets/skills/chef/dice.png",
     "wikiFile": "Dice.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Dice.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 18277,
+    "sha256": "94af295b5785d480df74f5c9cce7760620e4916e97b16e1cbead7cf3761196f5"
   },
   {
     "localPath": "assets/skills/chef/sear.png",
     "wikiFile": "Sear.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Sear.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 21800,
+    "sha256": "623451e1d3891bfbec07c8fe1a14da261978f8a80ff035eed764675cecf09493"
   },
   {
     "localPath": "assets/skills/chef/roll.png",
     "wikiFile": "Roll.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Roll.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 26136,
+    "sha256": "dcfc940d47c45fd9e86d775e3550992dcb9aeb1423df94750ab8a2cb36a7f971"
   },
   {
     "localPath": "assets/skills/chef/glaze.png",
     "wikiFile": "Glaze.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Glaze.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 14425,
+    "sha256": "b764172cb6aab8e0dcae5c22315f6a4ae6d9e82ba042f51ab81ee193b020eb1e"
   },
   {
     "localPath": "assets/skills/false-son/lunar-tampering.png",
     "wikiFile": "Lunar Tampering.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Lunar_Tampering.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 27705,
+    "sha256": "a53a708a512a1ccef12ef7caaec655ca0fbe604a34e5aa7b8e417d6ae8ea0aef"
   },
   {
     "localPath": "assets/skills/false-son/club-of-the-forsaken.png",
     "wikiFile": "Club of the Forsaken.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Club_of_the_Forsaken.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 21577,
+    "sha256": "31601abf8ec97d517c20426269731221a85c61533c125a53db03ab17363a2a82"
   },
   {
     "localPath": "assets/skills/false-son/lunar-spikes.png",
     "wikiFile": "Lunar Spikes.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Lunar_Spikes.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 15149,
+    "sha256": "9c4887afd59c184f9cb939fd0ba5507d0d2c61a57ff465cafe64866be6e87e7f"
   },
   {
     "localPath": "assets/skills/false-son/meridian-s-will.png",
     "wikiFile": "Meridian's Will.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Meridian%27s_Will.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 15567,
+    "sha256": "0a0df67445f177d51e310a9152036950e13387be2407e5241b1b9c53b3beb3d7"
   },
   {
     "localPath": "assets/skills/false-son/laser-burst.png",
     "wikiFile": "Laser Burst.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Laser_Burst.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 18232,
+    "sha256": "c40138a5b60b55c80081cacf8d3d862d7eda25e994adabc34dd24c9911cbcb6b"
   },
   {
     "localPath": "assets/skills/operator/drone-tech.png",
     "wikiFile": "Drone Tech.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Drone_Tech.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 31257,
+    "sha256": "73428975e40e7eda4bd3f033679088cd52045d87edf1615a5e7921f8ccdf9bac"
   },
   {
     "localPath": "assets/skills/operator/gunner-drone-mk-2.png",
     "wikiFile": "Gunner Drone Mk 2.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Gunner_Drone_Mk_2.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 67441,
+    "sha256": "833e6102f1afdcac4490649e137c2aced08914db7a1381581fd952228847440f"
   },
   {
     "localPath": "assets/skills/operator/healing-drone-mk-2.png",
     "wikiFile": "Healing Drone Mk 2.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Healing_Drone_Mk_2.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 71084,
+    "sha256": "683e6b4d642f96d604249bd533c0129cc735c3072c0e1bea6d241c78a6332c56"
   },
   {
     "localPath": "assets/skills/operator/h3-11-ocr-custom.png",
     "wikiFile": "H3-11 OCR Custom.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:H3-11_OCR_Custom.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 17492,
+    "sha256": "71cece784c30e4a40c55771934af3b1aed94c743a672d328aee30b0f9c7d612e"
   },
   {
     "localPath": "assets/skills/operator/admin-override.png",
     "wikiFile": "ADMIN-OVERRIDE.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:ADMIN-OVERRIDE.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 36888,
+    "sha256": "f4c3124a6b33fbc6fb742752624f6e6423a32d8798bd875ceefa4d7e91210630"
   },
   {
     "localPath": "assets/skills/operator/ascent-protocol.png",
     "wikiFile": "Ascent Protocol.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Ascent_Protocol.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 35024,
+    "sha256": "c0da511f94ad7a6da35383cf5ea80aede47933a90a135173852073d640cd052c"
   },
   {
     "localPath": "assets/skills/operator/ejection-core.png",
     "wikiFile": "Ejection Core.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Ejection_Core.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 35170,
+    "sha256": "a09048d04c4f8ec304845e9b3901fdfe4f862e9a675f00324e1164f847c9d6e7"
   },
   {
     "localPath": "assets/skills/drifter/trash-to-treasure.png",
     "wikiFile": "Trash to Treasure.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Trash_to_Treasure.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 48085,
+    "sha256": "12c53f4fb0a6b877b48c5d7f10334a49342992eade1c58b0dcbd151ffbeebb97"
   },
   {
     "localPath": "assets/skills/drifter/blunt-force.png",
     "wikiFile": "Blunt Force.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Blunt_Force.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 51514,
+    "sha256": "b12d2a8276904f10079cc702f29a9c9b6c7bf83a1164a17d9a7220adf52c8a87"
   },
   {
     "localPath": "assets/skills/drifter/junk-cube.png",
     "wikiFile": "Junk Cube.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Junk_Cube.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 43748,
+    "sha256": "1240aa098245861d04848a790a60f4551c5dc5d0ca1d77724d4f188e3659de85"
   },
   {
     "localPath": "assets/skills/drifter/tornado-slam.png",
     "wikiFile": "Tornado Slam.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Tornado_Slam.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 49062,
+    "sha256": "9c68b0bdf0ad94afa65faf55f27996d77d3d240cd0aa63eef64633ce3a2026c2"
   },
   {
     "localPath": "assets/skills/drifter/tinker.png",
     "wikiFile": "Tinker.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Tinker.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 33055,
+    "sha256": "fac0736634d3eddaf3f7a48fadc064d983cd60c9f4df0d8cd04ebabb07c8b481"
   },
   {
     "localPath": "assets/skills/heretic/hungering-gaze.png",
     "wikiFile": "Hungering Gaze.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Hungering_Gaze.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 12874,
+    "sha256": "c7a99e04d99ed42c393b601336fcda2b72921ce720ae6f976065abd3166389fd"
   },
   {
     "localPath": "assets/skills/heretic/slicing-maelstrom.png",
     "wikiFile": "Slicing Maelstrom.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Slicing_Maelstrom.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 14234,
+    "sha256": "613c2b78b1030a975d8cc4edca01d170bfe5e465ea7fc0c83d90a628b1e3d206"
   },
   {
     "localPath": "assets/skills/heretic/shadowfade.png",
     "wikiFile": "Shadowfade.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Shadowfade.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 13383,
+    "sha256": "470f4edee682b206e1e32a26800404105e81c239584164a374c11bcb3c3146da"
   },
   {
     "localPath": "assets/skills/heretic/ruin.png",
     "wikiFile": "Ruin.png",
     "sourcePage": "https://riskofrain2.wiki.gg/wiki/File:Ruin.png",
-    "kind": "skill"
+    "kind": "skill",
+    "byteLength": 14678,
+    "sha256": "8ae3eff16cf92cdadde0b6cdd83fe1fe5cda3f6d8baab285cad55c61c2bd85b6"
   }
 ]
