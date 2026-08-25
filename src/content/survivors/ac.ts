@@ -154,7 +154,7 @@ export const acSurvivors: SurvivorGuide[] = [
     ],
     commandRoute: [
       { phase: '前期', picks: ['mocha', 'focus-crystal', 'lens-makers-glasses', 'oddly-shaped-opal', 'item-scrap-white'], explanation: '先做移动近战与暴击基础，保留首个白废料测试被动，但不牺牲关键成装。' },
-      { phase: '中期', picks: ['backup-magazine', 'atg-missile-mk-1', 'collectors-compulsion', 'item-scrap-green'], explanation: '弹匣减少垃圾资源消耗，触发链和收藏冲动放大拾取循环，酌情保留绿废料。' },
+      { phase: '中期', picks: ['backup-magazine', 'atg-missile-mk-1', 'collectors-compulsion', 'item-scrap-green'], explanation: '弹匣减少垃圾资源消耗，触发链和收藏者的冲动放大拾取循环，酌情保留绿废料。' },
       { phase: '后期', picks: ['substandard-duplicator', '57-leaf-clover', 'brilliant-behemoth', 'dios-best-friend'], explanation: '复制器先放大临时库存，再补幸运、范围与复活；临时红黄直接带进首领战。' },
     ],
     voidItems: [

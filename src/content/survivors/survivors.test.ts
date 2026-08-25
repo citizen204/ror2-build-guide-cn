@@ -217,7 +217,8 @@ describe('publishable survivor guides', () => {
 
     expect(operator?.skills.find(({ nameEn }) => nameEn === 'Ejection Core')?.reason)
       .toContain('增幅核心')
-    expect(JSON.stringify(operator)).toContain('集群命令')
+    expect(operator?.solo.common.find(({ itemId }) => itemId === 'lens-makers-glasses')?.role)
+      .toContain('集群命令')
     expect(operator?.combatNotes[2].body).toContain('二型炮手无人机与导弹无人机命令追击')
 
     const falseSon = survivors.find((guide) => guide.slug === 'false-son')
@@ -240,6 +241,22 @@ describe('publishable survivor guides', () => {
 
     expect(heretic?.buildLogic[3]).toBe(
       '切割漩涡（异端之钩）先控场，饥渴凝视（异端幻象）给多目标叠加毁灭层数，装备和爆炸补层后再由毁灭（异端精华）集中引爆，最后用暗影消退（异端跨越）无形撤离。',
+    )
+  })
+
+  test('uses natural Chinese when Heretic yields ordinary healing to the frontline', () => {
+    const heretic = survivors.find((guide) => guide.slug === 'heretic')
+
+    expect(heretic?.coopAdjustments[2]).toBe(
+      '暗影消退（异端跨越）能自救，普通治疗可让给无自疗前排；异端负责用毁灭（异端精华）对齐团队首领爆发窗口。',
+    )
+  })
+
+  test('uses the exact 收藏者的冲动 catalog name in Drifter command guidance', () => {
+    const drifter = survivors.find((guide) => guide.slug === 'drifter')
+
+    expect(drifter?.commandRoute.find(({ phase }) => phase === '中期')?.explanation).toBe(
+      '弹匣减少垃圾资源消耗，触发链和收藏者的冲动放大拾取循环，酌情保留绿废料。',
     )
   })
 
