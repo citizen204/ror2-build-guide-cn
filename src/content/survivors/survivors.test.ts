@@ -169,11 +169,78 @@ describe('publishable survivor guides', () => {
 
     const operator = survivors.find((guide) => guide.slug === 'operator')
     const passiveChoices = operator?.skills.filter((candidate) => candidate.slot === 'passive')
-    expect(passiveChoices?.map(({ nameEn, unlock, icon }) => ({ nameEn, unlock, icon }))).toEqual([
-      { nameEn: 'Drone Tech', unlock: 'default', icon: 'assets/skills/operator/drone-tech.png' },
-      { nameEn: 'Gunner Drone Mk 2', unlock: 'default', icon: 'assets/skills/operator/gunner-drone-mk-2.png' },
-      { nameEn: 'Healing Drone Mk 2', unlock: 'default', icon: 'assets/skills/operator/healing-drone-mk-2.png' },
+    expect(passiveChoices?.map(({ nameZh, nameEn, unlock, icon }) => ({ nameZh, nameEn, unlock, icon }))).toEqual([
+      { nameZh: '无人机技术', nameEn: 'Drone Tech', unlock: 'default', icon: 'assets/skills/operator/drone-tech.png' },
+      { nameZh: '二型炮手无人机', nameEn: 'Gunner Drone Mk 2', unlock: 'default', icon: 'assets/skills/operator/gunner-drone-mk-2.png' },
+      { nameZh: '二型治疗无人机', nameEn: 'Healing Drone Mk 2', unlock: 'default', icon: 'assets/skills/operator/healing-drone-mk-2.png' },
     ])
+  })
+
+  test('uses exact Chinese-only DLC skill names and canonical Heresy item names', () => {
+    const railgunner = survivors.find((guide) => guide.slug === 'railgunner')
+    expect(railgunner?.skills.map(({ nameZh, nameEn }) => ({ nameZh, nameEn }))).toEqual([
+      { nameZh: '磁力加速器', nameEn: 'Magnetic Accelerator' },
+      { nameZh: '智能弹系统', nameEn: 'XQR Smart Round System' },
+      { nameZh: '狙击枪', nameEn: 'M99 Sniper' },
+      { nameZh: '震荡装置', nameEn: 'Concussion Device' },
+      { nameZh: '冷冻充能', nameEn: 'Cryocharge' },
+    ])
+
+    const operator = survivors.find((guide) => guide.slug === 'operator')
+    expect(operator?.skills.find(({ nameEn }) => nameEn === 'H3-11 OCR Custom')?.nameZh)
+      .toBe('定制充能步枪')
+
+    const heresyItemIds = [
+      'visions-of-heresy',
+      'hooks-of-heresy',
+      'strides-of-heresy',
+      'essence-of-heresy',
+    ]
+    expect(heresyItemIds.map((itemId) => items.find((item) => item.id === itemId)?.nameZh)).toEqual([
+      '异端幻象',
+      '异端之钩',
+      '异端跨越',
+      '异端精华',
+    ])
+
+    const heretic = survivors.find((guide) => guide.slug === 'heretic')
+    expect(heretic?.skills.map(({ nameZh }) => nameZh)).toEqual([
+      '饥渴凝视（异端幻象）',
+      '切割漩涡（异端之钩）',
+      '暗影消退（异端跨越）',
+      '毁灭（异端精华）',
+    ])
+
+    expect(railgunner?.skills.find(({ nameEn }) => nameEn === 'M99 Sniper')?.reason)
+      .toContain('精确射手步枪')
+    expect(railgunner?.combatNotes[0].body).toContain('使用震荡装置位移')
+
+    expect(operator?.skills.find(({ nameEn }) => nameEn === 'Ejection Core')?.reason)
+      .toContain('增幅核心')
+    expect(JSON.stringify(operator)).toContain('集群命令')
+    expect(operator?.combatNotes[2].body).toContain('二型炮手无人机与导弹无人机命令追击')
+
+    const falseSon = survivors.find((guide) => guide.slug === 'false-son')
+    expect(falseSon?.skills.find(({ nameEn }) => nameEn === 'Lunar Spikes')?.reason)
+      .toContain('月球尖桩')
+
+    const seeker = survivors.find((guide) => guide.slug === 'seeker')
+    expect(seeker?.solo.common[0].role).toContain('灵拳')
+    expect(seeker?.solo.common[1].role).toContain('灵拳与灵魂螺旋')
+    expect(seeker?.solo.common[2].synergy).toContain('更多灵魂螺旋')
+    expect(seeker?.solo.uncommon[1].role).toContain('灵拳和灵魂螺旋')
+    expect(seeker?.commandRoute[0].explanation).toContain('灵拳连段手感、近战乘区和灵魂螺旋库存')
+    expect(seeker?.combatNotes[0].body).toContain('灵魂螺旋开启屏障，灵拳连段穿群')
+    expect(seeker?.combatNotes[1].body).toContain('维持灵拳和灵魂螺旋')
+
+    const drifter = survivors.find((guide) => guide.slug === 'drifter')
+    expect(drifter?.coopAdjustments[1]).toContain('打捞')
+    expect(drifter?.coopAdjustments[2]).toContain('收回')
+    expect(drifter?.combatNotes[2].body).toContain('清理')
+
+    expect(heretic?.buildLogic[3]).toBe(
+      '切割漩涡（异端之钩）先控场，饥渴凝视（异端幻象）给多目标叠加毁灭层数，装备和爆炸补层后再由毁灭（异端精华）集中引爆，最后用暗影消退（异端跨越）无形撤离。',
+    )
   })
 
   test('uses canonical Chinese names whenever base guides reference alternate skills', () => {

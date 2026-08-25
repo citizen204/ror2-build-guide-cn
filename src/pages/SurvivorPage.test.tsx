@@ -204,7 +204,7 @@ describe('complete survivor guide route', () => {
 
     expect(screen.getByRole('heading', { level: 1, name: '异端' })).toBeInTheDocument()
     expect(screen.getByText(/不能在角色选择界面直接选择/)).toBeInTheDocument()
-    expect(screen.getByText(/同时持有 Visions、Hooks、Strides 和 Essence 才立即变身/)).toBeInTheDocument()
+    expect(screen.getByText(/同时持有异端幻象、异端之钩、异端跨越和异端精华才立即变身/)).toBeInTheDocument()
     expect(screen.getAllByText('特殊变身组件')).toHaveLength(4)
     for (const skill of ['饥渴凝视（异端幻象）', '切割漩涡（异端之钩）', '暗影消退（异端跨越）', '毁灭（异端精华）']) {
       expect(screen.getByText(skill)).toBeInTheDocument()
@@ -222,7 +222,7 @@ describe('complete survivor guide route', () => {
     captain.unmount()
 
     renderRoute('/survivors/operator')
-    for (const drone of ['无人机技术', '机枪无人机 Mk 2', '治疗无人机 Mk 2']) {
+    for (const drone of ['无人机技术', '二型炮手无人机', '二型治疗无人机']) {
       const row = screen.getByText(drone).closest('li')
       expect(row).not.toBeNull()
       expect(within(row!).getByText('被动')).toBeInTheDocument()
