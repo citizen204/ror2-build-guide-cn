@@ -208,7 +208,7 @@ test('shows recognizable card metadata and difficulty in text and marks', async 
   expect(within(card).getByText('呛鼻毒师')).toBeInTheDocument()
   expect(within(card).queryByText('Acrid')).not.toBeInTheDocument()
   expect(within(card).getByText('本体')).toBeInTheDocument()
-  expect(within(card).getByText(/百分比 Poison 削血/)).toBeInTheDocument()
+  expect(within(card).getByText(/百分比中毒削血/)).toBeInTheDocument()
   expect(within(card).getByText('操作难度：3 / 5')).toBeInTheDocument()
   expect(card.querySelector('[aria-hidden="true"]')).toHaveTextContent('●●●○○')
 })

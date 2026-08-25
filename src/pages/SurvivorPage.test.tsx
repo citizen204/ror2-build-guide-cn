@@ -60,9 +60,9 @@ describe('complete survivor guide route', () => {
       screen.getByRole('img', { name: '呛鼻毒师角色头像' }),
     ).toHaveAttribute('src', expectedAsset('assets/survivors/acrid.png'))
     expect(screen.queryByText('Acrid')).not.toBeInTheDocument()
-    expect(screen.getByText('百分比 Poison 削血、传播与外部伤害收尾')).toBeInTheDocument()
+    expect(screen.getByText('百分比中毒削血、传播与外部伤害收尾')).toBeInTheDocument()
     expect(screen.getByText('操作难度：3 / 5')).toBeInTheDocument()
-    expect(screen.getByText(/Poison 本身不能击杀，因此收尾能力比堆近战更关键/)).toBeInTheDocument()
+    expect(screen.getByText(/中毒本身不能击杀，因此收尾能力比堆近战更关键/)).toBeInTheDocument()
 
     const guide = screen.getByRole('article', { name: '呛鼻毒师完整构筑攻略' })
     expect(within(guide).getAllByRole('heading', { level: 2 }).map((heading) => heading.textContent)).toEqual([
@@ -115,7 +115,7 @@ describe('complete survivor guide route', () => {
     expect(within(gasolineRow!).getByText('普通')).toBeInTheDocument()
     expect(within(gasolineRow!).getByText('核心')).toBeInTheDocument()
     expect(within(gasolineRow!).getByText('1–3 件')).toBeInTheDocument()
-    expect(within(gasolineRow!).getByText(/解决 Poison 不能击杀/)).toBeInTheDocument()
+    expect(within(gasolineRow!).getByText(/解决中毒不能击杀/)).toBeInTheDocument()
     expect(within(gasolineRow!).getByText(/汽油会连锁引爆/)).toBeInTheDocument()
 
     const voidRow = screen
@@ -196,7 +196,7 @@ describe('complete survivor guide route', () => {
       .closest('li')
     expect(recyclerRow).not.toBeNull()
     expect(within(recyclerRow!).getByText('替代选择')).toBeInTheDocument()
-    expect(within(recyclerRow!).getByText('成型后换回 Royal Capacitor。')).toBeInTheDocument()
+    expect(within(recyclerRow!).getByText('成型后换回皇家电容器。')).toBeInTheDocument()
   })
 
   test('renders Heretic transformation requirements and all transformed skills', () => {
@@ -215,7 +215,7 @@ describe('complete survivor guide route', () => {
     const captain = renderRoute('/survivors/captain')
     const hacking = screen.getByText('骇入信标').closest('li')
     expect(hacking).not.toBeNull()
-    expect(within(hacking!).getByText(/两格都选择 Hacking/)).toBeInTheDocument()
+    expect(within(hacking!).getByText(/两格都选择骇入/)).toBeInTheDocument()
     expect(within(hacking!).getByText('需要解锁')).toBeInTheDocument()
     captain.unmount()
 
