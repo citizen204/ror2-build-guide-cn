@@ -243,6 +243,22 @@ describe('publishable survivor guides', () => {
     )
   })
 
+  test('uses 打捞 for every visible Salvage reference while keeping Recycler terminology distinct', () => {
+    const drifter = survivors.find((guide) => guide.slug === 'drifter')
+    const lysateCell = drifter?.voidItems.find(({ itemId }) => itemId === 'lysate-cell')
+    const recycler = drifter?.solo.equipment.find(({ itemId }) => itemId === 'recycler')
+
+    expect([
+      drifter?.coopAdjustments[1],
+      lysateCell?.role,
+    ]).toEqual([
+      '打捞产生的四个临时物可以分给队友；临时物有时限，团队应立刻进入传送器爆发窗。',
+      '腐化燃料电池，增加巧匠或打捞特殊充能',
+    ])
+    expect(lysateCell?.synergy).toBe('更多改造机会很强；回收机是核心选择工具时仍保留燃料电池。')
+    expect(recycler?.synergy).toBe('先回收低价值掉落，再决定是否用八点垃圾资源制作临时版本和废料。')
+  })
+
   test('uses canonical Chinese names whenever base guides reference alternate skills', () => {
     const guideText = (slug: string) => JSON.stringify(
       survivors.find((guide) => guide.slug === slug),

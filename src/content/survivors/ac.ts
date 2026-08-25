@@ -160,7 +160,7 @@ export const acSurvivors: SurvivorGuide[] = [
     voidItems: [
       pick('safer-spaces', 'recommended', '1 件起', '腐化更艰难的时光，提供可预测冷却格挡', '近战出入和龙卷猛击落点之间能计划保护，比随机格挡更易管理。'),
       pick('polylute', 'recommended', '完美巨兽提供范围伤害时 1 件', '腐化尤克里里，把群体连锁换成单体雷击', '垃圾立方与龙卷猛击多段命中能强化首领，完美巨兽已承担范围清群。'),
-      pick('lysate-cell', 'conditional', '装备不关键时 1 件', '腐化燃料电池，增加巧匠或回收特殊充能', '更多改造机会很强；回收机是核心选择工具时仍保留燃料电池。'),
+      pick('lysate-cell', 'conditional', '装备不关键时 1 件', '腐化燃料电池，增加巧匠或打捞特殊充能', '更多改造机会很强；回收机是核心选择工具时仍保留燃料电池。'),
       pick('benthic-bloom', 'avoid', '不建议变废为宝路线', '腐化57片叶子的三叶草并随机升级普通物品', '会打散想保留的特定白绿物与废料被动，也破坏统率路线。'),
     ],
     lunarItems: [
