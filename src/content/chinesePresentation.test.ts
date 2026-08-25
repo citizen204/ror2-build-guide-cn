@@ -8,24 +8,23 @@ import { items } from './items'
 import { survivors } from './survivors'
 
 const approvedOfficialLatinNames = ['MUL-T', 'REX'] as const
+const latinTokenPattern = /[A-Za-z]+(?:-[A-Za-z]+)*/g
 
 interface VisibleTextEntry {
   source: string
   value: string
 }
 
-function withoutApprovedOfficialNames(value: string): string {
-  return approvedOfficialLatinNames.reduce(
-    (result, name) => result.replaceAll(name, ''),
-    value,
-  )
+function unexpectedLatinTokens(value: string): string[] {
+  return Array.from(value.matchAll(latinTokenPattern), ([token]) => token)
+    .filter((token) => !approvedOfficialLatinNames.some((name) => name === token))
 }
 
 function expectChineseOnly({ source, value }: VisibleTextEntry): void {
   expect.soft(
-    withoutApprovedOfficialNames(value),
+    unexpectedLatinTokens(value),
     `${source} 含有未批准的拉丁字母：${value}`,
-  ).not.toMatch(/[A-Za-z]/)
+  ).toEqual([])
 }
 
 function itemPickText(pick: ItemPick, source: string): VisibleTextEntry[] {
@@ -86,6 +85,17 @@ function guideVisibleText(guide: SurvivorGuide): VisibleTextEntry[] {
 afterEach(cleanup)
 
 describe('全中文展示契约', () => {
+  test('只允许完整且精确匹配的官方拉丁专名', () => {
+    expect(unexpectedLatinTokens('MUL-T 与 REX')).toEqual([])
+
+    for (const value of ['MUL-TREX', 'REXMUL-T', 'MUL-TMUL-T', 'Acrid']) {
+      expect.soft(
+        unexpectedLatinTokens(value),
+        `${value} 必须被识别为未批准的拉丁字符串`,
+      ).toEqual([value])
+    }
+  })
+
   test('物品和角色的中文展示字段不含未批准的拉丁字母', () => {
     for (const item of items) {
       expectChineseOnly({ source: `items/${item.id}.nameZh`, value: item.nameZh })
