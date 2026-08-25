@@ -244,6 +244,13 @@ describe('publishable survivor guides', () => {
     )
   })
 
+  test('虚假子嗣使用官方简中角色名且可见数据不保留旧称', () => {
+    const falseSon = survivors.find((guide) => guide.slug === 'false-son')
+
+    expect(falseSon?.nameZh).toBe('虚假子嗣')
+    expect(JSON.stringify(survivors)).not.toContain('伪子')
+  })
+
   test('uses natural Chinese when Heretic yields ordinary healing to the frontline', () => {
     const heretic = survivors.find((guide) => guide.slug === 'heretic')
 

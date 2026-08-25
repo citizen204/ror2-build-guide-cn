@@ -88,6 +88,18 @@ test('searches by Chinese name and can clear the search', async () => {
   expect(screen.getByRole('status')).toHaveTextContent('找到 19 名角色')
 })
 
+test('官方简中名“虚假子嗣”可以唯一搜索且不再展示旧称', async () => {
+  const user = userEvent.setup()
+  renderHomePage()
+
+  await user.type(screen.getByRole('searchbox', { name: '搜索角色' }), '虚假子嗣')
+
+  expect(screen.getByRole('status')).toHaveTextContent('找到 1 名角色')
+  const link = screen.getByRole('link', { name: /虚假子嗣/ })
+  expect(link).toHaveAttribute('href', '/survivors/false-son')
+  expect(document.body).not.toHaveTextContent('伪子')
+})
+
 test('按虚空幸存者和特殊变身筛选角色', async () => {
   const user = userEvent.setup()
   renderHomePage()
@@ -129,7 +141,7 @@ test('按本体、风暴探寻者和合金意念筛选角色', async () => {
   ).toHaveLength(3)
   expect(screen.getByRole('heading', { level: 2, name: '探寻者' }).closest('a')).toBeInTheDocument()
   expect(screen.getByRole('link', { name: /大厨/ })).toBeInTheDocument()
-  expect(screen.getByRole('link', { name: /伪子/ })).toBeInTheDocument()
+  expect(screen.getByRole('link', { name: /虚假子嗣/ })).toBeInTheDocument()
 
   await user.click(screen.getByRole('button', { name: '合金意念' }))
   expect(screen.getByRole('status')).toHaveTextContent('找到 2 名角色')

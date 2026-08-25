@@ -1,4 +1,4 @@
-# 伪子 False Son
+# 虚假子嗣 False Son
 
 ## 版本与来源
 

@@ -52,7 +52,7 @@ export const sotsSurvivors: SurvivorGuide[] = [
       uncommon: [
         pick('rose-buckler', 'recommended', '1–3 件', '移动和冲刺期间提供额外护甲保护前排', '缓刑穿群与持续绕圈能较稳定地维持防御条件。'),
         pick('atg-missile-mk-1', 'recommended', '1–2 件', '把灵拳和灵魂螺旋的多次命中转成额外导弹伤害', '补足支援构筑的单体输出，避免终局只剩治疗没有击杀力。'),
-        pick('infusion', 'recommended', '1 件', '提高最大生命并放大屏障与治疗底盘', '缓刑屏障和恢复更稳，但队伍中伪子可能有更高优先级。'),
+        pick('infusion', 'recommended', '1 件', '提高最大生命并放大屏障与治疗底盘', '缓刑屏障和恢复更稳，但队伍中虚假子嗣可能有更高优先级。'),
       ],
       legendary: [
         pick('rejuvenation-rack', 'core', '1 件', '倍增冥想与旋风的团队治疗量', '直接强化支援身份，联机价值尤其高，但与 REX 需要协调。'),
@@ -177,7 +177,7 @@ export const sotsSurvivors: SurvivorGuide[] = [
   },
   {
     slug: 'false-son',
-    nameZh: '伪子',
+    nameZh: '虚假子嗣',
     nameEn: 'False Son',
     dlc: 'sots',
     portrait: 'assets/survivors/false-son.png',
@@ -222,7 +222,7 @@ export const sotsSurvivors: SurvivorGuide[] = [
       ],
     },
     coopAdjustments: [
-      '伪子是浸剂与巨型隆起的高优先候选，但 REX、探寻者也需要，按谁承担前排协商。',
+      '虚假子嗣是浸剂与巨型隆起的高优先候选，但 REX、探寻者也需要，按谁承担前排协商。',
       '子午线之意聚怪后让队友范围伤害对齐，不把目标拖出范围；泥沼之瓮当前只会牵引敌人。',
       '把高频触发物品让给持续射手，古拉格的杰作开启全队窗口，自己专注最大生命、近战乘区和冷却。',
     ],
