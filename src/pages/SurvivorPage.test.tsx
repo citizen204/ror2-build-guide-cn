@@ -50,15 +50,16 @@ beforeEach(() => {
 })
 
 describe('complete survivor guide route', () => {
-  test('renders Acrid identity and the fixed guide chapter sequence', () => {
+  test('只用中文渲染呛鼻毒师身份与固定攻略章节顺序', () => {
     renderRoute('/survivors/acrid')
 
     expect(
-      screen.getByRole('heading', { level: 1, name: '呛鼻毒师 Acrid' }),
+      screen.getByRole('heading', { level: 1, name: '呛鼻毒师' }),
     ).toBeInTheDocument()
     expect(
-      screen.getByRole('img', { name: '呛鼻毒师（Acrid）角色头像' }),
+      screen.getByRole('img', { name: '呛鼻毒师角色头像' }),
     ).toHaveAttribute('src', expectedAsset('assets/survivors/acrid.png'))
+    expect(screen.queryByText('Acrid')).not.toBeInTheDocument()
     expect(screen.getByText('百分比 Poison 削血、传播与外部伤害收尾')).toBeInTheDocument()
     expect(screen.getByText('操作难度：3 / 5')).toBeInTheDocument()
     expect(screen.getByText(/Poison 本身不能击杀，因此收尾能力比堆近战更关键/)).toBeInTheDocument()
@@ -76,10 +77,10 @@ describe('complete survivor guide route', () => {
     ])
   })
 
-  test('renders skill icons, slots, bilingual names, unlock state, and reasons', () => {
+  test('技能图标与名称只显示中文，并保留槽位、解锁状态和理由', () => {
     renderRoute('/survivors/acrid')
 
-    const skillIcon = screen.getByRole('img', { name: '神经毒素（Neurotoxin）技能图标' })
+    const skillIcon = screen.getByRole('img', { name: '神经毒素技能图标' })
     const skillRow = skillIcon.closest('li')
 
     expect(skillRow).not.toBeNull()
@@ -89,19 +90,19 @@ describe('complete survivor guide route', () => {
     )
     expect(within(skillRow!).getByText('副技能')).toBeInTheDocument()
     expect(within(skillRow!).getByText('神经毒素')).toBeInTheDocument()
-    expect(within(skillRow!).getByText('Neurotoxin')).toBeInTheDocument()
+    expect(within(skillRow!).queryByText('Neurotoxin')).not.toBeInTheDocument()
     expect(within(skillRow!).getByText('默认拥有')).toBeInTheDocument()
     expect(within(skillRow!).getByText(/远程施毒且不强迫贴脸/)).toBeInTheDocument()
   })
 
-  test('joins solo, Void, and Lunar picks to canonical item details', () => {
+  test('单人、虚空和月球选择只用中文名称关联标准物品', () => {
     renderRoute('/survivors/acrid')
 
     for (const group of ['白色物品', '绿色物品', '红色物品', '首领物品', '主动装备']) {
       expect(screen.getByRole('heading', { level: 3, name: group })).toBeInTheDocument()
     }
 
-    const gasolineIcon = screen.getByRole('img', { name: '汽油（Gasoline）物品图标' })
+    const gasolineIcon = screen.getByRole('img', { name: '汽油物品图标' })
     const gasolineRow = gasolineIcon.closest('li')
     expect(gasolineRow).not.toBeNull()
     expect(gasolineIcon).toHaveAttribute(
@@ -110,7 +111,7 @@ describe('complete survivor guide route', () => {
     )
     expect(gasolineIcon).toHaveAttribute('loading', 'lazy')
     expect(within(gasolineRow!).getByText('汽油')).toBeInTheDocument()
-    expect(within(gasolineRow!).getByText('Gasoline')).toBeInTheDocument()
+    expect(within(gasolineRow!).queryByText('Gasoline')).not.toBeInTheDocument()
     expect(within(gasolineRow!).getByText('普通')).toBeInTheDocument()
     expect(within(gasolineRow!).getByText('核心')).toBeInTheDocument()
     expect(within(gasolineRow!).getByText('1–3 件')).toBeInTheDocument()
@@ -118,21 +119,21 @@ describe('complete survivor guide route', () => {
     expect(within(gasolineRow!).getByText(/汽油会连锁引爆/)).toBeInTheDocument()
 
     const voidRow = screen
-      .getByRole('img', { name: '虚空源焰（Voidsent Flame）物品图标' })
+      .getByRole('img', { name: '虚空源焰物品图标' })
       .closest('li')
     expect(voidRow).not.toBeNull()
     expect(within(voidRow!).getByText('虚空')).toBeInTheDocument()
     expect(within(voidRow!).getByText(/腐化原物品/)).toBeInTheDocument()
     expect(within(voidRow!).getByText('鬼火')).toBeInTheDocument()
-    expect(within(voidRow!).getByText("Will-o'-the-wisp")).toBeInTheDocument()
+    expect(within(voidRow!).queryByText("Will-o'-the-wisp")).not.toBeInTheDocument()
 
     const conditionalVoidRow = screen
-      .getByRole('img', { name: '聚合鲁特琴（Polylute）物品图标' })
+      .getByRole('img', { name: '聚合鲁特琴物品图标' })
       .closest('li')
     expect(within(conditionalVoidRow!).getByText(/自己缺清群则保留原件/)).toBeInTheDocument()
 
     const avoidedLunarRow = screen
-      .getByRole('img', { name: '塑形玻璃（Shaped Glass）物品图标' })
+      .getByRole('img', { name: '塑形玻璃物品图标' })
       .closest('li')
     expect(within(avoidedLunarRow!).getByText('月球')).toBeInTheDocument()
     expect(within(avoidedLunarRow!).getByText('避免')).toBeInTheDocument()
@@ -148,12 +149,12 @@ describe('complete survivor guide route', () => {
     expect(within(acridLunarSection!).getByRole('heading', { level: 3, name: '被动月球物品' })).toBeInTheDocument()
     expect(within(acridLunarSection!).getByRole('heading', { level: 3, name: '月球主动装备' })).toBeInTheDocument()
     expect(within(acridLunarSection!).getByText('本攻略不推荐该角色使用月球主动装备。')).toBeInTheDocument()
-    expect(within(acridLunarSection!).getByRole('img', { name: '塑形玻璃（Shaped Glass）物品图标' })).toBeInTheDocument()
+    expect(within(acridLunarSection!).getByRole('img', { name: '塑形玻璃物品图标' })).toBeInTheDocument()
     acrid.unmount()
 
     renderRoute('/survivors/mul-t')
     const tonicRow = screen
-      .getByRole('img', { name: '尖晶强心剂（Spinel Tonic）物品图标' })
+      .getByRole('img', { name: '尖晶强心剂物品图标' })
       .closest('li')
     expect(tonicRow).not.toBeNull()
     expect(within(tonicRow!).getByText('月球主动装备')).toBeInTheDocument()
@@ -175,7 +176,10 @@ describe('complete survivor guide route', () => {
       '后期',
     ])
     expect(within(route).getByText('外星脑袋')).toBeInTheDocument()
-    expect(within(route).getByText('Alien Head')).toBeInTheDocument()
+    const alienHeadIcon = within(route).getByRole('img', { name: '外星脑袋统率路线图标' })
+    const alienHead = alienHeadIcon.closest('li')
+    expect(alienHead).not.toBeNull()
+    expect(within(alienHead!).queryByText('Alien Head')).not.toBeInTheDocument()
 
     const combat = screen.getByRole('list', { name: '呛鼻毒师战斗场景' })
     expect(within(combat).getAllByRole('listitem')).toHaveLength(4)
@@ -188,7 +192,7 @@ describe('complete survivor guide route', () => {
     renderRoute('/survivors/commando')
 
     const recyclerRow = screen
-      .getByRole('img', { name: '回收机（Recycler）物品图标' })
+      .getByRole('img', { name: '回收机物品图标' })
       .closest('li')
     expect(recyclerRow).not.toBeNull()
     expect(within(recyclerRow!).getByText('替代选择')).toBeInTheDocument()
@@ -198,25 +202,25 @@ describe('complete survivor guide route', () => {
   test('renders Heretic transformation requirements and all transformed skills', () => {
     renderRoute('/survivors/heretic')
 
-    expect(screen.getByRole('heading', { level: 1, name: '异端 Heretic' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { level: 1, name: '异端' })).toBeInTheDocument()
     expect(screen.getByText(/不能在角色选择界面直接选择/)).toBeInTheDocument()
     expect(screen.getByText(/同时持有 Visions、Hooks、Strides 和 Essence 才立即变身/)).toBeInTheDocument()
     expect(screen.getAllByText('特殊变身组件')).toHaveLength(4)
-    for (const skill of ['Hungering Gaze', 'Slicing Maelstrom', 'Shadowfade', 'Ruin']) {
+    for (const skill of ['饥渴凝视（异端幻象）', '切割漩涡（异端之钩）', '暗影消退（异端跨越）', '毁灭（异端精华）']) {
       expect(screen.getByText(skill)).toBeInTheDocument()
     }
   })
 
   test('makes Captain beacon and Operator drone selections explicit', () => {
     const captain = renderRoute('/survivors/captain')
-    const hacking = screen.getByText('Beacon: Hacking').closest('li')
+    const hacking = screen.getByText('骇入信标').closest('li')
     expect(hacking).not.toBeNull()
     expect(within(hacking!).getByText(/两格都选择 Hacking/)).toBeInTheDocument()
     expect(within(hacking!).getByText('需要解锁')).toBeInTheDocument()
     captain.unmount()
 
     renderRoute('/survivors/operator')
-    for (const drone of ['Drone Tech', 'Gunner Drone Mk 2', 'Healing Drone Mk 2']) {
+    for (const drone of ['无人机技术', '机枪无人机 Mk 2', '治疗无人机 Mk 2']) {
       const row = screen.getByText(drone).closest('li')
       expect(row).not.toBeNull()
       expect(within(row!).getByText('被动')).toBeInTheDocument()
@@ -237,33 +241,33 @@ describe('complete survivor guide route', () => {
 
     await user.click(screen.getByRole('button', { name: '回到顶部' }))
     expect(document.activeElement).toBe(
-      screen.getByRole('heading', { level: 1, name: '呛鼻毒师 Acrid' }),
+      screen.getByRole('heading', { level: 1, name: '呛鼻毒师' }),
     )
   })
 
   test('follows canonical previous and next navigation with boundary behavior', () => {
     const first = renderRoute('/survivors/commando')
     expect(screen.queryByRole('link', { name: /上一个角色/ })).not.toBeInTheDocument()
-    expect(screen.getByRole('link', { name: '下一个角色：女猎人 Huntress' })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: '下一个角色：女猎人' })).toHaveAttribute(
       'href',
       '/survivors/huntress',
     )
     first.unmount()
 
     const middle = renderRoute('/survivors/acrid')
-    expect(screen.getByRole('link', { name: '上一个角色：装载机 Loader' })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: '上一个角色：装载机' })).toHaveAttribute(
       'href',
       '/survivors/loader',
     )
     expect(screen.getByRole('link', { name: '返回角色首页' })).toHaveAttribute('href', '/')
-    expect(screen.getByRole('link', { name: '下一个角色：舰长 Captain' })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: '下一个角色：舰长' })).toHaveAttribute(
       'href',
       '/survivors/captain',
     )
     middle.unmount()
 
     renderRoute('/survivors/heretic')
-    expect(screen.getByRole('link', { name: '上一个角色：漂泊者 Drifter' })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: '上一个角色：漂泊者' })).toHaveAttribute(
       'href',
       '/survivors/drifter',
     )
@@ -282,9 +286,9 @@ describe('complete survivor guide route', () => {
     scrollTo.mockClear()
     focus.mockClear()
 
-    await user.click(screen.getByRole('link', { name: '下一个角色：舰长 Captain' }))
+    await user.click(screen.getByRole('link', { name: '下一个角色：舰长' }))
 
-    const heading = await screen.findByRole('heading', { level: 1, name: '舰长 Captain' })
+    const heading = await screen.findByRole('heading', { level: 1, name: '舰长' })
     await waitFor(() => {
       expect(scrollTo).toHaveBeenCalledWith({ top: 0, left: 0, behavior: 'instant' })
       expect(heading).toHaveAttribute('tabindex', '-1')
@@ -329,6 +333,8 @@ describe('complete survivor guide route', () => {
         .getByRole('heading', { level: 2, name: '月球物品' })
         .closest('section')
       const guide = survivors.find((candidate) => candidate.slug === slug)
+      expect(screen.getByRole('heading', { level: 1, name: guide?.nameZh })).toBeInTheDocument()
+      expect(screen.getByRole('img', { name: `${guide?.nameZh}角色头像` })).toBeInTheDocument()
       expect(lunarSection).not.toBeNull()
       expect(within(lunarSection!).getByRole('heading', { level: 3, name: '被动月球物品' })).toBeInTheDocument()
       expect(within(lunarSection!).getByRole('heading', { level: 3, name: '月球主动装备' })).toBeInTheDocument()

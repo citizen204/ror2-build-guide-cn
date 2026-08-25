@@ -53,12 +53,11 @@ function CommandItem({ item }: { item: ItemDefinition }) {
     <li className="command-item">
       <img
         src={assetUrl(item.icon)}
-        alt={`${item.nameZh}（${item.nameEn}）统率路线图标`}
+        alt={`${item.nameZh}统率路线图标`}
         loading="lazy"
       />
       <span>
         <strong>{item.nameZh}</strong>
-        <span lang="en">{item.nameEn}</span>
       </span>
     </li>
   )
@@ -91,16 +90,13 @@ function SurvivorIdentity({ guide }: { guide: SurvivorGuide }) {
       <div className="survivor-identity__portrait">
         <img
           src={assetUrl(guide.portrait)}
-          alt={`${guide.nameZh}（${guide.nameEn}）角色头像`}
+          alt={`${guide.nameZh}角色头像`}
           loading="eager"
           fetchPriority="high"
         />
       </div>
       <div className="survivor-identity__content">
-        <h1 id="guide-top" data-page-title="" tabIndex={-1}>
-          <span>{guide.nameZh}</span>{' '}
-          <span lang="en">{guide.nameEn}</span>
-        </h1>
+        <h1 id="guide-top" data-page-title="" tabIndex={-1}>{guide.nameZh}</h1>
         <div className="survivor-identity__meta">
           <span>{guide.role}</span>
           <span>操作难度：{guide.difficulty} / 5</span>
@@ -142,10 +138,10 @@ function SurvivorPagination({ index }: { index: number }) {
         {previous ? (
           <Link
             to={`/survivors/${previous.slug}`}
-            aria-label={`上一个角色：${previous.nameZh} ${previous.nameEn}`}
+            aria-label={`上一个角色：${previous.nameZh}`}
           >
             <span>← 上一个角色</span>
-            <strong>{previous.nameZh} · <span lang="en">{previous.nameEn}</span></strong>
+            <strong>{previous.nameZh}</strong>
           </Link>
         ) : null}
       </div>
@@ -154,10 +150,10 @@ function SurvivorPagination({ index }: { index: number }) {
         {next ? (
           <Link
             to={`/survivors/${next.slug}`}
-            aria-label={`下一个角色：${next.nameZh} ${next.nameEn}`}
+            aria-label={`下一个角色：${next.nameZh}`}
           >
             <span>下一个角色 →</span>
-            <strong>{next.nameZh} · <span lang="en">{next.nameEn}</span></strong>
+            <strong>{next.nameZh}</strong>
           </Link>
         ) : null}
       </div>

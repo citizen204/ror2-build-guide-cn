@@ -42,11 +42,10 @@ function resolveItem(itemId: string): ItemDefinition | undefined {
   return item
 }
 
-function BilingualItemName({ item }: { item: ItemDefinition }) {
+function ItemName({ item }: { item: ItemDefinition }) {
   return (
     <span className="item-row__name">
       <strong>{item.nameZh}</strong>
-      <span lang="en">{item.nameEn}</span>
     </span>
   )
 }
@@ -78,12 +77,12 @@ export function ItemGroup({ title, picks, emptyMessage }: ItemGroupProps) {
                 <img
                   className="item-row__icon"
                   src={assetUrl(item.icon)}
-                  alt={`${item.nameZh}（${item.nameEn}）物品图标`}
+                  alt={`${item.nameZh}物品图标`}
                   loading="lazy"
                 />
                 <div className="item-row__content">
                   <div className="item-row__identity">
-                    <BilingualItemName item={item} />
+                    <ItemName item={item} />
                     <span className={`item-tag item-tag--rarity-${item.tier}`}>
                       {rarityLabels[item.tier]}
                     </span>
@@ -109,7 +108,6 @@ export function ItemGroup({ title, picks, emptyMessage }: ItemGroupProps) {
                         <dt>腐化原物品</dt>
                         <dd className="item-row__original">
                           <span>{originalItem.nameZh}</span>
-                          <span lang="en">{originalItem.nameEn}</span>
                         </dd>
                       </div>
                     ) : null}

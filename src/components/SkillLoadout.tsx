@@ -27,7 +27,7 @@ export function SkillLoadout({ skills }: SkillLoadoutProps) {
           <img
             className="skill-row__icon"
             src={assetUrl(skill.icon)}
-            alt={`${skill.nameZh}（${skill.nameEn}）技能图标`}
+            alt={`${skill.nameZh}技能图标`}
             loading="lazy"
           />
           <div className="skill-row__content">
@@ -39,7 +39,6 @@ export function SkillLoadout({ skills }: SkillLoadoutProps) {
             </div>
             <p className="skill-row__name">
               <strong>{skill.nameZh}</strong>
-              <span lang="en">{skill.nameEn}</span>
             </p>
             <p className="skill-row__reason">{skill.reason}</p>
           </div>

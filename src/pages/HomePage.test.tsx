@@ -57,17 +57,19 @@ test('explains how Command and normal-run players should read recommendations', 
   expect(normalRunGuidance).toHaveTextContent(/普通流程.*作用.*联动.*替代选择/)
 })
 
-test('searches by English name and updates the result count', async () => {
+test('英文名称仍可搜索，但结果卡片只显示中文', async () => {
   const user = userEvent.setup()
   renderHomePage()
 
   await user.type(screen.getByRole('searchbox', { name: '搜索角色' }), 'Acrid')
 
   expect(screen.getByRole('status')).toHaveTextContent('找到 1 名角色')
-  expect(
-    screen.getByRole('link', { name: /呛鼻毒师.*Acrid/ }),
-  ).toBeInTheDocument()
-  expect(screen.queryByRole('link', { name: /Commando/ })).not.toBeInTheDocument()
+  const link = screen.getByRole('link', { name: /呛鼻毒师/ })
+  expect(link).toBeInTheDocument()
+  expect(link).not.toHaveTextContent('Acrid')
+  expect(link).not.toHaveAccessibleName(/Acrid/)
+  expect(screen.queryByText('Acrid')).not.toBeInTheDocument()
+  expect(screen.queryByRole('link', { name: /突击队员/ })).not.toBeInTheDocument()
 })
 
 test('searches by Chinese name and can clear the search', async () => {
@@ -77,33 +79,33 @@ test('searches by Chinese name and can clear the search', async () => {
 
   await user.type(searchbox, '呛鼻')
 
-  expect(
-    screen.getByRole('link', { name: /呛鼻毒师.*Acrid/ }),
-  ).toBeInTheDocument()
+  const link = screen.getByRole('link', { name: /呛鼻毒师/ })
+  expect(link).toBeInTheDocument()
+  expect(link).not.toHaveTextContent('Acrid')
   await user.click(screen.getByRole('button', { name: '清空搜索' }))
 
   expect(searchbox).toHaveValue('')
   expect(screen.getByRole('status')).toHaveTextContent('找到 19 名角色')
 })
 
-test('filters the roster by SOTV and the special transformation', async () => {
+test('按虚空幸存者和特殊变身筛选角色', async () => {
   const user = userEvent.setup()
   renderHomePage()
 
-  await user.click(screen.getByRole('button', { name: 'SOTV' }))
+  await user.click(screen.getByRole('button', { name: '虚空幸存者' }))
 
   expect(screen.getByRole('status')).toHaveTextContent('找到 2 名角色')
-  expect(screen.getByRole('link', { name: /Railgunner/ })).toBeInTheDocument()
-  expect(screen.getByRole('link', { name: /Void Fiend/ })).toBeInTheDocument()
-  expect(screen.queryByRole('link', { name: /Commando/ })).not.toBeInTheDocument()
+  expect(screen.getByRole('link', { name: /磁轨炮手/ })).toBeInTheDocument()
+  expect(screen.getByRole('link', { name: /虚空恶鬼/ })).toBeInTheDocument()
+  expect(screen.queryByRole('link', { name: /突击队员/ })).not.toBeInTheDocument()
 
-  await user.click(screen.getByRole('button', { name: '特殊' }))
+  await user.click(screen.getByRole('button', { name: '特殊变身' }))
 
   expect(screen.getByRole('status')).toHaveTextContent('找到 1 名角色')
-  expect(screen.getByRole('link', { name: /Heretic/ })).toBeInTheDocument()
+  expect(screen.getByRole('link', { name: /异端/ })).toBeInTheDocument()
 })
 
-test('filters the roster by the base game, SOTS, and AC', async () => {
+test('按本体、风暴探寻者和合金意念筛选角色', async () => {
   const user = userEvent.setup()
   renderHomePage()
 
@@ -114,63 +116,70 @@ test('filters the roster by the base game, SOTS, and AC', async () => {
       'listitem',
     ),
   ).toHaveLength(11)
-  expect(screen.getByRole('link', { name: /Commando/ })).toBeInTheDocument()
-  expect(screen.getByRole('link', { name: /Acrid/ })).toBeInTheDocument()
-  expect(screen.queryByRole('link', { name: /Seeker/ })).not.toBeInTheDocument()
+  expect(screen.getByRole('link', { name: /突击队员/ })).toBeInTheDocument()
+  expect(screen.getByRole('link', { name: /呛鼻毒师/ })).toBeInTheDocument()
+  expect(screen.queryByRole('link', { name: /探寻者/ })).not.toBeInTheDocument()
 
-  await user.click(screen.getByRole('button', { name: 'SOTS' }))
+  await user.click(screen.getByRole('button', { name: '风暴探寻者' }))
   expect(screen.getByRole('status')).toHaveTextContent('找到 3 名角色')
   expect(
     within(screen.getByRole('list', { name: '角色筛选结果' })).getAllByRole(
       'listitem',
     ),
   ).toHaveLength(3)
-  expect(screen.getByRole('link', { name: /Seeker/ })).toBeInTheDocument()
-  expect(screen.getByRole('link', { name: /CHEF/ })).toBeInTheDocument()
-  expect(screen.getByRole('link', { name: /False Son/ })).toBeInTheDocument()
+  expect(screen.getByRole('heading', { level: 2, name: '探寻者' }).closest('a')).toBeInTheDocument()
+  expect(screen.getByRole('link', { name: /大厨/ })).toBeInTheDocument()
+  expect(screen.getByRole('link', { name: /伪子/ })).toBeInTheDocument()
 
-  await user.click(screen.getByRole('button', { name: 'AC' }))
+  await user.click(screen.getByRole('button', { name: '合金意念' }))
   expect(screen.getByRole('status')).toHaveTextContent('找到 2 名角色')
   expect(
     within(screen.getByRole('list', { name: '角色筛选结果' })).getAllByRole(
       'listitem',
     ),
   ).toHaveLength(2)
-  expect(screen.getByRole('link', { name: /Operator/ })).toBeInTheDocument()
-  expect(screen.getByRole('link', { name: /Drifter/ })).toBeInTheDocument()
-  expect(screen.queryByRole('link', { name: /Seeker/ })).not.toBeInTheDocument()
+  expect(screen.getByRole('link', { name: /操作员/ })).toBeInTheDocument()
+  expect(screen.getByRole('link', { name: /漂泊者/ })).toBeInTheDocument()
+  expect(screen.queryByRole('link', { name: /探寻者/ })).not.toBeInTheDocument()
 })
 
 test('explains how to recover from an empty combined search and filter', async () => {
   const user = userEvent.setup()
   renderHomePage()
 
-  await user.click(screen.getByRole('button', { name: 'SOTV' }))
+  await user.click(screen.getByRole('button', { name: '虚空幸存者' }))
   await user.type(screen.getByRole('searchbox', { name: '搜索角色' }), 'Acrid')
 
   expect(screen.getByRole('status')).toHaveTextContent('找到 0 名角色')
-  expect(
-    screen.getByRole('heading', { name: '没有找到符合条件的角色' }),
-  ).toBeInTheDocument()
-  expect(screen.getByText(/清空搜索.*全部/)).toBeInTheDocument()
+  const emptyHeading = screen.getByRole('heading', { name: '没有找到符合条件的角色' })
+  const emptyResults = emptyHeading.closest<HTMLElement>('.empty-results')
+  expect(emptyResults).not.toBeNull()
+  expect(within(emptyResults!).getByText('试试清空搜索，或把扩展内容改为“全部”。')).toBeInTheDocument()
+  expect(emptyResults).not.toHaveTextContent(/[A-Za-z]/)
 
   await user.click(screen.getByRole('button', { name: '显示全部角色' }))
 
   expect(screen.getByRole('status')).toHaveTextContent('找到 19 名角色')
 })
 
-test('links every card to its detail route and gives portraits meaningful alt text', () => {
+test('每张角色卡只用中文展示名称链接详情并描述头像', () => {
   renderHomePage()
 
   for (const survivor of survivors) {
-    expect(
-      screen.getByRole('link', {
-        name: new RegExp(`${survivor.nameZh}.*${survivor.nameEn}`),
-      }),
-    ).toHaveAttribute('href', `/survivors/${survivor.slug}`)
+    const heading = screen.getByRole('heading', { level: 2, name: survivor.nameZh })
+    const link = heading.closest('a')
+    expect(link).not.toBeNull()
+    expect(link).toHaveAttribute('href', `/survivors/${survivor.slug}`)
+    expect(heading).toHaveTextContent(
+      new RegExp(`^${survivor.nameZh}$`),
+    )
+    if (survivor.nameEn !== survivor.nameZh) {
+      expect(link!).not.toHaveTextContent(survivor.nameEn)
+      expect(link!).not.toHaveAccessibleName(new RegExp(survivor.nameEn))
+    }
     expect(
       screen.getByRole('img', {
-        name: `${survivor.nameZh}（${survivor.nameEn}）角色头像`,
+        name: `${survivor.nameZh}角色头像`,
       }),
     ).toBeInTheDocument()
   }
@@ -197,21 +206,25 @@ test('shows recognizable card metadata and difficulty in text and marks', async 
   const card = screen.getByRole('article')
 
   expect(within(card).getByText('呛鼻毒师')).toBeInTheDocument()
-  expect(within(card).getByText('Acrid')).toBeInTheDocument()
+  expect(within(card).queryByText('Acrid')).not.toBeInTheDocument()
   expect(within(card).getByText('本体')).toBeInTheDocument()
   expect(within(card).getByText(/百分比 Poison 削血/)).toBeInTheDocument()
   expect(within(card).getByText('操作难度：3 / 5')).toBeInTheDocument()
   expect(card.querySelector('[aria-hidden="true"]')).toHaveTextContent('●●●○○')
 })
 
-test('exposes every DLC control and supports keyboard selection', async () => {
+test('显示每个扩展内容筛选控件并支持键盘选择', async () => {
   const user = userEvent.setup()
   renderHomePage()
-  const filterGroup = screen.getByRole('group', { name: '按 DLC 筛选' })
+  expect(screen.getByRole('searchbox', { name: '搜索角色' })).toHaveAttribute(
+    'placeholder',
+    '输入中文名；也支持英文搜索',
+  )
+  const filterGroup = screen.getByRole('group', { name: '按扩展内容筛选' })
   const allButton = within(filterGroup).getByRole('button', { name: '全部' })
-  const sotvButton = within(filterGroup).getByRole('button', { name: 'SOTV' })
+  const sotvButton = within(filterGroup).getByRole('button', { name: '虚空幸存者' })
 
-  for (const label of ['全部', '本体', 'SOTV', 'SOTS', 'AC', '特殊']) {
+  for (const label of ['全部', '本体', '虚空幸存者', '风暴探寻者', '合金意念', '特殊变身']) {
     expect(within(filterGroup).getByRole('button', { name: label })).toBeEnabled()
   }
   expect(allButton).toHaveAttribute('aria-pressed', 'true')
@@ -234,7 +247,7 @@ test('traverses and activates search, filters, reset, and a card link by keyboar
   expect(searchbox).toHaveFocus()
   await user.type(searchbox, 'Acrid')
 
-  for (const label of ['全部', '本体', 'SOTV', 'SOTS', 'AC', '特殊']) {
+  for (const label of ['全部', '本体', '虚空幸存者', '风暴探寻者', '合金意念', '特殊变身']) {
     await user.tab()
     const filterButton = screen.getByRole('button', { name: label })
     expect(filterButton).toHaveFocus()
@@ -259,13 +272,13 @@ test('traverses and activates search, filters, reset, and a card link by keyboar
 
   await user.tab()
   expect(searchbox).toHaveFocus()
-  for (const label of ['全部', '本体', 'SOTV', 'SOTS', 'AC', '特殊']) {
+  for (const label of ['全部', '本体', '虚空幸存者', '风暴探寻者', '合金意念', '特殊变身']) {
     await user.tab()
     expect(screen.getByRole('button', { name: label })).toHaveFocus()
   }
 
   await user.tab()
-  const firstCardLink = screen.getByRole('link', { name: /突击队员.*Commando/ })
+  const firstCardLink = screen.getByRole('link', { name: /突击队员/ })
   expect(firstCardLink).toHaveFocus()
   await user.keyboard('{Enter}')
 

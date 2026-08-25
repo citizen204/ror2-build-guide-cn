@@ -8,9 +8,9 @@ interface SurvivorCardProps {
 
 const dlcLabels: Record<DlcId, string> = {
   base: '本体',
-  sotv: 'SOTV',
-  sots: 'SOTS',
-  ac: 'AC',
+  sotv: '虚空幸存者',
+  sots: '风暴探寻者',
+  ac: '合金意念',
   special: '特殊变身',
 }
 
@@ -24,16 +24,13 @@ export function SurvivorCard({ survivor }: SurvivorCardProps) {
           <div className="survivor-card__portrait">
             <img
               src={assetUrl(survivor.portrait)}
-              alt={`${survivor.nameZh}（${survivor.nameEn}）角色头像`}
+              alt={`${survivor.nameZh}角色头像`}
               loading="lazy"
             />
           </div>
           <div className="survivor-card__body">
             <div className="survivor-card__heading">
-              <h2>
-                <span>{survivor.nameZh}</span>
-                <span lang="en">{survivor.nameEn}</span>
-              </h2>
+              <h2>{survivor.nameZh}</h2>
               <span className="survivor-card__dlc">{dlcLabels[survivor.dlc]}</span>
             </div>
             <p className="survivor-card__role">{survivor.role}</p>

@@ -11,10 +11,10 @@ interface SearchFiltersProps {
 const dlcOptions: { value: DlcFilter; label: string }[] = [
   { value: 'all', label: '全部' },
   { value: 'base', label: '本体' },
-  { value: 'sotv', label: 'SOTV' },
-  { value: 'sots', label: 'SOTS' },
-  { value: 'ac', label: 'AC' },
-  { value: 'special', label: '特殊' },
+  { value: 'sotv', label: '虚空幸存者' },
+  { value: 'sots', label: '风暴探寻者' },
+  { value: 'ac', label: '合金意念' },
+  { value: 'special', label: '特殊变身' },
 ]
 
 export function SearchFilters({
@@ -37,13 +37,13 @@ export function SearchFilters({
         <span>搜索角色</span>
         <input
           type="search"
-          placeholder="输入中文名、英文名或角色 ID"
+          placeholder="输入中文名；也支持英文搜索"
           value={query}
           onChange={(event) => onQueryChange(event.target.value)}
         />
       </label>
       <fieldset className="search-filters__group">
-        <legend>按 DLC 筛选</legend>
+        <legend>按扩展内容筛选</legend>
         <div className="search-filters__options">
           {dlcOptions.map((option) => (
             <button

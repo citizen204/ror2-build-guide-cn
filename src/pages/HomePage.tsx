@@ -48,7 +48,7 @@ export function HomePage() {
         ) : (
           <div className="empty-results" aria-labelledby="empty-results-title">
             <h2 id="empty-results-title">没有找到符合条件的角色</h2>
-            <p>试试清空搜索，或把 DLC 改为“全部”。</p>
+            <p>试试清空搜索，或把扩展内容改为“全部”。</p>
             <button type="button" onClick={resetFilters}>显示全部角色</button>
           </div>
         )}
