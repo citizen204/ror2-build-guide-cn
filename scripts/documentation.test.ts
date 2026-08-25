@@ -5,6 +5,37 @@ import { describe, expect, test } from 'vitest'
 
 const repositoryDirectory = resolve(process.cwd())
 
+interface DocumentationFile {
+  file: string
+  content: string
+}
+
+interface DocumentationSafetyViolation {
+  file: string
+  kind: string
+}
+
+const documentationSafetyRules = [
+  { kind: 'email address', pattern: /[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/ },
+  { kind: 'private key', pattern: /-----BEGIN (?:RSA |EC |OPENSSH |DSA |ENCRYPTED )?PRIVATE KEY-----/ },
+  { kind: 'GitHub token', pattern: /\b(?:gh[pousr]_|github_pat_)[A-Za-z0-9_]{20,}/ },
+  { kind: 'OpenAI token', pattern: /\bsk-[A-Za-z0-9_-]{20,}/ },
+  { kind: 'AWS access key', pattern: /\b(?:AKIA|ASIA)[0-9A-Z]{16}\b/ },
+  { kind: 'Slack token', pattern: /\bxox[baprs]-[A-Za-z0-9-]{20,}/ },
+  { kind: 'GitLab token', pattern: /\bglpat-[A-Za-z0-9_-]{20,}/ },
+  { kind: 'Google API key', pattern: /\bAIza[0-9A-Za-z_-]{30,}/ },
+] as const
+
+function findDocumentationSafetyViolations(
+  documents: DocumentationFile[],
+): DocumentationSafetyViolation[] {
+  return documents.flatMap(({ file, content }) => (
+    documentationSafetyRules.flatMap(({ kind, pattern }) => (
+      pattern.test(content) ? [{ file, kind }] : []
+    ))
+  ))
+}
+
 function listTrackedDocumentationFiles(): string[] {
   return execFileSync('git', ['ls-files', '-z'], {
     cwd: repositoryDirectory,
@@ -17,6 +48,55 @@ function listTrackedDocumentationFiles(): string[] {
 }
 
 describe('maintainer documentation', () => {
+  test('detects contact addresses and credential tokens in nested documentation', () => {
+    const controlledViolations = [
+      {
+        file: 'docs/superpowers/specs/email-example.md',
+        content: ['maintainer', 'example.test'].join('@'),
+        kind: 'email address',
+      },
+      {
+        file: 'research/build-notes/private-key-example.md',
+        content: ['-----BEGIN', 'ENCRYPTED', 'PRIVATE KEY-----'].join(' '),
+        kind: 'private key',
+      },
+      {
+        file: 'docs/superpowers/specs/github-example.md',
+        content: ['github', 'pat', 'A'.repeat(24)].join('_'),
+        kind: 'GitHub token',
+      },
+      {
+        file: 'research/build-notes/openai-example.md',
+        content: ['sk', 'A'.repeat(24)].join('-'),
+        kind: 'OpenAI token',
+      },
+      {
+        file: 'docs/superpowers/specs/aws-example.md',
+        content: ['ASIA', 'A'.repeat(16)].join(''),
+        kind: 'AWS access key',
+      },
+      {
+        file: 'research/build-notes/slack-example.md',
+        content: ['xoxb', 'A'.repeat(24)].join('-'),
+        kind: 'Slack token',
+      },
+      {
+        file: 'docs/superpowers/specs/gitlab-example.md',
+        content: ['glpat', 'A'.repeat(24)].join('-'),
+        kind: 'GitLab token',
+      },
+      {
+        file: 'research/build-notes/google-example.md',
+        content: ['AIza', 'A'.repeat(32)].join(''),
+        kind: 'Google API key',
+      },
+    ]
+
+    expect(findDocumentationSafetyViolations(
+      controlledViolations.map(({ file, content }) => ({ file, content })),
+    )).toEqual(controlledViolations.map(({ file, kind }) => ({ file, kind })))
+  })
+
   test('documents Chinese-only presentation and bounded English survivor search', async () => {
     const [product, readme] = await Promise.all([
       readFile(resolve(repositoryDirectory, 'PRODUCT.md'), 'utf8'),
@@ -35,22 +115,24 @@ describe('maintainer documentation', () => {
     expect(readme).not.toContain('- 本体（Base）')
   })
 
-  test('keeps public documentation free of contact addresses and credential material', async () => {
-    const publicDocumentationFiles = ['README.md', 'PRODUCT.md', 'index.html']
-    const forbiddenPatterns = [
-      /[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/,
-      /-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----/,
-      /\b(?:gh[pousr]_|github_pat_)[A-Za-z0-9_]{20,}/,
-      /\bsk-[A-Za-z0-9_-]{20,}/,
-      /\bAKIA[0-9A-Z]{16}\b/,
-    ]
+  test('keeps every tracked documentation file free of contact addresses and credential material', async () => {
+    const documentationFiles = listTrackedDocumentationFiles()
+    expect(documentationFiles).toEqual(expect.arrayContaining([
+      'index.html',
+      'docs/superpowers/specs/2026-08-25-chinese-only-presentation-design.md',
+      'research/build-notes/acrid.md',
+    ]))
 
-    for (const file of publicDocumentationFiles) {
-      const content = await readFile(resolve(repositoryDirectory, file), 'utf8')
-      for (const pattern of forbiddenPatterns) {
-        expect(content, `${file} must not publish contact details or secrets`).not.toMatch(pattern)
-      }
-    }
+    const documents = await Promise.all(documentationFiles.map(async (file) => ({
+      file,
+      content: await readFile(resolve(repositoryDirectory, file), 'utf8'),
+    })))
+    const violations = findDocumentationSafetyViolations(documents)
+
+    expect(
+      violations,
+      violations.map(({ file, kind }) => `${file}: ${kind}`).join('\n'),
+    ).toEqual([])
   })
 
   test('documents the canonical guide, item-pick, and validation contracts', async () => {
