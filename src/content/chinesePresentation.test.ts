@@ -8,7 +8,20 @@ import { items } from './items'
 import { survivors } from './survivors'
 
 const approvedOfficialLatinNames = ['MUL-T', 'REX'] as const
-const latinTokenPattern = /[A-Za-z]+(?:-[A-Za-z]+)*/g
+const latinNameBoundaryCharacters = String.raw`\p{Script=Latin}\p{Number}_\-`
+const approvedOfficialLatinNamePattern = new RegExp(
+  `(?<![${latinNameBoundaryCharacters}])(?:${approvedOfficialLatinNames.join('|')})(?![${latinNameBoundaryCharacters}])`,
+  'gu',
+)
+const latinScriptPattern = /\p{Script=Latin}+/gu
+const userFacingAttributes = [
+  'alt',
+  'aria-label',
+  'aria-description',
+  'title',
+  'placeholder',
+  'aria-valuetext',
+] as const
 
 interface VisibleTextEntry {
   source: string
@@ -16,8 +29,8 @@ interface VisibleTextEntry {
 }
 
 function unexpectedLatinTokens(value: string): string[] {
-  return Array.from(value.matchAll(latinTokenPattern), ([token]) => token)
-    .filter((token) => !approvedOfficialLatinNames.some((name) => name === token))
+  const withoutApprovedNames = value.replace(approvedOfficialLatinNamePattern, '')
+  return Array.from(withoutApprovedNames.matchAll(latinScriptPattern), ([token]) => token)
 }
 
 function expectChineseOnly({ source, value }: VisibleTextEntry): void {
@@ -82,17 +95,92 @@ function guideVisibleText(guide: SurvivorGuide): VisibleTextEntry[] {
   ]
 }
 
+function renderedPresentationEntries(source: string): VisibleTextEntry[] {
+  return [
+    {
+      source: `${source} document.title`,
+      value: document.title,
+    },
+    {
+      source: `${source} 可见文本`,
+      value: document.body.textContent ?? '',
+    },
+    ...userFacingAttributes.flatMap((attribute) => (
+      Array.from(document.querySelectorAll(`[${attribute}]`), (element, index) => ({
+        source: `${source} ${element.localName}[${index}].${attribute}`,
+        value: element.getAttribute(attribute) ?? '',
+      }))
+    )),
+  ]
+}
+
 afterEach(cleanup)
 
 describe('全中文展示契约', () => {
   test('只允许完整且精确匹配的官方拉丁专名', () => {
-    expect(unexpectedLatinTokens('MUL-T 与 REX')).toEqual([])
+    for (const value of [
+      'MUL-T',
+      'REX',
+      '（MUL-T）、REX。',
+      '角色MUL-T与REX搭档',
+    ]) {
+      expect.soft(
+        unexpectedLatinTokens(value),
+        `${value} 必须只包含批准的官方拉丁专名`,
+      ).toEqual([])
+    }
 
-    for (const value of ['MUL-TREX', 'REXMUL-T', 'MUL-TMUL-T', 'Acrid']) {
+    for (const value of [
+      'MUL-TREX',
+      'REXMUL-T',
+      'MUL-TMUL-T',
+      'MUL-T2',
+      'REX2',
+      '2REX',
+      'MUL-T_REX',
+      'é',
+      'Acrid',
+    ]) {
       expect.soft(
         unexpectedLatinTokens(value),
         `${value} 必须被识别为未批准的拉丁字符串`,
-      ).toEqual([value])
+      ).not.toEqual([])
+    }
+  })
+
+  test('路由扫描器会检查文档标题和所有用户可见属性', () => {
+    const originalTitle = document.title
+    document.title = 'English document title'
+
+    try {
+      render(createElement(
+        'section',
+        {
+          'aria-label': 'English aria label',
+          'aria-description': 'English aria description',
+          title: 'English title',
+        },
+        createElement('img', { alt: 'English alt' }),
+        createElement('input', {
+          placeholder: 'English placeholder',
+          'aria-valuetext': 'English value text',
+        }),
+      ))
+
+      const violations = renderedPresentationEntries('受控夹具')
+        .filter(({ value }) => unexpectedLatinTokens(value).length > 0)
+
+      expect(violations).toEqual([
+        { source: '受控夹具 document.title', value: 'English document title' },
+        { source: '受控夹具 img[0].alt', value: 'English alt' },
+        { source: '受控夹具 section[0].aria-label', value: 'English aria label' },
+        { source: '受控夹具 section[0].aria-description', value: 'English aria description' },
+        { source: '受控夹具 section[0].title', value: 'English title' },
+        { source: '受控夹具 input[0].placeholder', value: 'English placeholder' },
+        { source: '受控夹具 input[0].aria-valuetext', value: 'English value text' },
+      ])
+    } finally {
+      document.title = originalTitle
     }
   })
 
@@ -114,16 +202,7 @@ describe('全中文展示契约', () => {
         createElement(App),
       ))
 
-      expectChineseOnly({
-        source: `路由 ${path} 可见文本`,
-        value: document.body.textContent ?? '',
-      })
-      for (const [index, image] of Array.from(document.images).entries()) {
-        expectChineseOnly({
-          source: `路由 ${path} 图片[${index}]替代文本`,
-          value: image.alt,
-        })
-      }
+      renderedPresentationEntries(`路由 ${path}`).forEach(expectChineseOnly)
     },
   )
 })
