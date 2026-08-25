@@ -4,11 +4,11 @@ import { sources } from '../content/sources'
 
 const footerSourceConfig = [
   { id: 'steam-base', label: '官方本体页面' },
-  { id: 'steam-alloyed-collective', label: 'Alloyed Collective 官方页面' },
+  { id: 'steam-alloyed-collective', label: '合金意念官方页面' },
   { id: 'wiki-survivors', label: '角色资料与图标来源' },
   { id: 'wiki-items', label: '物品资料与图标来源' },
   { id: 'github-asset-manifest', label: '完整图标来源清单' },
-  { id: 'wiki-copyrights', label: 'Wiki 权利与许可说明' },
+  { id: 'wiki-copyrights', label: '维基权利与许可说明' },
 ] as const
 
 const footerSources = footerSourceConfig.map(({ id, label }) => {
@@ -40,21 +40,20 @@ export function SiteFooter() {
                 {siteMetadata.dlcScope.map((dlc, index) => (
                   <Fragment key={dlc.id}>
                     {index > 0 ? '、' : null}
-                    {dlc.nameZh}（<span lang="en">{dlc.nameEn}</span>
-                    {'abbreviation' in dlc ? `，${dlc.abbreviation}` : null}）
+                    {dlc.nameZh}
                   </Fragment>
                 ))}
               </dd>
             </div>
           </dl>
           <p className="site-footer__attribution">
-            角色、技能和物品图标取自 Risk of Rain 2 Wiki 的对应文件页。游戏名称与图像的权利及许可归各权利方，本站不对这些素材作再授权。
+            角色、技能和物品图标取自《雨中冒险 2》维基的对应文件页。游戏名称与图像的权利及许可归各权利方，本站不对这些素材作再授权。
           </p>
         </section>
 
         <section className="site-footer__sources">
           <h3>主要资料来源</h3>
-          <p>构筑结论参考官方商店、更新公告与 Wiki 机制资料；版本变化后应重新核对。</p>
+          <p>构筑结论参考官方商店、更新公告与维基机制资料；版本变化后应重新核对。</p>
           <ul>
             {footerSources.map((source) => (
               <li key={source.id}>

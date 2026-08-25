@@ -7,12 +7,12 @@ import { sources } from '../content/sources'
 import { SiteFooter } from './SiteFooter'
 
 const sourceLinks = [
-  { id: 'steam-base', name: /官方本体页面/ },
-  { id: 'steam-alloyed-collective', name: /Alloyed Collective 官方页面/ },
-  { id: 'wiki-survivors', name: /角色资料与图标来源/ },
-  { id: 'wiki-items', name: /物品资料与图标来源/ },
-  { id: 'github-asset-manifest', name: /完整图标来源清单/ },
-  { id: 'wiki-copyrights', name: /Wiki 权利与许可说明/ },
+  { id: 'steam-base', name: '官方本体页面新标签页 ↗' },
+  { id: 'steam-alloyed-collective', name: '合金意念官方页面新标签页 ↗' },
+  { id: 'wiki-survivors', name: '角色资料与图标来源新标签页 ↗' },
+  { id: 'wiki-items', name: '物品资料与图标来源新标签页 ↗' },
+  { id: 'github-asset-manifest', name: '完整图标来源清单新标签页 ↗' },
+  { id: 'wiki-copyrights', name: '维基权利与许可说明新标签页 ↗' },
 ] as const
 
 afterEach(cleanup)
@@ -34,15 +34,15 @@ describe('site footer', () => {
     expect(footer).not.toHaveTextContent('最后核对最后核对')
     const scope = within(footer).getByText('适用内容').parentElement?.querySelector('dd')
     expect(scope).not.toBeNull()
-    expect(scope).toHaveTextContent(
-      '本体（Base）、虚空幸存者（Survivors of the Void，SOTV）、风暴探寻者（Seekers of the Storm，SOTS）、合金意念（Alloyed Collective，AC）',
-    )
+    expect(scope).toHaveTextContent(/^本体、虚空幸存者、风暴探寻者、合金意念$/)
     expect(within(footer).getByText(/公开的非官方粉丝攻略/)).toHaveTextContent(
       /没有隶属、赞助或认可关系/,
     )
-    expect(within(footer).getByText(/图标取自 Risk of Rain 2 Wiki/)).toHaveTextContent(
+    expect(within(footer).getByText(/图标取自《雨中冒险 2》维基/)).toHaveTextContent(
       /本站不对这些素材作再授权/,
     )
+    expect(within(footer).getByText(/维基机制资料/)).toHaveTextContent(/版本变化后应重新核对/)
+    expect(footer).not.toHaveTextContent(/[A-Za-z]/)
     expect(footer).not.toHaveTextContent(/[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/)
   })
 
@@ -59,6 +59,7 @@ describe('site footer', () => {
       expect(source).toBeDefined()
 
       const link = screen.getByRole('link', { name: expected.name })
+      expect(link).toHaveAccessibleName(expected.name)
       expect(link).toHaveAttribute('href', source!.url)
       expect(link).toHaveAttribute('target', '_blank')
       expect(link).toHaveAttribute('rel', 'noreferrer')
@@ -67,11 +68,11 @@ describe('site footer', () => {
       expect(link).toHaveFocus()
     }
 
-    expect(screen.getByRole('link', { name: /完整图标来源清单/ })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: '完整图标来源清单新标签页 ↗' })).toHaveAttribute(
       'href',
       'https://github.com/citizen204/ror2-build-guide-cn/blob/main/src/content/assets.json',
     )
-    expect(screen.getByRole('link', { name: /Wiki 权利与许可说明/ })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: '维基权利与许可说明新标签页 ↗' })).toHaveAttribute(
       'href',
       'https://riskofrain2.wiki.gg/wiki/Risk_of_Rain_2_Wiki:Copyrights',
     )

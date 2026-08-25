@@ -17,6 +17,42 @@ function listTrackedDocumentationFiles(): string[] {
 }
 
 describe('maintainer documentation', () => {
+  test('documents Chinese-only presentation and bounded English survivor search', async () => {
+    const [product, readme] = await Promise.all([
+      readFile(resolve(repositoryDirectory, 'PRODUCT.md'), 'utf8'),
+      readFile(resolve(repositoryDirectory, 'README.md'), 'utf8'),
+    ])
+
+    expect(product).toContain('页面只显示中文')
+    expect(product).toMatch(/内部英文名称.*英文角色搜索、资源匹配和内容维护/)
+    expect(product).toMatch(/MUL-T.*REX.*官方专名/)
+    expect(product).not.toContain('中文名、英文名总是共同出现')
+    expect(product).not.toContain('中文与英文名称均可被辅助技术读取')
+
+    expect(readme).toContain('页面只显示中文')
+    expect(readme).toMatch(/输入英文角色名仍可搜索/)
+    expect(readme).toContain('英文搜索仅适用于角色；本站不提供物品或技能的站内搜索。')
+    expect(readme).not.toContain('- 本体（Base）')
+  })
+
+  test('keeps public documentation free of contact addresses and credential material', async () => {
+    const publicDocumentationFiles = ['README.md', 'PRODUCT.md', 'index.html']
+    const forbiddenPatterns = [
+      /[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/,
+      /-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----/,
+      /\b(?:gh[pousr]_|github_pat_)[A-Za-z0-9_]{20,}/,
+      /\bsk-[A-Za-z0-9_-]{20,}/,
+      /\bAKIA[0-9A-Z]{16}\b/,
+    ]
+
+    for (const file of publicDocumentationFiles) {
+      const content = await readFile(resolve(repositoryDirectory, file), 'utf8')
+      for (const pattern of forbiddenPatterns) {
+        expect(content, `${file} must not publish contact details or secrets`).not.toMatch(pattern)
+      }
+    }
+  })
+
   test('documents the canonical guide, item-pick, and validation contracts', async () => {
     const readme = await readFile(resolve(repositoryDirectory, 'README.md'), 'utf8')
 
