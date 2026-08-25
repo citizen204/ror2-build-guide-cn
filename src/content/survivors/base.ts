@@ -121,7 +121,7 @@ export const baseSurvivors: SurvivorGuide[] = [
     difficulty: 2,
     summary: '能在全速冲刺中保持锁定输出，以飞刃清群、弩炮补单体并用闪现跨过致命攻击；生命偏低，因此强度来自持续走位而非换血。',
     skills: [
-      skill('huntress', 'primary', '扫射', 'Strafe', 'default', '前期无需暴击即可稳定工作，满暴击后可条件切换疾射。'),
+      skill('huntress', 'primary', '扫射', 'Strafe', 'default', '前期无需暴击即可稳定工作，满暴击后可条件切换乱射。'),
       skill('huntress', 'secondary', '激光飞刃', 'Laser Glaive', 'default', '唯一副技能，借小怪反弹逐跳增伤，是角色主要清群手段。'),
       skill('huntress', 'utility', '闪现', 'Blink', 'default', '带垂直位移且一次脱险距离更可靠，适合稳定天蚀路线。'),
       skill('huntress', 'special', '弩炮', 'Ballista', 'unlock-required', '三发远程强击兼顾单体、手环触发和空中停滞。'),
@@ -129,13 +129,13 @@ export const baseSurvivors: SurvivorGuide[] = [
     buildLogic: [
       '女猎人能在冲刺中攻击，因此能量饮料与玫瑰圆盾都是角色特化收益；全程斜向绕圈，把闪现留给致命线。',
       '激光飞刃先锁小怪，让逐跳增伤最终落在精英；空旷单首领时由弩炮、手环和穿甲承担倍率。',
-      '扫射前期稳定，统率神器很快做满暴击后可切疾射；无论哪套都不能用锁定代替视线、射程和掩体管理。',
+      '扫射前期稳定，统率神器很快做满暴击后可切乱射；无论哪套都不能用锁定代替视线、射程和掩体管理。',
       '生命偏低意味着强光补燃器、额外跳跃和可预测格挡优先于小额治疗，输出够后继续补位移次数。',
     ],
     solo: {
       common: [
         pick('energy-drink', 'core', '3–5 件', '放大全程冲刺并保持射击的角色优势', '冲刺速度同时改善绕圈、生存与小门徒的自动伤害频率。'),
-        pick('lens-makers-glasses', 'core', '目标 10 件暴击等效', '建立稳定暴击并为疾射转换做准备', '满暴击会放大疾射箭数，并开启激光瞄准镜与易爆的脾脏联动。'),
+        pick('lens-makers-glasses', 'core', '目标 10 件暴击等效', '建立稳定暴击并为乱射转换做准备', '满暴击会放大乱射箭数，并开启激光瞄准镜与易爆的脾脏联动。'),
         pick('backup-magazine', 'recommended', '2–4 件', '增加激光飞刃储备并强化清群连续性', '多次飞刃能在不同怪群之间轮换，减少主技能单体不足的空窗。'),
       ],
       uncommon: [
@@ -145,11 +145,11 @@ export const baseSurvivors: SurvivorGuide[] = [
       ],
       legendary: [
         pick('hardlight-afterburner', 'core', '1 件', '增加闪现充能并显著提高脱险次数', '连续位移是低生命角色最直接的天蚀生存提升。'),
-        pick('laser-scope', 'recommended', '满暴击后 1 件', '把稳定暴击进一步放大成终局伤害倍率', '同时强化疾射、弩炮和易爆的脾脏，暴击未成型时不要先拿。'),
+        pick('laser-scope', 'recommended', '满暴击后 1 件', '把稳定暴击进一步放大成终局伤害倍率', '同时强化乱射、弩炮和易爆的脾脏，暴击未成型时不要先拿。'),
       ],
       boss: [
         pick('little-disciple', 'core', '1 件起', '冲刺时自动发射追踪弹并清理近身敌人', '女猎人常驻冲刺可持续触发，几乎不改变原有走位循环。'),
-        pick('shatterspleen', 'recommended', '满暴击后 1 件', '为暴击构筑补充流血和击杀范围爆炸', '疾射与锁定主攻提供稳定暴击，进一步扩大飞刃清场。'),
+        pick('shatterspleen', 'recommended', '满暴击后 1 件', '为暴击构筑补充流血和击杀范围爆炸', '乱射与锁定主攻提供稳定暴击，进一步扩大飞刃清场。'),
       ],
       equipment: [
         pick('royal-capacitor', 'recommended', '携带 1 件', '补足远距离单点并删除飞行精英威胁', '锁定走位中无需停下蓄力，能把装备爆发留给高价值目标。'),
@@ -163,18 +163,18 @@ export const baseSurvivors: SurvivorGuide[] = [
     ],
     commandRoute: [
       { phase: '前期', picks: ['energy-drink', 'lens-makers-glasses', 'backup-magazine', 'oddly-shaped-opal'], explanation: '先让边跑边打成立，并建立暴击、飞刃库存与第一下防护。' },
-      { phase: '中期', picks: ['kjaro-band', 'runald-band', 'hopoo-feather', 'rose-buckler'], explanation: '满暴击后可切疾射，再补双手环、额外跳跃和冲刺护甲。' },
+      { phase: '中期', picks: ['kjaro-band', 'runald-band', 'hopoo-feather', 'rose-buckler'], explanation: '满暴击后可切乱射，再补双手环、额外跳跃和冲刺护甲。' },
       { phase: '后期', picks: ['hardlight-afterburner', 'laser-scope', 'dios-best-friend'], explanation: '优先增加闪现次数，再用激光瞄准镜放大满暴击，最后补一次复活保险。' },
     ],
     voidItems: [
       pick('safer-spaces', 'recommended', '1 件起', '腐化更艰难的时光，得到冷却明确的定时格挡', '闪现两次危险窗口之间可等待保护恢复，比随机格挡更易计划。'),
       pick('polylute', 'conditional', '首领压力高时 1 件', '腐化尤克里里，把群体连锁换成单体雷击', '队伍已有清群时补足女猎人的单体短板，否则应保留尤克里里。'),
       pick('plasma-shrimp', 'conditional', '稳定护盾时 1 件', '腐化空对地导弹1号，以护盾换每次命中导弹', '只有走位足够稳定、护盾不断时收益可靠，受击掉盾后会停用。'),
-      pick('lost-seers-lenses', 'avoid', '不建议拾取', '腐化全部暴击眼镜并改为概率瞬杀', '会摧毁疾射箭数、激光瞄准镜与易爆的脾脏的整个暴击核心。'),
+      pick('lost-seers-lenses', 'avoid', '不建议拾取', '腐化全部暴击眼镜并改为概率瞬杀', '会摧毁乱射箭数、激光瞄准镜与易爆的脾脏的整个暴击核心。'),
     ],
     lunarItems: [
       pick('gesture-of-the-drowned', 'recommended', '伤害装备成型后 1 件', '自动释放装备并加快短冷却点杀循环', '持续跑动能降低误用风险，但仍无法为指定首领窗口保留装备。'),
-      pick('light-flux-pauldron', 'conditional', '技能流 1 件', '大幅缩短技能冷却但降低普通攻击速度', '弩炮与飞刃流可接受代价，依赖疾射的构筑应避免。'),
+      pick('light-flux-pauldron', 'conditional', '技能流 1 件', '大幅缩短技能冷却但降低普通攻击速度', '弩炮与飞刃流可接受代价，依赖乱射的构筑应避免。'),
       pick('brittle-crown', 'avoid', '不建议稳定路线拾取', '命中赚取金币但受伤会立刻损失金币', '低生命角色容易被擦伤，经济波动会拖慢关键移动和暴击成型。'),
     ],
     lunarEquipment: [],
@@ -198,7 +198,7 @@ export const baseSurvivors: SurvivorGuide[] = [
     summary: '依靠背后必定暴击、烟雾弹换侧和亡命徒处决层数滚起单发倍率；需要管理尾刀、换弹与站位，联机时尤其要处理资源冲突。',
     skills: [
       skill('bandit', 'passive', '背刺', 'Backstab', 'default', '从背后攻击必定暴击，是站位与高倍率构筑的核心。'),
-      skill('bandit', 'primary', '爆裂射击', 'Burst', 'default', '近中距离总倍率和触发更强，远距精准需求时才换爆破。'),
+      skill('bandit', 'primary', '爆裂射击', 'Burst', 'default', '近中距离总倍率和触发更强，远距精准需求时才换爆破射击。'),
       skill('bandit', 'secondary', '锯齿飞刀', 'Serrated Shiv', 'unlock-required', '安全远程施加出血，不必为流血持续贴脸。'),
       skill('bandit', 'utility', '烟雾弹', 'Smoke Bomb', 'default', '唯一位移，兼具隐身、眩晕、垂直修正和绕背。'),
       skill('bandit', 'special', '亡命徒', 'Desperado', 'unlock-required', '单人每次处决增加本关伤害，长关卡滚雪球最强。'),
@@ -258,7 +258,7 @@ export const baseSurvivors: SurvivorGuide[] = [
     combatNotes: combat(
       '先用亡命徒收小怪，再用烟雾弹穿到精英背后，锯齿飞刀、爆裂射击后由特殊收尾。',
       '保持侧后方出血，首领转身或出招时隐身换侧，装备与双环留给硬直窗。',
-      '用锯齿飞刀、特殊或条件爆破点杀，不为背刺跳入没有安全落点的空域。',
+      '用锯齿飞刀、特殊或条件爆破射击点杀，不为背刺跳入没有安全落点的空域。',
       '烟雾弹留给锤击和旋转墙；夺取物品阶段从背后爆裂射击，避免正面贪换弹。',
     ),
     sourceIds: ['wiki-bandit', 'wiki-proc-coefficient', 'wiki-items'],
@@ -359,7 +359,7 @@ export const baseSurvivors: SurvivorGuide[] = [
     buildLogic: [
       '两座炮台完整复制工程师当前物品，新捡物品后必须重新部署才更新；关键触发、暴击与真菌因此会在三体上同时工作。',
       '固定炮台分开放置，让射界与真菌圈互相覆盖但不重叠；护盾罩住主要远程射线，不要追着本体随意落盾。',
-      '气泡护盾是稳定单人推荐；若已有掩体和移动，可条件换热能鱼叉，先存满最多四枚再进入锁定爆发。',
+      '气泡护盾是稳定单人推荐；若已有掩体和移动，可条件换热力鱼叉，先存满最多四枚再进入锁定爆发。',
       '机械红装与召唤件很强，但本体仍需要移动和羽毛；炮台承担火力不代表工程师可以站在治疗圈内硬吃伤害。',
     ],
     solo: {
@@ -589,7 +589,7 @@ export const baseSurvivors: SurvivorGuide[] = [
     ],
     buildLogic: [
       '指令：注射末击和其他技能维持削弱，显著降低首领伤害、速度并降甲；高威胁目标应常驻而不是只在开场挂一次。',
-      '指令：钻孔提供十六次零点五触发系数且不耗血，备用弹夹增加覆盖层数，是稳定天蚀构筑的核心。',
+      '指令：钻孔可命中十六次，每次命中的触发系数均为零点五，且不耗血；备用弹夹增加覆盖层数，是稳定天蚀构筑的核心。',
       '缠绕生长先把怪群聚在一起，再叠指令：钻孔；指令：驱散可推回控制区或反向跳推，生命低时停止一切自伤。',
       '普通季风可放大治疗，天蚀尤其天蚀八更重视外星脑袋、机动、复活和避免永久伤，不能用自愈掩盖风险。',
     ],
@@ -601,7 +601,7 @@ export const baseSurvivors: SurvivorGuide[] = [
       ],
       uncommon: [
         pick('death-mark', 'core', '条件满足时 1 件', '利用削弱与其他减益触发独立增伤', 'REX 自带削弱，队伍或物品补齐四类减益后能稳定激活。'),
-        pick('atg-missile-mk-1', 'recommended', '1–3 件', '把指令：钻孔的多段命中转成额外导弹伤害', '十六次零点五触发系数提供大量触发机会，兼顾群体和单体输出。'),
+        pick('atg-missile-mk-1', 'recommended', '1–3 件', '把指令：钻孔的多段命中转成额外导弹伤害', '指令：钻孔可命中十六次，每次命中的触发系数均为零点五，可提供大量触发机会，兼顾群体和单体输出。'),
         pick('infusion', 'conditional', '1–2 件', '增加最大生命并提高承压与治疗底盘', '绝对生命更高但百分比自伤的绝对值也会提高，不能当免费减耗。'),
       ],
       legendary: [
@@ -816,7 +816,7 @@ export const baseSurvivors: SurvivorGuide[] = [
       skill('captain', 'primary', '火神霰弹枪', 'Vulcan Shotgun', 'default', '唯一主攻，八弹丸各有触发判定，蓄力只收紧散布。'),
       skill('captain', 'secondary', '电击枪', 'Power Tazer', 'default', '唯一副技能，先眩晕普通目标再预判轨道探针落点。'),
       skill('captain', 'utility', '轨道探针', 'Orbital Probe', 'default', '三次短延迟轨道打击比会伤及全员的地狱火打击稳定。'),
-      skill('captain', 'special', '骇入信标', 'Beacon: Hacking', 'unlock-required', '轨道补给信标的两格都选择骇入；每关免费关键金币对象，落地后不可回收。'),
+      skill('captain', 'special', '骇入信标', 'Beacon: Hacking', 'unlock-required', '轨道补给信标的两格都选择骇入信标；每关免费关键金币对象，落地后不可回收。'),
     ],
     buildLogic: [
       '火神霰弹枪八弹丸各有零点七五触发系数，蓄力只收紧散布不提高总伤；靠近大目标可密集触发空对地导弹1号、尤克里里和流血。',
@@ -840,11 +840,11 @@ export const baseSurvivors: SurvivorGuide[] = [
         pick('spare-drone-parts', 'conditional', '已有无人机时 1 件', '强化继承防御用微型机器人的无人机队伍', '机械随从既输出又拦截投射物，但操作员在队时可能拥有更高优先级。'),
       ],
       boss: [
-        pick('empathy-cores', 'recommended', '无人机体系 1 件', '利用无人机和盟友数量提高核心伤害', '骇入能低成本购买无人机，容易扩大盟友规模并兑现收益。'),
+        pick('empathy-cores', 'recommended', '无人机体系 1 件', '利用无人机和盟友数量提高核心伤害', '骇入信标能低成本购买无人机，容易扩大盟友规模并兑现收益。'),
         pick('charged-perforator', 'recommended', '1 件起', '把密集霰弹触发转成电击单体与链伤', '多弹丸触发提供大量机会，适合首领和飞行精英。'),
       ],
       equipment: [
-        pick('executive-card', 'core', '经济阶段携带', '放大购买选择并进一步强化每关经济节奏', '与骇入分工：信标免费大目标，卡片提高其余箱子和商店价值。'),
+        pick('executive-card', 'core', '经济阶段携带', '放大购买选择并进一步强化每关经济节奏', '与骇入信标分工：信标免费大目标，卡片提高其余箱子和商店价值。'),
         pick('royal-capacitor', 'recommended', '成型后携带', '点杀高速飞行精英并补轨道探针难命中的目标', '角色成型后不再需要纯经济装备，可换成可靠短冷却战斗爆发。'),
       ],
     },
@@ -862,16 +862,16 @@ export const baseSurvivors: SurvivorGuide[] = [
       pick('polylute', 'recommended', '队伍有清群时 1 件', '腐化尤克里里，把群体连锁换成单体雷击', '八颗霰弹能高频触发，适合首领；自己仍缺清群则保留原件。'),
       pick('lysate-cell', 'recommended', '信标支援流 1 件', '腐化燃料电池，增加特殊信标充能', '额外信标扩大每关支援，但装备流仍应保留燃料电池。'),
       pick('encrusted-key', 'recommended', '经济路线 1 件', '腐化生锈的钥匙，每关开启虚空三选一缓存', '进一步提高每关物品选择质量，但会腐化全部生锈钥匙。'),
-      pick('benthic-bloom', 'avoid', '不建议精确经济路线', '腐化57片叶子的三叶草并随机升级普通物品', '会破坏骇入与统率神器精确选择形成的移动和触发库存。'),
+      pick('benthic-bloom', 'avoid', '不建议精确经济路线', '腐化57片叶子的三叶草并随机升级普通物品', '会破坏骇入信标与统率神器精确选择形成的移动和触发库存。'),
     ],
     lunarItems: [
       pick('strides-of-heresy', 'recommended', '需要机动时 1 件', '替换轨道探针，获得无形移动与治疗', '可直接修复无位移短板，代价是失去轨道伤害；隐秘领域反而更实用。'),
       pick('focused-convergence', 'conditional', '清场和移速成型后 1 件', '缩小传送器区域并加快充能速度', '舰长无原生位移，区域过小会提高风险，只有移动充足时考虑。'),
-      pick('brittle-crown', 'avoid', '不建议稳定经济路线', '命中赚金币但受伤会丢失大量金币', '无位移角色更容易被擦伤，反而削弱骇入建立的经济优势。'),
+      pick('brittle-crown', 'avoid', '不建议稳定经济路线', '命中赚金币但受伤会丢失大量金币', '无位移角色更容易被擦伤，反而削弱骇入信标建立的经济优势。'),
     ],
     lunarEquipment: [],
     combatNotes: combat(
-      '骇入先换资源，电击枪定精英，轨道探针预判落点，再蓄紧霰弹枪近中距触发。',
+      '先用骇入信标换资源，电击枪定精英，轨道探针预判落点，再蓄紧霰弹枪近中距触发。',
       '三次轨道探针交错落点，近距霰弹打满；明显大招前提前远离，因为没有紧急位移。',
       '蓄力霰弹收紧散布，皇家电容器点杀；轨道探针对高速空怪不稳定。',
       '依靠羽毛和移速而非轨道救场；柱子前放可用信标，夺取物品阶段借地形慢打。',

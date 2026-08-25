@@ -160,11 +160,12 @@ describe('publishable survivor guides', () => {
     const captain = survivors.find((guide) => guide.slug === 'captain')
     const captainSpecial = captain?.skills.find((candidate) => candidate.slot === 'special')
     expect(captainSpecial).toMatchObject({
+      nameZh: '骇入信标',
       nameEn: 'Beacon: Hacking',
       unlock: 'unlock-required',
       icon: 'assets/skills/captain/beacon-hacking.png',
+      reason: '轨道补给信标的两格都选择骇入信标；每关免费关键金币对象，落地后不可回收。',
     })
-    expect(captainSpecial?.reason).toContain('两格')
 
     const operator = survivors.find((guide) => guide.slug === 'operator')
     const passiveChoices = operator?.skills.filter((candidate) => candidate.slot === 'passive')
@@ -173,6 +174,28 @@ describe('publishable survivor guides', () => {
       { nameEn: 'Gunner Drone Mk 2', unlock: 'default', icon: 'assets/skills/operator/gunner-drone-mk-2.png' },
       { nameEn: 'Healing Drone Mk 2', unlock: 'default', icon: 'assets/skills/operator/healing-drone-mk-2.png' },
     ])
+  })
+
+  test('uses canonical Chinese names whenever base guides reference alternate skills', () => {
+    const guideText = (slug: string) => JSON.stringify(
+      survivors.find((guide) => guide.slug === slug),
+    )
+
+    expect(guideText('huntress')).toContain('乱射')
+    expect(guideText('huntress')).not.toContain('疾射')
+    expect(guideText('bandit')).toContain('爆破射击')
+    expect(guideText('bandit')).not.toMatch(/爆破(?!射击)/u)
+    expect(guideText('engineer')).toContain('热力鱼叉')
+    expect(guideText('engineer')).not.toContain('热能鱼叉')
+  })
+
+  test('states the REX Drill hit count and per-hit proc coefficient unambiguously', () => {
+    const rex = survivors.find((guide) => guide.slug === 'rex')
+    const rexText = JSON.stringify(rex)
+    const exactMechanic = '可命中十六次，每次命中的触发系数均为零点五'
+
+    expect(rexText.split(exactMechanic)).toHaveLength(3)
+    expect(rexText).not.toContain('十六次零点五触发系数')
   })
 
   test('cites the direct Mired Urn source wherever Seeker and CHEF publish its current targeting', () => {

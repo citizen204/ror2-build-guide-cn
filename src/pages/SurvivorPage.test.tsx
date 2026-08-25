@@ -215,7 +215,9 @@ describe('complete survivor guide route', () => {
     const captain = renderRoute('/survivors/captain')
     const hacking = screen.getByText('骇入信标').closest('li')
     expect(hacking).not.toBeNull()
-    expect(within(hacking!).getByText(/两格都选择骇入/)).toBeInTheDocument()
+    expect(within(hacking!).getByText(
+      '轨道补给信标的两格都选择骇入信标；每关免费关键金币对象，落地后不可回收。',
+    )).toBeInTheDocument()
     expect(within(hacking!).getByText('需要解锁')).toBeInTheDocument()
     captain.unmount()
 
