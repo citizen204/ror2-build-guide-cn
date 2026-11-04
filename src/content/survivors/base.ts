@@ -122,7 +122,7 @@ export const baseSurvivors: SurvivorGuide[] = [
     summary: '能在全速冲刺中保持锁定输出，以飞刃清群、弩炮补单体并用闪现跨过致命攻击；生命偏低，因此强度来自持续走位而非换血。',
     skills: [
       skill('huntress', 'primary', '扫射', 'Strafe', 'default', '前期无需暴击即可稳定工作，满暴击后可条件切换乱射。'),
-      skill('huntress', 'secondary', '激光飞刃', 'Laser Glaive', 'default', '唯一副技能，借小怪反弹逐跳增伤，是角色主要清群手段。'),
+      skill('huntress', 'secondary', '激光飞刃', 'Laser Glaive', 'default', '默认副技能，借小怪反弹逐跳增伤，是角色主要清群手段。'),
       skill('huntress', 'utility', '闪现', 'Blink', 'default', '带垂直位移且一次脱险距离更可靠，适合稳定天蚀路线。'),
       skill('huntress', 'special', '弩炮', 'Ballista', 'unlock-required', '三发远程强击兼顾单体、手环触发和空中停滞。'),
     ],
@@ -351,7 +351,7 @@ export const baseSurvivors: SurvivorGuide[] = [
     difficulty: 2,
     summary: '两座炮台会复制工程师当前物品，把每个触发与治疗件放大为三体体系；固定炮台配爆裂真菌最稳定，拾取新物品后必须重新部署才能更新。',
     skills: [
-      skill('engineer', 'primary', '弹跳手雷', 'Bouncing Grenades', 'default', '唯一主技能，蓄满后用于地面大目标和炮台空窗。'),
+      skill('engineer', 'primary', '弹跳手雷', 'Bouncing Grenades', 'default', '默认主技能，蓄满后用于地面大目标和炮台空窗。'),
       skill('engineer', 'secondary', '蜘蛛地雷', 'Spider Mines', 'unlock-required', '自动寻敌使实战命中比压力地雷稳定，守点预埋才换回默认。'),
       skill('engineer', 'utility', '气泡护盾', 'Bubble Shield', 'default', '稳定单人守点首选，为固定炮台覆盖明显远程射线。'),
       skill('engineer', 'special', '高斯自动炮台', 'TR12 Gauss Auto-Turret', 'default', '远射程固定炮台继承物品，并能停在爆裂真菌治疗圈。'),
@@ -739,7 +739,7 @@ export const baseSurvivors: SurvivorGuide[] = [
       skill('acrid', 'primary', '恶毒创伤', 'Vicious Wounds', 'default', '唯一主攻，安全窗口近战三连并负责最终收尾。'),
       skill('acrid', 'secondary', '神经毒素', 'Neurotoxin', 'default', '远程施毒且不强迫贴脸，比饥饿撕咬更稳定。'),
       skill('acrid', 'utility', '腐蚀飞跃', 'Caustic Leap', 'default', '两层充能和毒池控制，进场与退场各保留一次。'),
-      skill('acrid', 'special', '传染', 'Epidemic', 'default', '唯一特殊技能，把中毒在怪群中连续传播。'),
+      skill('acrid', 'special', '传染', 'Epidemic', 'default', '默认特殊技能，把中毒在怪群中连续传播。'),
     ],
     buildLogic: [
       '传染先投到怪群中央，让中毒把高血目标压到一生命；它不能单独击杀，必须由汽油、主攻、装备或触发收尾。',

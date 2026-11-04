@@ -25,6 +25,8 @@ const rarityLabels: Record<ItemTier, string> = {
   lunar: '月球',
   'lunar-equipment': '月球主动装备',
   void: '虚空',
+  hex: '诅咒',
+  hallowed: '神圣',
 }
 
 const recommendationLabels: Record<Recommendation, string> = {

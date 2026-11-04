@@ -9,6 +9,9 @@ import { SiteFooter } from './SiteFooter'
 const sourceLinks = [
   { id: 'steam-base', name: '官方本体页面新标签页 ↗' },
   { id: 'steam-alloyed-collective', name: '合金意念官方页面新标签页 ↗' },
+  { id: 'steam-hallowed-concepts', name: '万象归衡官方页面新标签页 ↗' },
+  { id: 'official-hc-release', name: '十月八日更新说明新标签页 ↗' },
+  { id: 'official-hc-hotfix', name: '十月十四日电脑端热修复新标签页 ↗' },
   { id: 'wiki-survivors', name: '角色资料与图标来源新标签页 ↗' },
   { id: 'wiki-items', name: '物品资料与图标来源新标签页 ↗' },
   { id: 'github-asset-manifest', name: '完整图标来源清单新标签页 ↗' },

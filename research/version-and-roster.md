@@ -1,6 +1,6 @@
 # 版本、DLC 与角色名册基线
 
-> 核验日期：2026-08-25。本文只把已经公开发行、能在当前正式版中实际游玩的内容纳入攻略；数值事实与编辑推荐分开记录。
+> 原攻略基线：2026-08-25。补丁与发行状态复核：2026-11-04。游戏已发布内容和本站已完成核验的攻略不是同一范围；数值事实与编辑推荐分开记录。
 
 ## 当前版本语境
 
@@ -21,9 +21,11 @@
 | Alloyed Collective | 2 | Operator、Drifter |
 | 特殊变身 | 1 | Heretic |
 
-## 明确排除：Hallowed Concepts
+## 已发售、攻略待核验：Hallowed Concepts
 
-`Hallowed Concepts` 已公布但截至核验日没有发行：Steam 商店将其标为 **“This content is not yet available on Steam”**，发行日期是 **“To be announced”**。因此其两名预告幸存者、新物品、诅咒、技能改动与皮肤均不进入当前名册、物品目录或推荐；后续正式发售后必须重新核验全站。
+2026-11-04 重新核实：`Hallowed Concepts` 已于 **2026-10-08** 发布，增加 Enforcer 与 Acolyte、14 种 Hex、11 件 Hallowed 物品；同期免费更新增加六名原角色的技能。PC 的 **2026-10-14** 热修复处理部分越界问题，官方仍承认少数边缘情况。不能继续把 DLC 描述为未发售。
+
+游戏名册因此为 **20 名正常可选幸存者 + Heretic = 21 个攻略目标**。本分支仍保留 **19 篇原攻略 + 2 篇未发布草稿**，待核验项目见 [万象归衡研究记录](hallowed-concepts-2026-11-04.md)。上方 19 篇顺序描述的是原公开索引，不代表最新游戏角色总数。
 
 ## 直接来源
 
@@ -35,4 +37,6 @@
 - 官方 Alloyed Collective Patch 1.4.1：https://steamcommunity.com/ogg/632360/announcements/detail/497214077375874960
 - 当前 wiki.gg 幸存者名册：https://riskofrain2.wiki.gg/wiki/Survivors
 - wiki.gg Heretic 页面：https://riskofrain2.wiki.gg/wiki/Heretic
-- Hallowed Concepts Steam 页（未发售、日期待定）：https://store.steampowered.com/app/3055670/Risk_of_Rain_2_Hallowed_Concepts/
+- Hallowed Concepts Steam 页（发行状态于 2026-11-04 重查）：https://store.steampowered.com/app/3055670/Risk_of_Rain_2_Hallowed_Concepts/
+- 2026-10-08 官方更新：https://support.2k.com/hc/en-us/articles/56193476123795-Risk-of-Rain-2-Patch-Notes-October-8-2026
+- 2026-10-14 PC 热修复：https://support.2k.com/hc/en-us/articles/56426531573779-Risk-of-Rain-2-PC-Hotfix-October-14-2026

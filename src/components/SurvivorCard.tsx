@@ -11,6 +11,7 @@ const dlcLabels: Record<DlcId, string> = {
   sotv: '虚空幸存者',
   sots: '风暴探寻者',
   ac: '合金意念',
+  hc: '万象归衡',
   special: '特殊变身',
 }
 

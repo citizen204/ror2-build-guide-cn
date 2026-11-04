@@ -1,4 +1,4 @@
-export type DlcId = 'base' | 'sotv' | 'sots' | 'ac' | 'special'
+export type DlcId = 'base' | 'sotv' | 'sots' | 'ac' | 'hc' | 'special'
 
 export type ItemTier =
   | 'common'
@@ -9,6 +9,8 @@ export type ItemTier =
   | 'lunar'
   | 'lunar-equipment'
   | 'void'
+  | 'hex'
+  | 'hallowed'
 
 export type Recommendation = 'core' | 'recommended' | 'conditional' | 'avoid'
 
@@ -82,4 +84,30 @@ export interface SurvivorGuide {
   combatNotes: CombatNote[]
   sourceIds: string[]
   verifiedOn: string
+}
+
+/** Research is deliberately not assignable to a publishable SurvivorGuide. */
+export interface SurvivorGuideDraft extends Omit<SurvivorGuide, 'nameZh' | 'portrait' | 'skills' | 'verifiedOn'> {
+  status: 'draft'
+  researchedOn: string
+  proposedNameZh: string
+  localizationStatus: 'pending-game-text'
+  skills: (Omit<SkillChoice, 'nameZh' | 'icon'> & { sourceIds: string[] })[]
+  alternatives: { nameEn: string; slot: SkillSlot | 'litany'; assessment: string; sourceIds: string[] }[]
+  hallowedItems: ItemPick[]
+  releaseBlockers: string[]
+}
+
+export interface ItemResearch {
+  id: string
+  nameEn: string
+  tier: 'hex' | 'hallowed'
+  nameZh: null
+  localizationStatus: 'pending-game-text'
+  researchedOn: string
+  evidence: 'community-mechanics' | 'identity-only'
+  sourceIds: string[]
+  effect: string | null
+  stacking: string | null
+  caveat: string
 }

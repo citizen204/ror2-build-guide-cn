@@ -7,6 +7,7 @@ import { survivors } from '../content/survivors'
 import { assetUrl } from '../domain/assets'
 import type { ItemDefinition, StageRoute, SurvivorGuide } from '../domain/guide'
 import { NotFoundPage } from './NotFoundPage'
+import { PatchReview } from '../components/PatchReview'
 
 const chapters = [
   { id: 'skills', label: '推荐技能' },
@@ -172,6 +173,7 @@ export function SurvivorPage() {
     <main className="guide-page page-shell">
       <Link className="guide-page__home" to="/">← 角色首页</Link>
       <SurvivorIdentity guide={guide} />
+      <PatchReview slug={guide.slug} verifiedOn={guide.verifiedOn} />
       <div className="guide-layout">
         <ChapterNavigation />
         <article className="guide-content" aria-label={`${guide.nameZh}完整构筑攻略`}>

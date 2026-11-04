@@ -2,14 +2,18 @@
 
 这是一个只读的《雨中冒险 2》中文粉丝攻略站。它覆盖 18 名可选角色与异端（Heretic）特殊变身，集中说明推荐技能、物品作用与件数、单人和联机调整、统率神器路线、虚空与月球物品，以及常见战斗场景。
 
-当前内容核对日期为 2026-08-25，适用范围包括：
+原有 19 篇完整攻略的内容核对日期为 2026-08-25，适用范围包括：
 
 - 本体
 - 虚空幸存者
 - 风暴探寻者
 - 合金意念
 
-Hallowed Concepts 尚未纳入已发布攻略范围。
+万象归衡（Hallowed Concepts）已于 2026-10-08 发售。本分支正在处理 [Issue #1](https://github.com/citizen204/ror2-build-guide-cn/issues/1)，补丁资料核对日期为 **2026-11-04**，电脑端基线包括 **2026-10-14 热修复**。
+
+本次是**待审查草稿，未发布**：两名新角色的完整章节草稿位于 `src/content/survivors/hc.ts`，尚未加入公开角色列表。11 件神圣物品与 14 种诅咒的社区机制研究位于 `src/content/items.ts`，中文名称明确留空，不冒充游戏本地化。六个新增技能与原角色的补丁影响由 `src/content/patchReview.ts` 管理，并在旧角色页面展示更新提示。完整证据、冲突和发布前待办见 [万象归衡研究记录](research/hallowed-concepts-2026-11-04.md)。
+
+`siteMetadata.verifiedOn` 保留原攻略基线，`patchReviewedOn` 单独表示此次补丁核对；不能以更新一个全局日期代表所有旧攻略都完成了新版本实测。`pendingDlc` 记录已发售但攻略尚未完成核验的扩展。
 
 ## 展示与搜索
 
@@ -42,6 +46,8 @@ npm run check
 3. 在 `src/content/sources.ts` 中登记直接资料链接，并在 `src/content/siteMetadata.ts` 更新公开核对日期与 DLC 范围；同时更新受影响角色资料中的 `verifiedOn` 和来源 ID。首页与页脚会读取共享元数据，`index.html` 与本 README 的静态范围说明也需要同步检查。
 4. 更新角色、技能或物品图标时，先修改 `src/content/assets.json` 中的本地路径与 wiki.gg 文件来源，再运行 `npm run assets:update`。不要直接替换 `public/assets/` 中的文件。
 5. 运行 `npm run assets:check` 和 `npm run check`，确认资源哈希、内容结构、测试和生产构建全部通过。
+
+万象归衡草稿使用独立的 `SurvivorGuideDraft` / `ItemResearch` 类型，不能直接赋值给正式攻略。填补游戏内简中名称、图标与机制证据并完成实测后，才能转换成正式数据，接入角色索引，并把公开名册、校验、签名、资源和路由测试一起更新为 21 篇。不要仅为了让测试通过而把草稿强制转换成正式类型。
 
 ## 攻略数据结构
 
