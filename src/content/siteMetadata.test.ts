@@ -9,6 +9,7 @@ describe('public site metadata', () => {
       { id: 'sotv', nameZh: '虚空幸存者', nameEn: 'Survivors of the Void', abbreviation: 'SOTV' },
       { id: 'sots', nameZh: '风暴探寻者', nameEn: 'Seekers of the Storm', abbreviation: 'SOTS' },
       { id: 'ac', nameZh: '合金意念', nameEn: 'Alloyed Collective', abbreviation: 'AC' },
+      { id: 'hc', nameZh: '万象归衡', nameEn: 'Hallowed Concepts', abbreviation: 'HC' },
     ])
   })
 })

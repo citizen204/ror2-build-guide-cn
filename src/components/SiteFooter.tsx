@@ -50,7 +50,7 @@ export function SiteFooter() {
             </div>
           </dl>
           <p className="site-footer__attribution">
-            万象归衡已发售，新角色完整攻略尚在核对中。十月补丁核对日期：{siteMetadata.patchReviewedOn}；上述日期与范围指原有攻略基线。
+            万象归衡两名新角色的构筑尚未实测，详情页已标注，其资料核对日期为 {siteMetadata.gameTextVerifiedOn}。十月补丁核对日期：{siteMetadata.patchReviewedOn}；“最后核对”指原有攻略基线。
           </p>
           <p className="site-footer__attribution">
             角色、技能和物品图标取自《雨中冒险 2》维基的对应文件页。游戏名称与图像的权利及许可归各权利方，本站不对这些素材作再授权。

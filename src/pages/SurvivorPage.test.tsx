@@ -269,9 +269,9 @@ describe('complete survivor guide route', () => {
     middle.unmount()
 
     renderRoute('/survivors/heretic')
-    expect(screen.getByRole('link', { name: '上一个角色：漂泊者' })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: '上一个角色：侍僧' })).toHaveAttribute(
       'href',
-      '/survivors/drifter',
+      '/survivors/acolyte',
     )
     expect(screen.queryByRole('link', { name: /下一个角色/ })).not.toBeInTheDocument()
   })
@@ -330,7 +330,7 @@ describe('complete survivor guide route', () => {
       expect(screen.getByRole('main')).toBeInTheDocument()
       expect(
         within(screen.getByRole('article')).getAllByRole('heading', { level: 2 }),
-      ).toHaveLength(8)
+      ).toHaveLength(['enforcer', 'acolyte'].includes(slug) ? 10 : 8)
       const lunarSection = screen
         .getByRole('heading', { level: 2, name: '月球物品' })
         .closest('section')

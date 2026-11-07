@@ -7,23 +7,26 @@ export interface SkillResearch {
   officialSourceId: string
   mechanicsSourceId: string
   researchedOn: string
-  nameZh: null
+  nameZh: string
+  icon: string
+  unlock: string
   facts: string
   assessment: string
 }
 
 /** Official existence/slot is separate from community mechanics and editorial choices. */
 export const newSkillResearch: SkillResearch[] = [
-  ['commando', 'Sabotage', 'special', '三枚可附着炸药，攻击可引爆；社区记录每枚 400%、冷却七秒。', '可研究爆发分支；不能把三枚伤害相加后直接当作一次命中计算手环。'],
-  ['huntress', 'Laser Cyclone', 'secondary', '接回时再次输入可续投；社区记录基础每秒 400%，每次续投再增加每秒 400%。', '可研究副技能弹匣与持续命中分支；每秒伤害不能直接当手环单击倍率。'],
-  ['acrid', 'Cloying Breath', 'special', '留下持续毒雾；社区记录每秒 240%、冷却十二秒。', '适合研究守点持续命中；替换传播技能会改变对分散敌人的处理方式，不直接判定更强。'],
-  ['artificer', 'Tectonic Blast', 'utility', '八片各 100% 伤害碎片并施加油效果；社区记录冷却七秒。', '可研究点燃协同，但失去原有冰冻工具；应同时评估生存，不只比较伤害。'],
-  ['engineer', 'Laser Cutter', 'primary', '重型激光，描述为每秒 270%–630%，可治疗炮台与无人机。', '可研究本体持续命中和机械治疗；不会仅因本体换主技能就改变炮台武器。'],
-  ['rex', 'Proliferation', 'utility', '消耗当前生命种花，瞄准花可传送并恢复最大生命；社区记录可同时保留两株。', '可研究预置退路；种花有自伤成本，不能当作原本无自伤位移路线的直接升级。'],
-].map(([survivorSlug, nameEn, slot, facts, assessment]) => ({
-  survivorSlug, nameEn, slot: slot as SkillSlot, facts, assessment, nameZh: null,
+  ['commando', '蓄意破坏', '在获得 8 点业力后击败终极首领', 'Sabotage', 'special', '三枚可附着炸药，受到攻击时电击敌人；每枚 400%，社区记录冷却七秒。', '可研究爆发分支；不能把三枚伤害相加后直接当作一次命中计算手环。'],
+  ['huntress', '激光旋风', '25 分钟内从堡垒的橱柜取得一件神器', 'Laser Cyclone', 'secondary', '接回时再次输入可续投；社区记录基础每秒 400%，每次续投再增加每秒 400%。', '可研究副技能弹匣与持续命中分支；每秒伤害不能直接当手环单击倍率。'],
+  ['acrid', '黏腻吐息', '至少用秩序神龛重排一次物品后通关', 'Cloying Breath', 'special', '留下持续毒雾；社区记录每秒 240%、冷却十二秒。', '适合研究守点持续命中；替换传播技能会改变对分散敌人的处理方式，不直接判定更强。'],
+  ['artificer', '构造爆破', '不激活任何柱子到达月球的终极首领面前', 'Tectonic Blast', 'utility', '八片各 100% 伤害碎片并施加油效果；社区记录冷却七秒。', '可研究点燃协同，但失去原有冰冻工具；应同时评估生存，不只比较伤害。'],
+  ['engineer', '激光切割器', '用逃生舱的燃料组件修理装备无人机', 'Laser Cutter', 'primary', '重型激光，描述为每秒 270%–630%，可治疗炮台与无人机。', '可研究本体持续命中和机械治疗；不会仅因本体换主技能就改变炮台武器。'],
+  ['rex', '增殖生长', '携带至少 5 种不同的月球物品通关', 'Proliferation', 'utility', '消耗 20% 生命种下会射击的花，对花使用辅助技能可传送并恢复 20% 生命；最多同时两朵。', '可研究预置退路；种花有自伤成本，不能当作原本无自伤位移路线的直接升级。'],
+].map(([survivorSlug, nameZh, unlock, nameEn, slot, facts, assessment]) => ({
+  survivorSlug, nameZh, unlock, nameEn, slot: slot as SkillSlot, facts, assessment,
+  icon: `assets/skills/${survivorSlug}/${nameEn.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`,
   officialSourceId: 'official-hc-release', mechanicsSourceId: `wiki-hc-${survivorSlug}-skill`,
-  researchedOn: '2026-11-04',
+  researchedOn: '2026-11-07',
 }))
 
 export const patchFactsBySurvivor: Record<string, string[]> = {

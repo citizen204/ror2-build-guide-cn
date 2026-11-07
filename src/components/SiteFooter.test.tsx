@@ -37,7 +37,7 @@ describe('site footer', () => {
     expect(footer).not.toHaveTextContent('最后核对最后核对')
     const scope = within(footer).getByText('适用内容').parentElement?.querySelector('dd')
     expect(scope).not.toBeNull()
-    expect(scope).toHaveTextContent(/^本体、虚空幸存者、风暴探寻者、合金意念$/)
+    expect(scope).toHaveTextContent(/^本体、虚空幸存者、风暴探寻者、合金意念、万象归衡$/)
     expect(within(footer).getByText(/公开的非官方粉丝攻略/)).toHaveTextContent(
       /没有隶属、赞助或认可关系/,
     )

@@ -5,6 +5,7 @@ import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs'
 import { relative, resolve } from 'node:path'
 import { describe, expect, test } from 'vitest'
 import { items } from './items'
+import { newSkillResearch } from './patchReview'
 import { survivors } from './survivors'
 
 type AssetKind = 'survivor' | 'skill' | 'item'
@@ -27,6 +28,9 @@ const expectedAssets = new Map<string, AssetKind>([
   ...items.map((item) => [item.icon, 'item'] as const),
   ...survivors.map((survivor) => [survivor.portrait, 'survivor'] as const),
   ...survivors.flatMap((survivor) => survivor.skills.map((skill) => [skill.icon, 'skill'] as const)),
+  ...survivors.flatMap((survivor) => [...(survivor.alternativeSkills ?? []), ...(survivor.transformationSkills ?? [])]
+    .map((skill) => [skill.icon, 'skill'] as const)),
+  ...newSkillResearch.map((skill) => [skill.icon, 'skill'] as const),
 ])
 
 describe('local game asset manifest', () => {

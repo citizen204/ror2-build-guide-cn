@@ -10,7 +10,7 @@ export function SiteHeader() {
       <time className="site-header__verification" dateTime={siteMetadata.verifiedOn}>
         最后核对：{siteMetadata.verifiedOn}
       </time>
-      <p>{siteMetadata.pendingDlc.notice}</p>
+      <p>{siteMetadata.latestDlc.notice}</p>
       <p>十月补丁核对：<time dateTime={siteMetadata.patchReviewedOn}>{siteMetadata.patchReviewedOn}</time>。原攻略核对日期单独保留。</p>
     </header>
   )

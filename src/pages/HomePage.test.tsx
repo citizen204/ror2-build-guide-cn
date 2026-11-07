@@ -44,7 +44,7 @@ test('introduces the guide and reports the full survivor roster', () => {
     within(header!).getByText(/按中文名或英文名搜索角色/),
   ).toBeInTheDocument()
   expect(within(header!).getByText('最后核对：2026-08-25')).toBeInTheDocument()
-  expect(screen.getByRole('status')).toHaveTextContent('找到 19 名角色')
+  expect(screen.getByRole('status')).toHaveTextContent('找到 21 名角色')
 })
 
 test('explains how Command and normal-run players should read recommendations', () => {
@@ -85,7 +85,7 @@ test('searches by Chinese name and can clear the search', async () => {
   await user.click(screen.getByRole('button', { name: '清空搜索' }))
 
   expect(searchbox).toHaveValue('')
-  expect(screen.getByRole('status')).toHaveTextContent('找到 19 名角色')
+  expect(screen.getByRole('status')).toHaveTextContent('找到 21 名角色')
 })
 
 test('官方简中名“虚假子嗣”可以唯一搜索且不再展示旧称', async () => {
@@ -155,6 +155,16 @@ test('按本体、风暴探寻者和合金意念筛选角色', async () => {
   expect(screen.queryByRole('link', { name: /探寻者/ })).not.toBeInTheDocument()
 })
 
+test('按万象归衡筛选新角色并显示未实测标签', async () => {
+  const user = userEvent.setup()
+  renderHomePage()
+
+  await user.click(screen.getByRole('button', { name: '万象归衡' }))
+  expect(screen.getByRole('status')).toHaveTextContent('找到 2 名角色')
+  expect(screen.getByRole('link', { name: /执行者.*构筑未实测/ })).toBeInTheDocument()
+  expect(screen.getByRole('link', { name: /侍僧.*构筑未实测/ })).toBeInTheDocument()
+})
+
 test('explains how to recover from an empty combined search and filter', async () => {
   const user = userEvent.setup()
   renderHomePage()
@@ -171,7 +181,7 @@ test('explains how to recover from an empty combined search and filter', async (
 
   await user.click(screen.getByRole('button', { name: '显示全部角色' }))
 
-  expect(screen.getByRole('status')).toHaveTextContent('找到 19 名角色')
+  expect(screen.getByRole('status')).toHaveTextContent('找到 21 名角色')
 })
 
 test('每张角色卡只用中文展示名称链接详情并描述头像', () => {
@@ -236,7 +246,7 @@ test('显示每个扩展内容筛选控件并支持键盘选择', async () => {
   const allButton = within(filterGroup).getByRole('button', { name: '全部' })
   const sotvButton = within(filterGroup).getByRole('button', { name: '虚空幸存者' })
 
-  for (const label of ['全部', '本体', '虚空幸存者', '风暴探寻者', '合金意念', '特殊变身']) {
+  for (const label of ['全部', '本体', '虚空幸存者', '风暴探寻者', '合金意念', '万象归衡', '特殊变身']) {
     expect(within(filterGroup).getByRole('button', { name: label })).toBeEnabled()
   }
   expect(allButton).toHaveAttribute('aria-pressed', 'true')
@@ -259,7 +269,7 @@ test('traverses and activates search, filters, reset, and a card link by keyboar
   expect(searchbox).toHaveFocus()
   await user.type(searchbox, 'Acrid')
 
-  for (const label of ['全部', '本体', '虚空幸存者', '风暴探寻者', '合金意念', '特殊变身']) {
+  for (const label of ['全部', '本体', '虚空幸存者', '风暴探寻者', '合金意念', '万象归衡', '特殊变身']) {
     await user.tab()
     const filterButton = screen.getByRole('button', { name: label })
     expect(filterButton).toHaveFocus()
@@ -284,7 +294,7 @@ test('traverses and activates search, filters, reset, and a card link by keyboar
 
   await user.tab()
   expect(searchbox).toHaveFocus()
-  for (const label of ['全部', '本体', '虚空幸存者', '风暴探寻者', '合金意念', '特殊变身']) {
+  for (const label of ['全部', '本体', '虚空幸存者', '风暴探寻者', '合金意念', '万象归衡', '特殊变身']) {
     await user.tab()
     expect(screen.getByRole('button', { name: label })).toHaveFocus()
   }

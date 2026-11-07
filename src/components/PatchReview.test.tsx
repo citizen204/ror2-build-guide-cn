@@ -15,14 +15,29 @@ test.each(['commando', 'huntress', 'acrid', 'artificer', 'engineer', 'rex'])('%s
   expect(section).toHaveTextContent('尚未完成新版本全面实测')
 })
 
-test('the homepage acknowledges release without claiming two new guides are published', () => {
+test('the homepage announces the two new guides as untested', () => {
   render(<MemoryRouter><App /></MemoryRouter>)
-  expect(screen.getByText(/万象归衡已发售：两名新角色/)).toBeInTheDocument()
-  expect(screen.getByRole('status')).toHaveTextContent('找到 19 名角色')
-  expect(screen.queryByRole('link', { name: /执行者|侍僧/ })).not.toBeInTheDocument()
+  expect(screen.getByText(/万象归衡（游戏内名称：神圣观念）两名新角色攻略已上线.*构筑尚未实测/)).toBeInTheDocument()
+  expect(screen.getByRole('status')).toHaveTextContent('找到 21 名角色')
+  expect(screen.getByRole('link', { name: /执行者.*构筑未实测/ })).toBeInTheDocument()
+  expect(screen.getByRole('link', { name: /侍僧.*构筑未实测/ })).toBeInTheDocument()
 })
 
-test.each(['enforcer', 'acolyte'])('unreviewed %s draft does not have a live guide route', (slug) => {
+test.each(['enforcer', 'acolyte'])('%s guide is live and clearly labelled as untested', (slug) => {
   render(<MemoryRouter initialEntries={[`/survivors/${slug}`]}><App /></MemoryRouter>)
-  expect(screen.queryByRole('article', { name: /完整构筑攻略/ })).not.toBeInTheDocument()
+  expect(screen.getByRole('article', { name: /完整构筑攻略/ })).toBeInTheDocument()
+  const notice = screen.getByRole('region', { name: '构筑未实测' })
+  expect(notice).toHaveTextContent('尚未经过游戏实测')
+  expect(notice).toHaveTextContent('2026-11-07')
+  expect(notice).toHaveTextContent('25921972')
+  expect(screen.queryByRole('region', { name: '十月更新说明' })).not.toBeInTheDocument()
+  expect(screen.getByRole('heading', { level: 2, name: '备选技能' })).toBeInTheDocument()
+  expect(screen.getByRole('heading', { level: 2, name: '神圣物品' })).toBeInTheDocument()
+})
+
+test('existing guides keep their patch notice and show no untested label', () => {
+  render(<MemoryRouter initialEntries={['/survivors/commando']}><App /></MemoryRouter>)
+  expect(screen.getByRole('region', { name: '十月更新说明' })).toBeInTheDocument()
+  expect(screen.getByRole('img', { name: '蓄意破坏技能图标' })).toBeInTheDocument()
+  expect(screen.queryByText('构筑未实测')).not.toBeInTheDocument()
 })

@@ -64,6 +64,24 @@ export interface CombatNote {
   body: string
 }
 
+export interface AlternativeSkill {
+  slot: SkillSlot | 'litany'
+  nameZh: string
+  nameEn: string
+  icon: string
+  /** Challenge that unlocks the skill; absent when no unlock is recorded. */
+  unlockCondition?: string
+  assessment: string
+}
+
+export interface TransformationSkill {
+  slot: SkillSlot
+  nameZh: string
+  nameEn: string
+  icon: string
+  facts: string
+}
+
 export interface SurvivorGuide {
   slug: string
   nameZh: string
@@ -84,26 +102,20 @@ export interface SurvivorGuide {
   combatNotes: CombatNote[]
   sourceIds: string[]
   verifiedOn: string
-}
-
-/** Research is deliberately not assignable to a publishable SurvivorGuide. */
-export interface SurvivorGuideDraft extends Omit<SurvivorGuide, 'nameZh' | 'portrait' | 'skills' | 'verifiedOn'> {
-  status: 'draft'
-  researchedOn: string
-  proposedNameZh: string
-  localizationStatus: 'pending-game-text'
-  skills: (Omit<SkillChoice, 'nameZh' | 'icon'> & { sourceIds: string[] })[]
-  alternatives: { nameEn: string; slot: SkillSlot | 'litany'; assessment: string; sourceIds: string[] }[]
-  hallowedItems: ItemPick[]
-  releaseBlockers: string[]
+  /** Set when a guide is published before any in-game build testing. */
+  playtestStatus?: 'untested'
+  alternativeSkills?: AlternativeSkill[]
+  transformationSkills?: TransformationSkill[]
+  hallowedItems?: ItemPick[]
 }
 
 export interface ItemResearch {
   id: string
   nameEn: string
   tier: 'hex' | 'hallowed'
-  nameZh: null
-  localizationStatus: 'pending-game-text'
+  icon: string
+  nameZh: string
+  localizationStatus: 'game-text-verified'
   researchedOn: string
   evidence: 'community-mechanics' | 'identity-only'
   sourceIds: string[]

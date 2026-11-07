@@ -1,6 +1,6 @@
 # 雨中冒险 2 全角色中文构筑攻略
 
-这是一个只读的《雨中冒险 2》中文粉丝攻略站。它覆盖 18 名可选角色与异端（Heretic）特殊变身，集中说明推荐技能、物品作用与件数、单人和联机调整、统率神器路线、虚空与月球物品，以及常见战斗场景。
+这是一个只读的《雨中冒险 2》中文粉丝攻略站。它覆盖 20 名可选角色与异端（Heretic）特殊变身，集中说明推荐技能、物品作用与件数、单人和联机调整、统率神器路线、虚空与月球物品，以及常见战斗场景。
 
 原有 19 篇完整攻略的内容核对日期为 2026-08-25，适用范围包括：
 
@@ -9,11 +9,15 @@
 - 风暴探寻者
 - 合金意念
 
-万象归衡（Hallowed Concepts）已于 2026-10-08 发售。本分支正在处理 [Issue #1](https://github.com/citizen204/ror2-build-guide-cn/issues/1)，补丁资料核对日期为 **2026-11-04**，电脑端基线包括 **2026-10-14 热修复**。
+万象归衡的两篇攻略于 2026-11-07 单独上线，**构筑尚未实测**，核对范围见下文。
 
-本次是**待审查草稿，未发布**：两名新角色的完整章节草稿位于 `src/content/survivors/hc.ts`，尚未加入公开角色列表。11 件神圣物品与 14 种诅咒的社区机制研究位于 `src/content/items.ts`，中文名称明确留空，不冒充游戏本地化。六个新增技能与原角色的补丁影响由 `src/content/patchReview.ts` 管理，并在旧角色页面展示更新提示。完整证据、冲突和发布前待办见 [万象归衡研究记录](research/hallowed-concepts-2026-11-04.md)。
+万象归衡（Hallowed Concepts，游戏内名称“神圣观念”）已于 2026-10-08 发售。补丁资料核对日期为 **2026-11-04**，电脑端基线包括 **2026-10-14 热修复**。
 
-`siteMetadata.verifiedOn` 保留原攻略基线，`patchReviewedOn` 单独表示此次补丁核对；不能以更新一个全局日期代表所有旧攻略都完成了新版本实测。`pendingDlc` 记录已发售但攻略尚未完成核验的扩展。
+执行者与侍僧的攻略位于 `src/content/survivors/hc.ts`，名册共 21 篇。维护者于 2026-11-07 决定在未实测的情况下带标签发布：`playtestStatus: 'untested'` 会在角色卡和详情页显示“构筑未实测”，并用未实测说明取代十月更新提示。名称和技能描述按游戏文件核对（电脑版构建 25921972），机制数值来自社区资料，推荐物品与件数是编辑推导。完成实测后，再移除这个状态并更新 `verifiedOn`。
+
+11 件神圣物品与 14 种诅咒位于 `src/content/items.ts`。六个新增技能与原角色的补丁影响由 `src/content/patchReview.ts` 管理，并在旧角色页面展示更新提示。完整证据和冲突见 [万象归衡研究记录](research/hallowed-concepts-2026-11-04.md)。
+
+`siteMetadata.verifiedOn` 保留原攻略基线，`patchReviewedOn` 单独表示此次补丁核对，`gameTextVerifiedOn` 表示游戏文件核对；不能以更新一个全局日期代表所有旧攻略都完成了新版本实测。`latestDlc` 记录最新扩展的发布状态。
 
 ## 展示与搜索
 
@@ -47,15 +51,15 @@ npm run check
 4. 更新角色、技能或物品图标时，先修改 `src/content/assets.json` 中的本地路径与 wiki.gg 文件来源，再运行 `npm run assets:update`。不要直接替换 `public/assets/` 中的文件。
 5. 运行 `npm run assets:check` 和 `npm run check`，确认资源哈希、内容结构、测试和生产构建全部通过。
 
-万象归衡草稿使用独立的 `SurvivorGuideDraft` / `ItemResearch` 类型，不能直接赋值给正式攻略。填补游戏内简中名称、图标与机制证据并完成实测后，才能转换成正式数据，接入角色索引，并把公开名册、校验、签名、资源和路由测试一起更新为 21 篇。不要仅为了让测试通过而把草稿强制转换成正式类型。
-
 ## 攻略数据结构
 
 每个 `SurvivorGuide` 以 `slug` 为稳定路由键，并包含 `nameZh`、`nameEn`、`dlc`、`portrait`、`role`、`difficulty` 与 `summary`。正文由 `skills`、`buildLogic`、`coopAdjustments`、三个阶段的 `commandRoute`、`combatNotes`、`sourceIds` 和 `verifiedOn` 组成。
 
+可选字段 `playtestStatus`、`alternativeSkills`、`transformationSkills` 和 `hallowedItems` 只用于需要它们的攻略；存在时详情页才显示对应章节。
+
 物品按用途分组：`solo` 内含白、绿、红、首领与普通主动装备；`voidItems` 存放虚空物品；`lunarItems` 只存被动月球物品；`lunarEquipment` 只存月球主动装备。每条 `ItemPick` 使用 `itemId` 连接 `src/content/items.ts`，并写明 `recommendation`、`stacks`、`role`、`synergy`，需要时再提供 `alternative`。
 
-`validateGuideData` 会检查 19 篇攻略的完整性、必需技能槽位、三阶段统率路线、非空公开内容、来源和所有物品引用，并验证每个分组对应的 `tier`；规范顺序由签名测试固定。新增字段或分组时，应先扩展类型、领域校验和签名测试，再更新全部角色数据。
+`validateGuideData` 会检查 21 篇攻略的完整性、必需技能槽位、三阶段统率路线、非空公开内容、来源和所有物品引用，并验证每个分组对应的 `tier`；规范顺序由签名测试固定。新增字段或分组时，应先扩展类型、领域校验和签名测试，再更新全部角色数据。
 
 ## 资料、素材与声明
 

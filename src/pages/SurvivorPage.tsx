@@ -1,4 +1,5 @@
 import { Link, useParams } from 'react-router-dom'
+import { AlternativeSkills, TransformationSkills } from '../components/AlternativeSkills'
 import { GuideSection } from '../components/GuideSection'
 import { ItemGroup } from '../components/ItemGroup'
 import { SkillLoadout } from '../components/SkillLoadout'
@@ -8,17 +9,22 @@ import { assetUrl } from '../domain/assets'
 import type { ItemDefinition, StageRoute, SurvivorGuide } from '../domain/guide'
 import { NotFoundPage } from './NotFoundPage'
 import { PatchReview } from '../components/PatchReview'
+import { UntestedNotice } from '../components/UntestedNotice'
 
-const chapters = [
-  { id: 'skills', label: '推荐技能' },
-  { id: 'build-logic', label: '构筑逻辑' },
-  { id: 'solo-build', label: '单人构筑' },
-  { id: 'coop-build', label: '联机调整' },
-  { id: 'command-route', label: '统率神器路线' },
-  { id: 'void-items', label: '虚空物品' },
-  { id: 'lunar-items', label: '月球物品' },
-  { id: 'combat-notes', label: '打法速记' },
-] as const
+function chaptersFor(guide: SurvivorGuide) {
+  return [
+    { id: 'skills', label: '推荐技能' },
+    ...(guide.alternativeSkills ? [{ id: 'alternative-skills', label: '备选技能' }] : []),
+    { id: 'build-logic', label: '构筑逻辑' },
+    { id: 'solo-build', label: '单人构筑' },
+    { id: 'coop-build', label: '联机调整' },
+    { id: 'command-route', label: '统率神器路线' },
+    { id: 'void-items', label: '虚空物品' },
+    { id: 'lunar-items', label: '月球物品' },
+    ...(guide.hallowedItems ? [{ id: 'hallowed-items', label: '神圣物品' }] : []),
+    { id: 'combat-notes', label: '打法速记' },
+  ]
+}
 
 const itemById = new Map(items.map((item) => [item.id, item]))
 
@@ -101,6 +107,7 @@ function SurvivorIdentity({ guide }: { guide: SurvivorGuide }) {
         <div className="survivor-identity__meta">
           <span>{guide.role}</span>
           <span>操作难度：{guide.difficulty} / 5</span>
+          {guide.playtestStatus === 'untested' ? <span className="untested-tag">构筑未实测</span> : null}
         </div>
         <p>{guide.summary}</p>
       </div>
@@ -108,12 +115,12 @@ function SurvivorIdentity({ guide }: { guide: SurvivorGuide }) {
   )
 }
 
-function ChapterNavigation() {
+function ChapterNavigation({ guide }: { guide: SurvivorGuide }) {
   return (
     <nav className="chapter-nav" aria-label="攻略章节">
       <p className="chapter-nav__title">章节导航</p>
       <ol className="chapter-nav__list">
-        {chapters.map((chapter) => (
+        {chaptersFor(guide).map((chapter) => (
           <li key={chapter.id}>
             <button
               type="button"
@@ -173,9 +180,11 @@ export function SurvivorPage() {
     <main className="guide-page page-shell">
       <Link className="guide-page__home" to="/">← 角色首页</Link>
       <SurvivorIdentity guide={guide} />
-      <PatchReview slug={guide.slug} verifiedOn={guide.verifiedOn} />
+      {guide.playtestStatus === 'untested'
+        ? <UntestedNotice verifiedOn={guide.verifiedOn} />
+        : <PatchReview slug={guide.slug} verifiedOn={guide.verifiedOn} />}
       <div className="guide-layout">
-        <ChapterNavigation />
+        <ChapterNavigation guide={guide} />
         <article className="guide-content" aria-label={`${guide.nameZh}完整构筑攻略`}>
           <GuideSection
             id="skills"
@@ -184,6 +193,17 @@ export function SurvivorPage() {
           >
             <SkillLoadout skills={guide.skills} />
           </GuideSection>
+
+          {guide.alternativeSkills ? (
+            <GuideSection
+              id="alternative-skills"
+              title="备选技能"
+              intro={<p>这里是基础配置之外的选择和相关技能；需要解锁的会写明挑战，并说明取舍。</p>}
+            >
+              <AlternativeSkills skills={guide.alternativeSkills} />
+              {guide.transformationSkills ? <TransformationSkills skills={guide.transformationSkills} /> : null}
+            </GuideSection>
+          ) : null}
 
           <GuideSection id="build-logic" title="构筑逻辑">
             <ol className="logic-list">
@@ -253,6 +273,16 @@ export function SurvivorPage() {
               />
             </div>
           </GuideSection>
+
+          {guide.hallowedItems ? (
+            <GuideSection
+              id="hallowed-items"
+              title="神圣物品"
+              intro={<p>主要靠在神圣神龛净化诅咒获得，无法稳定指定，遇到时再按下列条件取舍。</p>}
+            >
+              <ItemGroup title="神圣选择" picks={guide.hallowedItems} />
+            </GuideSection>
+          ) : null}
 
           <GuideSection id="combat-notes" title="打法速记">
             <ul className="combat-notes" aria-label={`${guide.nameZh}战斗场景`}>
