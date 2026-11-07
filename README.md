@@ -65,9 +65,11 @@ npm run check
 
 攻略结论参考官方 Steam 商店、官方更新公告和 [Risk of Rain 2 Wiki](https://riskofrain2.wiki.gg/wiki/Risk_of_Rain_2_Wiki)。主要直接来源记录在 `src/content/sources.ts`。
 
-角色、技能和物品图标取自 Risk of Rain 2 Wiki 的对应文件页。[完整图标来源清单](https://github.com/citizen204/ror2-build-guide-cn/blob/main/src/content/assets.json)为每个本地 PNG 记录原文件名、直接来源页、文件大小和 SHA-256。游戏名称与图像的权利及许可归各权利方；本仓库不对这些素材作再授权，复用前请查阅对应文件来源页及 [Wiki 权利与许可说明](https://riskofrain2.wiki.gg/wiki/Risk_of_Rain_2_Wiki:Copyrights)。
+角色、技能和物品图标取自 Risk of Rain 2 Wiki 的对应文件页。[完整图标来源清单](https://github.com/citizen204/ror2-build-guide-cn/blob/main/src/content/assets.json)为每个本地 PNG 记录原文件名、直接来源页、文件大小和 SHA-256。游戏名称、图像和游戏内文本的权利及许可归各权利方；本仓库不对这些素材作再授权，复用前请查阅对应文件来源页及 [Wiki 权利与许可说明](https://riskofrain2.wiki.gg/wiki/Risk_of_Rain_2_Wiki:Copyrights)。
 
 本项目是公开的非官方粉丝攻略，与《雨中冒险 2》的开发商、发行商及平台方没有隶属、赞助或认可关系。仓库当前标记为 `UNLICENSED`，未另行授予站点代码或攻略文字的复用许可。
+
+本站不收费，也不含广告。权利方如需修改或移除内容，可在[议题区](https://github.com/citizen204/ror2-build-guide-cn/issues)提出，维护者收到后会尽快处理。
 
 ## GitHub Pages
 
