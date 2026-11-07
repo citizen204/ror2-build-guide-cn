@@ -11,6 +11,7 @@ const dlcLabels: Record<DlcId, string> = {
   sotv: '虚空幸存者',
   sots: '风暴探寻者',
   ac: '合金意念',
+  hc: '万象归衡',
   special: '特殊变身',
 }
 
@@ -34,6 +35,7 @@ export function SurvivorCard({ survivor }: SurvivorCardProps) {
               <span className="survivor-card__dlc">{dlcLabels[survivor.dlc]}</span>
             </div>
             <p className="survivor-card__role">{survivor.role}</p>
+            {survivor.playtestStatus === 'untested' ? <p className="untested-tag">构筑未实测</p> : null}
             <div className="survivor-card__difficulty">
               <span>操作难度：{survivor.difficulty} / 5</span>
               <span aria-hidden="true" className="survivor-card__marks">

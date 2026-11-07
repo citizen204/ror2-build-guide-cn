@@ -371,6 +371,26 @@ button:disabled {
   line-height: 1.25;
 }
 
+.untested-tag {
+  display: inline-block;
+  width: fit-content;
+  margin: 0;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--color-rarity-boss);
+  border-radius: 999rem;
+  color: var(--color-rarity-boss);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1.25;
+}
+
+.patch-skill-icon {
+  width: 2rem;
+  height: 2rem;
+  margin-inline-end: 0.5rem;
+  vertical-align: middle;
+}
+
 .survivor-card__role {
   margin: 0;
   color: var(--color-muted);
@@ -898,6 +918,11 @@ button:disabled {
 .item-tag--rarity-void {
   border-color: var(--color-rarity-void);
   color: var(--color-rarity-void);
+}
+
+.item-tag--rarity-hallowed {
+  border-color: var(--color-rarity-hallowed);
+  color: var(--color-rarity-hallowed);
 }
 
 .item-tag--recommendation-core {

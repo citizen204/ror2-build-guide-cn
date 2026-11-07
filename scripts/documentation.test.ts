@@ -149,7 +149,7 @@ describe('maintainer documentation', () => {
 
     expect(readme).toMatch(/`lunarItems`.*被动月球物品/)
     expect(readme).toMatch(/`lunarEquipment`.*月球主动装备/)
-    expect(readme).toMatch(/`validateGuideData`.*19.*技能槽位.*统率路线.*tier/)
+    expect(readme).toMatch(/`validateGuideData`.*21.*技能槽位.*统率路线.*tier/)
     expect(readme).toContain('规范顺序由签名测试固定')
   })
 

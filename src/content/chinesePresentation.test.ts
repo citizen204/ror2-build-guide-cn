@@ -88,6 +88,16 @@ function guideVisibleText(guide: SurvivorGuide): VisibleTextEntry[] {
     ...itemPickListText(guide.voidItems, `${source}.voidItems`),
     ...itemPickListText(guide.lunarItems, `${source}.lunarItems`),
     ...itemPickListText(guide.lunarEquipment, `${source}.lunarEquipment`),
+    ...itemPickListText(guide.hallowedItems ?? [], `${source}.hallowedItems`),
+    ...(guide.alternativeSkills ?? []).flatMap((skill, index) => [
+      { source: `${source}.alternativeSkills[${index}].nameZh`, value: skill.nameZh },
+      { source: `${source}.alternativeSkills[${index}].assessment`, value: skill.assessment },
+      { source: `${source}.alternativeSkills[${index}].unlockCondition`, value: skill.unlockCondition ?? '' },
+    ]),
+    ...(guide.transformationSkills ?? []).flatMap((skill, index) => [
+      { source: `${source}.transformationSkills[${index}].nameZh`, value: skill.nameZh },
+      { source: `${source}.transformationSkills[${index}].facts`, value: skill.facts },
+    ]),
     ...guide.combatNotes.flatMap((note, index) => [
       { source: `${source}.combatNotes[${index}].title`, value: note.title },
       { source: `${source}.combatNotes[${index}].body`, value: note.body },

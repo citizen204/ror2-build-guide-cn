@@ -14,6 +14,7 @@ const dlcOptions: { value: DlcFilter; label: string }[] = [
   { value: 'sotv', label: '虚空幸存者' },
   { value: 'sots', label: '风暴探寻者' },
   { value: 'ac', label: '合金意念' },
+  { value: 'hc', label: '万象归衡' },
   { value: 'special', label: '特殊变身' },
 ]
 

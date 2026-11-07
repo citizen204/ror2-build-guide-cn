@@ -17,7 +17,7 @@ describe('document metadata', () => {
   test('provides descriptive search and browser metadata', () => {
     expect(document.title).toBe('雨中冒险 2 全角色构筑攻略｜中文技能与物品指南')
     expect(metaContent('meta[name="description"]')).toBe(
-      '《雨中冒险 2》全角色中文构筑攻略，覆盖本体、虚空幸存者、风暴探寻者与合金意念，提供技能、物品、统率路线和联机建议。',
+      '《雨中冒险 2》全角色中文构筑攻略，覆盖本体、虚空幸存者、风暴探寻者、合金意念与万象归衡，提供技能、物品、统率路线和联机建议。',
     )
     expect(html).not.toContain('Alloyed Collective')
     expect(html).toContain('合金意念')

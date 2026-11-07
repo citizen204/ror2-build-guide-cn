@@ -1,4 +1,4 @@
-export type DlcId = 'base' | 'sotv' | 'sots' | 'ac' | 'special'
+export type DlcId = 'base' | 'sotv' | 'sots' | 'ac' | 'hc' | 'special'
 
 export type ItemTier =
   | 'common'
@@ -9,6 +9,8 @@ export type ItemTier =
   | 'lunar'
   | 'lunar-equipment'
   | 'void'
+  | 'hex'
+  | 'hallowed'
 
 export type Recommendation = 'core' | 'recommended' | 'conditional' | 'avoid'
 
@@ -62,6 +64,24 @@ export interface CombatNote {
   body: string
 }
 
+export interface AlternativeSkill {
+  slot: SkillSlot | 'litany'
+  nameZh: string
+  nameEn: string
+  icon: string
+  /** Challenge that unlocks the skill; absent when no unlock is recorded. */
+  unlockCondition?: string
+  assessment: string
+}
+
+export interface TransformationSkill {
+  slot: SkillSlot
+  nameZh: string
+  nameEn: string
+  icon: string
+  facts: string
+}
+
 export interface SurvivorGuide {
   slug: string
   nameZh: string
@@ -82,4 +102,24 @@ export interface SurvivorGuide {
   combatNotes: CombatNote[]
   sourceIds: string[]
   verifiedOn: string
+  /** Set when a guide is published before any in-game build testing. */
+  playtestStatus?: 'untested'
+  alternativeSkills?: AlternativeSkill[]
+  transformationSkills?: TransformationSkill[]
+  hallowedItems?: ItemPick[]
+}
+
+export interface ItemResearch {
+  id: string
+  nameEn: string
+  tier: 'hex' | 'hallowed'
+  icon: string
+  nameZh: string
+  localizationStatus: 'game-text-verified'
+  researchedOn: string
+  evidence: 'community-mechanics' | 'identity-only'
+  sourceIds: string[]
+  effect: string | null
+  stacking: string | null
+  caveat: string
 }

@@ -25,6 +25,8 @@ export const EXPECTED_SURVIVOR_SLUGS = [
   'false-son',
   'operator',
   'drifter',
+  'enforcer',
+  'acolyte',
   'heretic',
 ] as const
 
@@ -52,6 +54,7 @@ function itemPicksFor(guide: SurvivorGuide): ItemPick[] {
     ...guide.voidItems,
     ...guide.lunarItems,
     ...guide.lunarEquipment,
+    ...(guide.hallowedItems ?? []),
   ]
 }
 
@@ -102,6 +105,12 @@ function validatePublishableContent(guide: SurvivorGuide, errors: string[]): voi
 
   if (guide.skills.some((skill) => !hasText(skill.nameZh) || !hasText(skill.nameEn) || !hasText(skill.icon) || !hasText(skill.reason))) {
     errors.push(`${guide.slug} 的技能配置存在空内容`)
+  }
+  if ((guide.alternativeSkills ?? []).some((skill) => !hasText(skill.nameZh) || !hasText(skill.nameEn) || !hasText(skill.icon) || !hasText(skill.assessment))) {
+    errors.push(`${guide.slug} 的备选技能存在空内容`)
+  }
+  if ((guide.transformationSkills ?? []).some((skill) => !hasText(skill.nameZh) || !hasText(skill.nameEn) || !hasText(skill.icon) || !hasText(skill.facts))) {
+    errors.push(`${guide.slug} 的化身技能存在空内容`)
   }
   if (guide.commandRoute.some((route) => route.picks.length === 0 || route.picks.some((pick) => !hasText(pick)) || !hasText(route.explanation))) {
     errors.push(`${guide.slug} 的统率路线存在空内容`)
@@ -157,7 +166,7 @@ export function validateGuideData(
   const itemById = validateCatalogue(items, errors)
 
   if (guides.length !== EXPECTED_SURVIVOR_SLUGS.length) {
-    errors.push('缺少 19 名角色的完整攻略')
+    errors.push('缺少 21 名角色的完整攻略')
   }
 
   if (guideSlugs.size !== guides.length) {
@@ -200,6 +209,7 @@ export function validateGuideData(
     validateItemPicks(guide, guide.voidItems, itemById, errors, 'void', '虚空')
     validateItemPicks(guide, guide.lunarItems, itemById, errors, 'lunar', '月球')
     validateItemPicks(guide, guide.lunarEquipment, itemById, errors, 'lunar-equipment', '月球主动装备')
+    validateItemPicks(guide, guide.hallowedItems ?? [], itemById, errors, 'hallowed', '神圣')
   }
 
   return errors

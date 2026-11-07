@@ -22,6 +22,8 @@ describe('research source registry', () => {
 
   test('records verification dates as YYYY-MM-DD', () => {
     expect(sources.every((source) => /^\d{4}-\d{2}-\d{2}$/.test(source.verifiedOn))).toBe(true)
-    expect(sources.every((source) => source.verifiedOn === siteMetadata.verifiedOn)).toBe(true)
+    expect(sources.find((source) => source.id === 'wiki-items')?.verifiedOn).toBe('2026-08-25')
+    expect(sources.find((source) => source.id === 'official-hc-release')?.verifiedOn).toBe(siteMetadata.patchReviewedOn)
+    expect(sources.find((source) => source.id === 'steam-hallowed-concepts')?.label).not.toContain('unreleased')
   })
 })

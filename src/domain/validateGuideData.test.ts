@@ -89,7 +89,7 @@ describe('guide domain', () => {
       'commando', 'huntress', 'bandit', 'mul-t', 'engineer', 'artificer',
       'mercenary', 'rex', 'loader', 'acrid', 'captain', 'railgunner',
       'void-fiend', 'seeker', 'chef', 'false-son', 'operator', 'drifter',
-      'heretic',
+      'enforcer', 'acolyte', 'heretic',
     ])
   })
 })
@@ -98,10 +98,10 @@ describe('validateGuideData', () => {
   test('reports incomplete roster and every missing slug for empty data', () => {
     const errors = validateGuideData([], [])
 
-    expect(errors).toContain('缺少 19 名角色的完整攻略')
+    expect(errors).toContain('缺少 21 名角色的完整攻略')
     expect(errors).toContain('缺少角色：commando')
     expect(errors).toContain('缺少角色：heretic')
-    expect(errors.filter((error) => error.startsWith('缺少角色：'))).toHaveLength(19)
+    expect(errors.filter((error) => error.startsWith('缺少角色：'))).toHaveLength(21)
   })
 
   test('detects duplicate guide slugs in otherwise valid data', () => {

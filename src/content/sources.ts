@@ -1,6 +1,6 @@
 import { siteMetadata } from './siteMetadata'
 
-const contentVerifiedOn = siteMetadata.verifiedOn
+const contentVerifiedOn = '2026-08-25'
 
 export interface SourceRecord {
   id: string
@@ -11,6 +11,51 @@ export interface SourceRecord {
 
 /** Direct evidence used by the research notes and publishable survivor guides. */
 export const sources: SourceRecord[] = [
+  {"id":"game-language-files","label":"Game files — StreamingAssets/Language zh-CN and en, PC build 25921972","url":"https://steamdb.info/app/632360/","verifiedOn":"2026-11-07"},
+  {"id":"wiki-hallowed-shrine","label":"Wiki — Hallowed Shrine (community evidence)","url":"https://riskofrain2.wiki.gg/wiki/Hallowed_Shrine","verifiedOn":"2026-11-07"},
+  {"id":"wiki-earthbound-vessel","label":"Wiki — Earthbound Vessel (community evidence)","url":"https://riskofrain2.wiki.gg/wiki/Earthbound_Vessel","verifiedOn":"2026-11-07"},
+  {"id":"wiki-totem-of-avarice","label":"Wiki — Totem of Avarice (community evidence)","url":"https://riskofrain2.wiki.gg/wiki/Totem_of_Avarice","verifiedOn":"2026-11-07"},
+  {"id":"wiki-a-broken-ritual","label":"Wiki — A Broken Ritual (community evidence)","url":"https://riskofrain2.wiki.gg/wiki/A_Broken_Ritual","verifiedOn":"2026-11-07"},
+  {"id":"wiki-challenges-data","label":"Wiki — challenge data","url":"https://riskofrain2.wiki.gg/wiki/Module:Challenges/Data","verifiedOn":"2026-11-07"},
+  {"id": "wiki-hex-of-acceleration", "label": "Wiki \u2014 Hex of Acceleration (community mechanics)", "url": "https://riskofrain2.wiki.gg/wiki/Hex_of_Acceleration", "verifiedOn": "2026-11-07"},
+  {"id": "wiki-hex-of-famine", "label": "Wiki \u2014 Hex of Famine (community mechanics)", "url": "https://riskofrain2.wiki.gg/wiki/Hex_of_Famine", "verifiedOn": "2026-11-07"},
+  {"id": "wiki-hex-of-greed", "label": "Wiki \u2014 Hex of Greed (community mechanics)", "url": "https://riskofrain2.wiki.gg/wiki/Hex_of_Greed", "verifiedOn": "2026-11-07"},
+  {"id": "wiki-hex-of-haunting", "label": "Wiki \u2014 Hex of Haunting (community mechanics)", "url": "https://riskofrain2.wiki.gg/wiki/Hex_of_Haunting", "verifiedOn": "2026-11-07"},
+  {"id": "wiki-hex-of-leaping", "label": "Wiki \u2014 Hex of Leaping (community mechanics)", "url": "https://riskofrain2.wiki.gg/wiki/Hex_of_Leaping", "verifiedOn": "2026-11-07"},
+  {"id": "wiki-hex-of-loss", "label": "Wiki \u2014 Hex of Loss (community mechanics)", "url": "https://riskofrain2.wiki.gg/wiki/Hex_of_Loss", "verifiedOn": "2026-11-07"},
+  {"id": "wiki-hex-of-mimicry", "label": "Wiki \u2014 Hex of Mimicry (community mechanics)", "url": "https://riskofrain2.wiki.gg/wiki/Hex_of_Mimicry", "verifiedOn": "2026-11-07"},
+  {"id": "wiki-hex-of-misfortune", "label": "Wiki \u2014 Hex of Misfortune (community mechanics)", "url": "https://riskofrain2.wiki.gg/wiki/Hex_of_Misfortune", "verifiedOn": "2026-11-07"},
+  {"id": "wiki-hex-of-ossification", "label": "Wiki \u2014 Hex of Ossification (community mechanics)", "url": "https://riskofrain2.wiki.gg/wiki/Hex_of_Ossification", "verifiedOn": "2026-11-07"},
+  {"id": "wiki-hex-of-pain", "label": "Wiki \u2014 Hex of Pain (community mechanics)", "url": "https://riskofrain2.wiki.gg/wiki/Hex_of_Pain", "verifiedOn": "2026-11-07"},
+  {"id": "wiki-hex-of-patience", "label": "Wiki \u2014 Hex of Patience (community mechanics)", "url": "https://riskofrain2.wiki.gg/wiki/Status_Effects#Hex_of_Patience_Debuff", "verifiedOn": "2026-11-04"},
+  {"id": "wiki-hex-of-rain", "label": "Wiki \u2014 Hex of Rain (community mechanics)", "url": "https://riskofrain2.wiki.gg/wiki/Hex_of_Rain", "verifiedOn": "2026-11-07"},
+  {"id": "wiki-hc-commando-skill", "label": "Wiki — Commando Sabotage (community mechanics)", "url": "https://riskofrain2.wiki.gg/wiki/Commando#Sabotage", "verifiedOn": "2026-11-04"},
+  {"id": "wiki-hc-huntress-skill", "label": "Wiki — Huntress Laser_Cyclone (community mechanics)", "url": "https://riskofrain2.wiki.gg/wiki/Huntress#Laser_Cyclone", "verifiedOn": "2026-11-04"},
+  {"id": "wiki-hc-acrid-skill", "label": "Wiki — Acrid Cloying_Breath (community mechanics)", "url": "https://riskofrain2.wiki.gg/wiki/Acrid#Cloying_Breath", "verifiedOn": "2026-11-04"},
+  {"id": "wiki-hc-artificer-skill", "label": "Wiki — Artificer Tectonic_Blast (community mechanics)", "url": "https://riskofrain2.wiki.gg/wiki/Artificer#Tectonic_Blast", "verifiedOn": "2026-11-04"},
+  {"id": "wiki-hc-engineer-skill", "label": "Wiki — Engineer Laser_Cutter (community mechanics)", "url": "https://riskofrain2.wiki.gg/wiki/Engineer#Laser_Cutter", "verifiedOn": "2026-11-04"},
+  {"id": "wiki-hc-rex-skill", "label": "Wiki — REX Proliferation (community mechanics)", "url": "https://riskofrain2.wiki.gg/wiki/REX#Proliferation", "verifiedOn": "2026-11-04"},
+  {"id": "official-hc-release", "label": "2K — Hallowed Concepts release and free update", "url": "https://support.2k.com/hc/en-us/articles/56193476123795-Risk-of-Rain-2-Patch-Notes-October-8-2026", "verifiedOn": "2026-11-04"},
+  {"id": "official-hc-release-zh", "label": "2K — Chinese translation (not game localization authority)", "url": "https://support.2k.com/hc/zh-cn/articles/56193476123795", "verifiedOn": "2026-11-04"},
+  {"id": "official-hc-hotfix", "label": "2K — PC hotfix October 14, 2026", "url": "https://support.2k.com/hc/en-us/articles/56426531573779-Risk-of-Rain-2-PC-Hotfix-October-14-2026", "verifiedOn": "2026-11-04"},
+  {"id": "official-hc-survivors-diary", "label": "Steam — HC Dev Diary 4 (pre-release mechanics only)", "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844751498222145", "verifiedOn": "2026-11-04"},
+  {"id": "official-hc-items-diary", "label": "Steam — HC Dev Diary 2 (pre-release; not current numbers)", "url": "https://store.steampowered.com/news/app/632360/view/710026912607507071", "verifiedOn": "2026-11-04"},
+  {"id": "wiki-hc-category", "label": "Wiki — Hallowed Concepts content index", "url": "https://riskofrain2.wiki.gg/wiki/Category:Hallowed_Concepts", "verifiedOn": "2026-11-04"},
+  {"id": "wiki-hc-skills", "label": "Wiki — skill description data", "url": "https://riskofrain2.wiki.gg/wiki/Module:Skills/Data", "verifiedOn": "2026-11-07"},
+  {"id": "wiki-hc-items", "label": "Wiki — item description data", "url": "https://riskofrain2.wiki.gg/wiki/Module:Items/Data", "verifiedOn": "2026-11-07"},
+  {"id": "wiki-enforcer", "label": "Wiki — Enforcer (community evidence)", "url": "https://riskofrain2.wiki.gg/wiki/Enforcer", "verifiedOn": "2026-11-07"},
+  {"id": "wiki-acolyte", "label": "Wiki — Acolyte (community evidence)", "url": "https://riskofrain2.wiki.gg/wiki/Acolyte", "verifiedOn": "2026-11-07"},
+  {"id": "wiki-corpse-lily", "label": "Wiki — Corpse Lily (community evidence)", "url": "https://riskofrain2.wiki.gg/wiki/Corpse_Lily", "verifiedOn": "2026-11-07"},
+  {"id": "wiki-dream-crucible", "label": "Wiki — Dream Crucible (community evidence)", "url": "https://riskofrain2.wiki.gg/wiki/Dream_Crucible", "verifiedOn": "2026-11-07"},
+  {"id": "wiki-infernal-mark", "label": "Wiki — Infernal Mark (community evidence)", "url": "https://riskofrain2.wiki.gg/wiki/Infernal_Mark", "verifiedOn": "2026-11-07"},
+  {"id": "wiki-nightmare-demon", "label": "Wiki — Nightmare Demon (community evidence)", "url": "https://riskofrain2.wiki.gg/wiki/Nightmare_Demon", "verifiedOn": "2026-11-07"},
+  {"id": "wiki-ritual-helmet", "label": "Wiki — Ritual Helmet (community evidence)", "url": "https://riskofrain2.wiki.gg/wiki/Ritual_Helmet", "verifiedOn": "2026-11-07"},
+  {"id": "wiki-sanguine-chalice", "label": "Wiki — Sanguine Chalice (community evidence)", "url": "https://riskofrain2.wiki.gg/wiki/Sanguine_Chalice", "verifiedOn": "2026-11-07"},
+  {"id": "wiki-stained-scimitar", "label": "Wiki — Stained Scimitar (community evidence)", "url": "https://riskofrain2.wiki.gg/wiki/Stained_Scimitar", "verifiedOn": "2026-11-07"},
+  {"id": "wiki-vengeful-spirit", "label": "Wiki — Vengeful Spirit (community evidence)", "url": "https://riskofrain2.wiki.gg/wiki/Vengeful_Spirit", "verifiedOn": "2026-11-07"},
+  {"id": "wiki-vile-censer", "label": "Wiki — Vile Censer (community evidence)", "url": "https://riskofrain2.wiki.gg/wiki/Vile_Censer", "verifiedOn": "2026-11-07"},
+  {"id": "wiki-hex-of-strife", "label": "Wiki — Hex of Strife (community evidence)", "url": "https://riskofrain2.wiki.gg/wiki/Hex_of_Strife", "verifiedOn": "2026-11-07"},
+  {"id": "wiki-hex-of-blindness", "label": "Wiki — Hex of Blindness (community evidence)", "url": "https://riskofrain2.wiki.gg/wiki/Hex_of_Blindness", "verifiedOn": "2026-11-07"},
   {
     id: 'steam-base',
     label: 'Steam — Risk of Rain 2 base game',
@@ -25,9 +70,9 @@ export const sources: SourceRecord[] = [
   },
   {
     id: 'steam-hallowed-concepts',
-    label: 'Steam — Risk of Rain 2: Hallowed Concepts (unreleased)',
+    label: 'Steam — Risk of Rain 2: Hallowed Concepts (released October 8, 2026)',
     url: 'https://store.steampowered.com/app/3055670/Risk_of_Rain_2_Hallowed_Concepts/',
-    verifiedOn: contentVerifiedOn,
+    verifiedOn: siteMetadata.patchReviewedOn,
   },
   {
     id: 'official-ac-release-notes',
