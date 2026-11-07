@@ -21,6 +21,8 @@ const footerSources = footerSourceConfig.map(({ id, label }) => {
   return { ...source, displayLabel: label }
 })
 
+const issuesUrl = 'https://github.com/citizen204/ror2-build-guide-cn/issues'
+
 export function SiteFooter() {
   return (
     <footer className="site-footer">
@@ -53,7 +55,7 @@ export function SiteFooter() {
             万象归衡两名新角色的构筑尚未实测，详情页已标注，其资料核对日期为 {siteMetadata.gameTextVerifiedOn}。十月补丁核对日期：{siteMetadata.patchReviewedOn}；“最后核对”指原有攻略基线。
           </p>
           <p className="site-footer__attribution">
-            角色、技能和物品图标取自《雨中冒险 2》维基的对应文件页。游戏名称与图像的权利及许可归各权利方，本站不对这些素材作再授权。
+            角色、技能和物品图标取自《雨中冒险 2》维基的对应文件页。游戏名称、图像和游戏内文本的权利及许可归各权利方，本站不对这些素材作再授权。
           </p>
         </section>
 
@@ -69,6 +71,17 @@ export function SiteFooter() {
                 </a>
               </li>
             ))}
+          </ul>
+          <p className="site-footer__attribution">
+            本站不收费，也不含广告。权利方如需修改或移除内容，可在议题区提出，维护者收到后会尽快处理。
+          </p>
+          <ul>
+            <li>
+              <a href={issuesUrl} target="_blank" rel="noreferrer">
+                <span>提交修改或移除请求</span>
+                <span className="site-footer__external-note">新标签页 ↗</span>
+              </a>
+            </li>
           </ul>
         </section>
       </div>

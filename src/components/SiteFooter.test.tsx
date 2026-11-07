@@ -42,8 +42,13 @@ describe('site footer', () => {
       /没有隶属、赞助或认可关系/,
     )
     expect(within(footer).getByText(/图标取自《雨中冒险 2》维基/)).toHaveTextContent(
-      /本站不对这些素材作再授权/,
+      /游戏名称、图像和游戏内文本的权利及许可归各权利方，本站不对这些素材作再授权/,
     )
+    expect(within(footer).getByText(/本站不收费/)).toHaveTextContent(/权利方如需修改或移除内容/)
+    const removalLink = within(footer).getByRole('link', { name: '提交修改或移除请求新标签页 ↗' })
+    expect(removalLink).toHaveAttribute('href', 'https://github.com/citizen204/ror2-build-guide-cn/issues')
+    expect(removalLink).toHaveAttribute('target', '_blank')
+    expect(removalLink).toHaveAttribute('rel', 'noreferrer')
     expect(within(footer).getByText(/维基机制资料/)).toHaveTextContent(/版本变化后应重新核对/)
     expect(footer).not.toHaveTextContent(/[A-Za-z]/)
     expect(footer).not.toHaveTextContent(/[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/)
